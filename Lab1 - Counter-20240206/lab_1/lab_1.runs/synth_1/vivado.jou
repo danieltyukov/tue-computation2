@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Feb  6 10:23:14 2024
+# Process ID: 2675
+# Current directory: /media/sf_SharedWork/Lab1 - Counter-20240206/lab_1/lab_1.runs/synth_1
+# Command line: vivado -log half_adder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source half_adder.tcl
+# Log file: /media/sf_SharedWork/Lab1 - Counter-20240206/lab_1/lab_1.runs/synth_1/half_adder.vds
+# Journal file: /media/sf_SharedWork/Lab1 - Counter-20240206/lab_1/lab_1.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source half_adder.tcl -notrace
