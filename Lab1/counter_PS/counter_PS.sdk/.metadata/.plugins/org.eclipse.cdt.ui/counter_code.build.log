@@ -1,0 +1,6 @@
+02:58:30 **** Incremental Build of configuration Debug for project counter_code ****
+make all 
+make: Nothing to be done for 'all'.
+
+02:58:31 Build Finished (took 217ms)
+

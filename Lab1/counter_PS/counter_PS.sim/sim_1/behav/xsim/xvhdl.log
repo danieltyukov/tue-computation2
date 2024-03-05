@@ -1,0 +1,14 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/media/sf_SharedWork/Lab1/counter_PS/counter_PS.ip_user_files/bd/design_1/ip/design_1_microblaze_0_0/sim/design_1_microblaze_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_microblaze_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "/media/sf_SharedWork/Lab1/counter_PS/counter_PS.ip_user_files/bd/design_1/ip/design_1_mdm_1_0/sim/design_1_mdm_1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_mdm_1_0
+INFO: [VRFC 10-163] Analyzing VHDL file "/media/sf_SharedWork/Lab1/counter_PS/counter_PS.ip_user_files/bd/design_1/ip/design_1_rst_sim_clk_gen_0_100M_0/sim/design_1_rst_sim_clk_gen_0_100M_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_rst_sim_clk_gen_0_100M_0
+INFO: [VRFC 10-163] Analyzing VHDL file "/media/sf_SharedWork/Lab1/counter_PS/counter_PS.ip_user_files/bd/design_1/ip/design_1_dlmb_v10_0/sim/design_1_dlmb_v10_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_dlmb_v10_0
+INFO: [VRFC 10-163] Analyzing VHDL file "/media/sf_SharedWork/Lab1/counter_PS/counter_PS.ip_user_files/bd/design_1/ip/design_1_ilmb_v10_0/sim/design_1_ilmb_v10_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_ilmb_v10_0
+INFO: [VRFC 10-163] Analyzing VHDL file "/media/sf_SharedWork/Lab1/counter_PS/counter_PS.ip_user_files/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/sim/design_1_dlmb_bram_if_cntlr_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_dlmb_bram_if_cntlr_0
+INFO: [VRFC 10-163] Analyzing VHDL file "/media/sf_SharedWork/Lab1/counter_PS/counter_PS.ip_user_files/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/sim/design_1_ilmb_bram_if_cntlr_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_ilmb_bram_if_cntlr_0
