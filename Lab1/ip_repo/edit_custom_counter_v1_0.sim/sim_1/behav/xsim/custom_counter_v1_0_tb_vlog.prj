@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../custom_counter_1.0/src/adder.v" \
+"../../../../custom_counter_1.0/src/counter.v" \
+"../../../../custom_counter_1.0/hdl/custom_counter_v1_0.v" \
+"../../../../custom_counter_1.0/hdl/custom_counter_v1_0_S00_AXI.v" \
+"../../../../custom_counter_1.0/src/full_adder.v" \
+"../../../../custom_counter_1.0/src/half_adder.v" \
+"../../../../edit_custom_counter_v1_0.srcs/sim_1/imports/Lab1/custom_counter_v1_0_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

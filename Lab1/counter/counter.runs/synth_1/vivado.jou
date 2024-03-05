@@ -2,11 +2,11 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Feb 22 21:33:38 2024
-# Process ID: 2593
+# Start of session at: Sat Feb 24 14:04:55 2024
+# Process ID: 4766
 # Current directory: /media/sf_SharedWork/Lab1/counter/counter.runs/synth_1
-# Command line: vivado -log full_adder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source full_adder.tcl
-# Log file: /media/sf_SharedWork/Lab1/counter/counter.runs/synth_1/full_adder.vds
+# Command line: vivado -log counter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source counter.tcl
+# Log file: /media/sf_SharedWork/Lab1/counter/counter.runs/synth_1/counter.vds
 # Journal file: /media/sf_SharedWork/Lab1/counter/counter.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
-source full_adder.tcl -notrace
+source counter.tcl -notrace

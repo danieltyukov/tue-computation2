@@ -1,0 +1,20 @@
+02:28:41 INFO  : Registering command handlers for SDK TCF services
+02:28:41 INFO  : Launching XSCT server: xsct -n -interactive /home/computation/counter_PS/counter_PS.sdk/temp_xsdb_launch_script.tcl
+02:28:43 INFO  : XSCT server has started successfully.
+02:28:43 INFO  : Successfully done setting XSCT server connection channel  
+02:28:44 INFO  : Successfully done setting SDK workspace  
+02:28:44 INFO  : Processing command line option -hwspec /home/computation/counter_PS/counter_PS.sdk/design_1_wrapper.hdf.
+02:31:22 INFO  : Launching XSCT server: xsct -n -interactive /home/computation/counter_PS/counter_PS.sdk/temp_xsdb_launch_script.tcl
+02:31:23 INFO  : XSCT server has started successfully.
+02:31:23 INFO  : Successfully done setting XSCT server connection channel  
+02:31:24 INFO  : Successfully done setting SDK workspace  
+02:31:24 INFO  : Registering command handlers for SDK TCF services
+02:31:24 INFO  : Processing command line option -hwspec /home/computation/counter_PS/counter_PS.sdk/design_1_wrapper.hdf.
+02:31:25 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+02:31:25 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1709602264000,  Project:1709602107000
+02:31:25 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from /home/computation/counter_PS/counter_PS.sdk/design_1_wrapper.hdf.
+02:31:25 INFO  : Copied contents of /home/computation/counter_PS/counter_PS.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+02:31:25 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+02:31:25 INFO  : Clearing existing target manager status.
+02:31:25 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+02:31:25 WARN  : Linker script will not be updated automatically. Users need to update it manually.

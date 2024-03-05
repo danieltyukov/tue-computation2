@@ -6,4 +6,4 @@
 # Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log full_adder.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source full_adder.tcl -notrace
+vivado -log counter.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source counter.tcl -notrace

@@ -1,0 +1,3 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+$finish called at time : 510 ns : File "/media/sf_SharedWork/Lab1/ip_repo/edit_custom_counter_v1_0.srcs/sim_1/imports/Lab1/custom_counter_v1_0_tb.v" Line 110

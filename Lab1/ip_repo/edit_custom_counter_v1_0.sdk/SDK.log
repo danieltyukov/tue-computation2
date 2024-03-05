@@ -1,0 +1,6 @@
+23:51:35 INFO  : Registering command handlers for SDK TCF services
+23:51:35 INFO  : Launching XSCT server: xsct -n -interactive /media/sf_SharedWork/Lab1/ip_repo/edit_custom_counter_v1_0.sdk/temp_xsdb_launch_script.tcl
+23:51:37 INFO  : XSCT server has started successfully.
+23:51:37 INFO  : Successfully done setting XSCT server connection channel  
+23:51:38 INFO  : Processing command line option -hwspec /media/sf_SharedWork/Lab1/ip_repo/edit_custom_counter_v1_0.sdk/design_1_wrapper.hdf.
+23:51:38 INFO  : Successfully done setting SDK workspace  

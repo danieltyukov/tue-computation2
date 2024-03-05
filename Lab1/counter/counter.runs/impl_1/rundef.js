@@ -29,7 +29,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "write_bitstream", "begin" );
 ISEStep( "vivado",
-         "-log full_adder.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source full_adder.tcl -notrace" );
+         "-log counter.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source counter.tcl -notrace" );
 
 
 

@@ -1,0 +1,18 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /opt/tools/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 424b82241e1a455c8851355c2b81a80b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot custom_counter_v1_0_tb_behav xil_defaultlib.custom_counter_v1_0_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.half_adder
+Compiling module xil_defaultlib.full_adder
+Compiling module xil_defaultlib.adder_default
+Compiling module xil_defaultlib.counter(number_of_clk_cycles=10)
+Compiling module xil_defaultlib.custom_counter_v1_0_S00_AXI(numb...
+Compiling module xil_defaultlib.custom_counter_v1_0(number_of_cl...
+Compiling module xil_defaultlib.custom_counter_v1_0_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot custom_counter_v1_0_tb_behav

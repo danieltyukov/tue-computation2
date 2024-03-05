@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1708634017">
-  <File Type="VDS-TIMING-PB" Name="full_adder_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="full_adder_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="full_adder.dcp"/>
-  <File Type="REPORTS-TCL" Name="full_adder_reports.tcl"/>
-  <File Type="PA-TCL" Name="full_adder.tcl"/>
-  <File Type="RDS-RDS" Name="full_adder.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="full_adder_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="full_adder_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="full_adder_utilization_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1708779894">
+  <File Type="REPORTS-TCL" Name="counter_reports.tcl"/>
+  <File Type="PA-TCL" Name="counter.tcl"/>
+  <File Type="RDS-DCP" Name="counter.dcp"/>
+  <File Type="RDS-RDS" Name="counter.vds"/>
+  <File Type="RDS-UTIL-PB" Name="counter_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="counter_utilization_synth.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/half_adder.v">
+    <File Path="$PSRCDIR/sources_1/new/adder.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -25,9 +22,23 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/half_adder.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/counter.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="full_adder"/>
+      <Option Name="TopModule" Val="counter"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
@@ -39,14 +50,18 @@
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/constrs_1/new/counstraints_counter.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
