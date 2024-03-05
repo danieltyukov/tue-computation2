@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# 
+# Start of session at: Tue Mar  5 05:22:00 2024
+# Process ID: 8342
+# Current directory: /media/sf_SharedWork/Lab1/counter_PS_REAL/counter_PS_REAL.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /media/sf_SharedWork/Lab1/counter_PS_REAL/counter_PS_REAL.sdk/webtalk/webtalk.log
+# Journal file: /media/sf_SharedWork/Lab1/counter_PS_REAL/counter_PS_REAL.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

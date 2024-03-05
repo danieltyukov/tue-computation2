@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Mar  5 04:51:00 2024
+# Process ID: 5096
+# Current directory: /media/sf_SharedWork/Lab1/counter_PS_REAL/counter_PS_REAL.runs/impl_1
+# Command line: vivado -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: /media/sf_SharedWork/Lab1/counter_PS_REAL/counter_PS_REAL.runs/impl_1/design_1_wrapper.vdi
+# Journal file: /media/sf_SharedWork/Lab1/counter_PS_REAL/counter_PS_REAL.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
