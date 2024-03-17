@@ -1,0 +1,10 @@
+21:19:41 **** Incremental Build of configuration Debug for project fsm_code ****
+make pre-build main-build 
+make: Warning: File 'src/subdir.mk' has modification time 0.18 s in the future
+a9-linaro-pre-build-step
+ 
+make: warning:  Clock skew detected.  Your build may be incomplete.
+make: Nothing to be done for 'main-build'.
+
+21:19:41 Build Finished (took 291ms)
+
