@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/sf_SharedWork/Lab3/ip_repo/coffee_mealy.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module coffee_mealy
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sim_1/new/coffee_mealy_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module coffee_mealy_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

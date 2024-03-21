@@ -12,3 +12,17 @@ a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
 make: warning:  Clock skew detected.  Your build may be incomplete.
+16:56:29 **** Incremental Build of configuration Debug for project zynq_counter ****
+make pre-build main-build 
+make: Warning: File 'src/subdir.mk' has modification time 2.6 s in the future
+a9-linaro-pre-build-step
+ 
+make: warning:  Clock skew detected.  Your build may be incomplete.
+make: Nothing to be done for 'main-build'.
+17:10:08 **** Incremental Build of configuration Debug for project zynq_counter ****
+make pre-build main-build 
+make: Warning: File 'src/subdir.mk' has modification time 2.3 s in the future
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+make: warning:  Clock skew detected.  Your build may be incomplete.

@@ -1,0 +1,3 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+$finish called at time : 860 ns : File "/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sim_1/new/coffee_mealy_tb.v" Line 66

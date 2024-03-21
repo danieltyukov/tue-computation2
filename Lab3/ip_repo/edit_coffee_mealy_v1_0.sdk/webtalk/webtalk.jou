@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# 
+# Start of session at: Thu Mar 21 16:29:01 2024
+# Process ID: 11760
+# Current directory: /media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.sdk/webtalk/webtalk.log
+# Journal file: /media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

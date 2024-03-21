@@ -1,0 +1,8 @@
+16:27:57 **** Incremental Build of configuration Debug for project fsm_code ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+
+16:27:58 Build Finished (took 267ms)
+
