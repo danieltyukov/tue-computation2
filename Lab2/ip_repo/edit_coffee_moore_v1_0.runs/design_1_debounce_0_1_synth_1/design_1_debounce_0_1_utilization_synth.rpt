@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Sun Mar 17 20:42:51 2024
+| Date         : Sat Mar 23 11:01:41 2024
 | Host         : computation-virtual-machine running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_utilization -file design_1_debounce_0_1_utilization_synth.rpt -pb design_1_debounce_0_1_utilization_synth.pb
 | Design       : design_1_debounce_0_1
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |    9 |     0 |     53200 |  0.02 |
-|   LUT as Logic          |    9 |     0 |     53200 |  0.02 |
+| Slice LUTs*             |   23 |     0 |     53200 |  0.04 |
+|   LUT as Logic          |   23 |     0 |     53200 |  0.04 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |   22 |     0 |    106400 |  0.02 |
-|   Register as Flip Flop |   22 |     0 |    106400 |  0.02 |
+| Slice Registers         |   23 |     0 |    106400 |  0.02 |
+|   Register as Flip Flop |   23 |     0 |    106400 |  0.02 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 22    |          Yes |       Reset |            - |
+| 23    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -146,13 +146,11 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   22 |        Flop & Latch |
+| FDRE     |   23 |        Flop & Latch |
+| LUT2     |   20 |                 LUT |
 | CARRY4   |    5 |          CarryLogic |
-| LUT4     |    3 |                 LUT |
-| LUT6     |    2 |                 LUT |
 | LUT5     |    2 |                 LUT |
-| LUT3     |    1 |                 LUT |
-| LUT2     |    1 |                 LUT |
+| LUT4     |    2 |                 LUT |
 | LUT1     |    1 |                 LUT |
 +----------+------+---------------------+
 

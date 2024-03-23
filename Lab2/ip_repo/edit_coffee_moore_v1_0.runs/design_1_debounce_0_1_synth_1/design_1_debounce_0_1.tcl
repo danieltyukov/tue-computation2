@@ -33,7 +33,7 @@ set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
 set_property ip_repo_paths /media/sf_SharedWork/Lab2/ip_repo/coffee_moore_1.0 [current_project]
 set_property ip_output_repo /media/sf_SharedWork/Lab2/ip_repo/edit_coffee_moore_v1_0.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib /media/sf_SharedWork/Lab2/ip_repo/edit_coffee_moore_v1_0.srcs/sources_1/imports/new/debounce.v
+read_verilog -library xil_defaultlib /media/sf_SharedWork/Lab2/ip_repo/edit_coffee_moore_v1_0.srcs/sources_1/new/debounce.v
 read_ip -quiet /media/sf_SharedWork/Lab2/ip_repo/edit_coffee_moore_v1_0.srcs/sources_1/bd/design_1/ip/design_1_debounce_0_1/design_1_debounce_0_1.xci
 
 # Mark all dcp files as not used in implementation to prevent them from being

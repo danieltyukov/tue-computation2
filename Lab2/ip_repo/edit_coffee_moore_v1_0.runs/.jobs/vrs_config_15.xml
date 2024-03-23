@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<Runs Version="1" Minor="0">
-	<Run Id="impl_1" LaunchDir="/media/sf_SharedWork/Lab2/ip_repo/edit_coffee_moore_v1_0.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="route_design"/>
-</Runs>
-

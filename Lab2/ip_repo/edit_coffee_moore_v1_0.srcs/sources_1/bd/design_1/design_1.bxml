@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="design_1" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1710704453"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1710704453"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1710704453"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1710704453"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1711187982"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1711187982"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1711187982"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1711187982"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/design_1_coffee_moore_0_0/design_1_coffee_moore_0_0.xci" Type="IP">
         <Instance HierarchyPath="coffee_moore_0"/>
@@ -15,16 +15,16 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci" Type="IP">
-        <Instance HierarchyPath="processing_system7_0"/>
+      <File Name="ip/design_1_debounce_0_0/design_1_debounce_0_0.xci" Type="IP">
+        <Instance HierarchyPath="debounce_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/design_1_debounce_0_0/design_1_debounce_0_0.xci" Type="IP">
-        <Instance HierarchyPath="debounce_0"/>
+      <File Name="ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci" Type="IP">
+        <Instance HierarchyPath="processing_system7_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -47,7 +47,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/design_1_debounce_1_0/design_1_debounce_1_0.xci" Type="IP">
+      <File Name="ip/design_1_debounce_0_2/design_1_debounce_0_2.xci" Type="IP">
         <Instance HierarchyPath="debounce_2"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -55,7 +55,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/design_1_debounce_2_0/design_1_debounce_2_0.xci" Type="IP">
+      <File Name="ip/design_1_debounce_0_3/design_1_debounce_0_3.xci" Type="IP">
         <Instance HierarchyPath="debounce_3"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -64,7 +64,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/design_1_ps7_0_axi_periph_0/design_1_ps7_0_axi_periph_0.xci" Type="IP">
-        <Instance HierarchyPath="ps7_0_axi_periph"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

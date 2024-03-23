@@ -1,4 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "/media/sf_SharedWork/Lab2/moore_machine/moore_machine.srcs/sources_1/imports/moore_machine/coffee_moore.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module coffee_moore
-INFO: [VRFC 10-2263] Analyzing Verilog file "/media/sf_SharedWork/Lab2/moore_machine/moore_machine.srcs/sim_1/new/coffee_moore_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module coffee_moore_tb

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Mar 17 20:40:53 2024" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Mar 23 10:59:42 2024" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -35,24 +35,24 @@
         <CONNECTION INSTANCE="coffee_moore_0" PORT="state_display"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="button_in_0" SIGIS="undef" SIGNAME="External_Ports_button_in_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="debounce_1" PORT="button_in"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="button_in_1" SIGIS="undef" SIGNAME="External_Ports_button_in_1">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="debounce_2" PORT="button_in"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="button_in_2" SIGIS="undef" SIGNAME="External_Ports_button_in_2">
+    <PORT DIR="I" NAME="button_in_reset" SIGIS="undef" SIGNAME="External_Ports_button_in_reset">
       <CONNECTIONS>
         <CONNECTION INSTANCE="debounce_0" PORT="button_in"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="button_in_3" SIGIS="undef" SIGNAME="External_Ports_button_in_3">
+    <PORT DIR="I" NAME="button_in_coins_10" SIGIS="undef" SIGNAME="External_Ports_button_in_coins_10">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="debounce_1" PORT="button_in"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="button_in_coins_5" SIGIS="undef" SIGNAME="External_Ports_button_in_coins_5">
       <CONNECTIONS>
         <CONNECTION INSTANCE="debounce_3" PORT="button_in"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="button_in_insert" SIGIS="undef" SIGNAME="External_Ports_button_in_insert">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="debounce_2" PORT="button_in"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -124,9 +124,9 @@
             <CONNECTION INSTANCE="debounce_0" PORT="button_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="insert" SIGIS="undef" SIGNAME="debounce_3_button_out">
+        <PORT DIR="I" NAME="insert" SIGIS="undef" SIGNAME="debounce_2_button_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="debounce_3" PORT="button_out"/>
+            <CONNECTION INSTANCE="debounce_2" PORT="button_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="1" NAME="coins" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
@@ -325,9 +325,9 @@
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="button_in" SIGIS="undef" SIGNAME="External_Ports_button_in_2">
+        <PORT DIR="I" NAME="button_in" SIGIS="undef" SIGNAME="External_Ports_button_in_reset">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="button_in_2"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="button_in_reset"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="button_out" SIGIS="undef" SIGNAME="debounce_0_button_out">
@@ -355,9 +355,9 @@
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="button_in" SIGIS="undef" SIGNAME="External_Ports_button_in_0">
+        <PORT DIR="I" NAME="button_in" SIGIS="undef" SIGNAME="External_Ports_button_in_coins_10">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="button_in_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="button_in_coins_10"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="button_out" SIGIS="undef" SIGNAME="debounce_1_button_out">
@@ -371,7 +371,7 @@
     <MODULE FULLNAME="/debounce_2" HWVERSION="1.0" INSTANCE="debounce_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="debounce" VLNV="xilinx.com:module_ref:debounce:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_debounce_1_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_debounce_0_2"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -385,14 +385,14 @@
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="button_in" SIGIS="undef" SIGNAME="External_Ports_button_in_1">
+        <PORT DIR="I" NAME="button_in" SIGIS="undef" SIGNAME="External_Ports_button_in_insert">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="button_in_1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="button_in_insert"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="button_out" SIGIS="undef" SIGNAME="debounce_2_button_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="xlconcat_0" PORT="In1"/>
+            <CONNECTION INSTANCE="coffee_moore_0" PORT="insert"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -401,7 +401,7 @@
     <MODULE FULLNAME="/debounce_3" HWVERSION="1.0" INSTANCE="debounce_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="debounce" VLNV="xilinx.com:module_ref:debounce:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_debounce_2_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_debounce_0_3"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -415,14 +415,14 @@
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="button_in" SIGIS="undef" SIGNAME="External_Ports_button_in_3">
+        <PORT DIR="I" NAME="button_in" SIGIS="undef" SIGNAME="External_Ports_button_in_coins_5">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="button_in_3"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="button_in_coins_5"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="button_out" SIGIS="undef" SIGNAME="debounce_3_button_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="coffee_moore_0" PORT="insert"/>
+            <CONNECTION INSTANCE="xlconcat_0" PORT="In1"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -2549,9 +2549,9 @@
             <CONNECTION INSTANCE="debounce_1" PORT="button_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="debounce_2_button_out">
+        <PORT DIR="I" LEFT="0" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="debounce_3_button_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="debounce_2" PORT="button_out"/>
+            <CONNECTION INSTANCE="debounce_3" PORT="button_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">

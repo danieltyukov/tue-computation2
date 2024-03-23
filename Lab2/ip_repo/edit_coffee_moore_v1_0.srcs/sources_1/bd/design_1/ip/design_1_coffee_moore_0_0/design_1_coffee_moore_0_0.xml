@@ -581,7 +581,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Mar 17 19:40:47 UTC 2024</spirit:value>
+            <spirit:value>Sat Mar 23 09:59:35 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -601,7 +601,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Mar 17 19:40:47 UTC 2024</spirit:value>
+            <spirit:value>Sat Mar 23 09:59:35 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -621,7 +621,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Mar 17 19:40:47 UTC 2024</spirit:value>
+            <spirit:value>Sat Mar 23 09:59:35 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -641,7 +641,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Mar 17 19:40:47 UTC 2024</spirit:value>
+            <spirit:value>Sat Mar 23 09:59:35 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -659,7 +659,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Mar 17 19:43:30 UTC 2024</spirit:value>
+            <spirit:value>Sat Mar 23 10:00:25 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -1087,15 +1087,15 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/58f3/hdl/coffee_moore_v1_0_S00_AXI.v</spirit:name>
+        <spirit:name>../../ipshared/45f7/hdl/coffee_moore_v1_0_S00_AXI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/58f3/hdl/coffee_moore_v1_0.v</spirit:name>
+        <spirit:name>../../ipshared/45f7/hdl/coffee_moore_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/edit_coffee_moore_v1_0.srcs/sources_1/imports/moore_machine/coffee_moore.v</spirit:name>
+        <spirit:name>../../ipshared/edit_coffee_moore_v1_0.srcs/sources_1/new/coffee_moore.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1110,15 +1110,15 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/58f3/hdl/coffee_moore_v1_0_S00_AXI.v</spirit:name>
+        <spirit:name>../../ipshared/45f7/hdl/coffee_moore_v1_0_S00_AXI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/58f3/hdl/coffee_moore_v1_0.v</spirit:name>
+        <spirit:name>../../ipshared/45f7/hdl/coffee_moore_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/edit_coffee_moore_v1_0.srcs/sources_1/imports/moore_machine/coffee_moore.v</spirit:name>
+        <spirit:name>../../ipshared/edit_coffee_moore_v1_0.srcs/sources_1/new/coffee_moore.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1266,7 +1266,7 @@
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="160f3a15"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="ae395b32"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a31a5c49"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="5f1024e0"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="6992ea72"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="be1fe57b"/>

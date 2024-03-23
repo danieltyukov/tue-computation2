@@ -1,8 +1,8 @@
-16:22:07 **** Auto Build of configuration Debug for project fsm_code ****
+11:16:23 **** Incremental Build of configuration Debug for project fsm_code ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
 
-16:22:08 Build Finished (took 699ms)
+11:16:23 Build Finished (took 271ms)
 

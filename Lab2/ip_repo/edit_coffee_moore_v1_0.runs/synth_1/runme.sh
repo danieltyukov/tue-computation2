@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log coffee_moore_v1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source coffee_moore_v1_0.tcl
+EAStep vivado -log design_1_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl

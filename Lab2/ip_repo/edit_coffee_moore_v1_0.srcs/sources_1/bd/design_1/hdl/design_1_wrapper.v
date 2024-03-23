@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-//Date        : Sun Mar 17 20:40:46 2024
+//Date        : Sat Mar 23 10:59:34 2024
 //Host        : computation-virtual-machine running 64-bit Ubuntu 18.04.5 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -31,10 +31,10 @@ module design_1_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    button_in_0,
-    button_in_1,
-    button_in_2,
-    button_in_3,
+    button_in_coins_10,
+    button_in_coins_5,
+    button_in_insert,
+    button_in_reset,
     coffee_0,
     state_display_0);
   inout [14:0]DDR_addr;
@@ -58,10 +58,10 @@ module design_1_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  input button_in_0;
-  input button_in_1;
-  input button_in_2;
-  input button_in_3;
+  input button_in_coins_10;
+  input button_in_coins_5;
+  input button_in_insert;
+  input button_in_reset;
   output coffee_0;
   output [2:0]state_display_0;
 
@@ -86,10 +86,10 @@ module design_1_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire button_in_0;
-  wire button_in_1;
-  wire button_in_2;
-  wire button_in_3;
+  wire button_in_coins_10;
+  wire button_in_coins_5;
+  wire button_in_insert;
+  wire button_in_reset;
   wire coffee_0;
   wire [2:0]state_display_0;
 
@@ -115,10 +115,10 @@ module design_1_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .button_in_0(button_in_0),
-        .button_in_1(button_in_1),
-        .button_in_2(button_in_2),
-        .button_in_3(button_in_3),
+        .button_in_coins_10(button_in_coins_10),
+        .button_in_coins_5(button_in_coins_5),
+        .button_in_insert(button_in_insert),
+        .button_in_reset(button_in_reset),
         .coffee_0(coffee_0),
         .state_display_0(state_display_0));
 endmodule
