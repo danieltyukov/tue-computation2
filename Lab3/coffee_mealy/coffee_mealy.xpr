@@ -6,7 +6,7 @@
 <Project Version="7" Minor="38" Path="/media/sf_SharedWork/Lab3/coffee_mealy/coffee_mealy.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="01e6321d08be44b08cd88f04941f463e"/>
+    <Option Name="Id" Val="28993a98695f409ca9303d16b1811ff7"/>
     <Option Name="Part" Val="xc7z020clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>

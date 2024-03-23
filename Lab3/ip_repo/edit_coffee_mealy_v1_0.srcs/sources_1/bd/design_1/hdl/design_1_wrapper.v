@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-//Date        : Sat Mar 23 18:25:29 2024
+//Date        : Sat Mar 23 23:08:09 2024
 //Host        : computation-virtual-machine running 64-bit Ubuntu 18.04.5 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -63,7 +63,7 @@ module design_1_wrapper
   input button_in_insert;
   input button_in_reset;
   output coffee_0;
-  output [2:0]state_display_0;
+  output [1:0]state_display_0;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -91,7 +91,7 @@ module design_1_wrapper
   wire button_in_insert;
   wire button_in_reset;
   wire coffee_0;
-  wire [2:0]state_display_0;
+  wire [1:0]state_display_0;
 
   design_1 design_1_i
        (.DDR_addr(DDR_addr),

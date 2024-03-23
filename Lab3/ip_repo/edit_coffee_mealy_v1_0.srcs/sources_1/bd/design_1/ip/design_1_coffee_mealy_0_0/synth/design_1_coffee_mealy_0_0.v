@@ -88,7 +88,7 @@ input wire reset;
 input wire insert;
 input wire [1 : 0] coins;
 output wire coffee;
-output wire [2 : 0] state_display;
+output wire [1 : 0] state_display;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *)
 input wire [3 : 0] s00_axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *)

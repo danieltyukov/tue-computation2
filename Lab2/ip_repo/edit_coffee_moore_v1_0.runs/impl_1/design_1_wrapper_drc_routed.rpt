@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Sat Mar 23 11:04:57 2024
+| Date         : Sat Mar 23 22:12:29 2024
 | Host         : computation-virtual-machine running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -24,18 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 1
-+----------+----------+-------------------+------------+
-| Rule     | Severity | Description       | Violations |
-+----------+----------+-------------------+------------+
-| PDRC-153 | Warning  | Gated clock check | 1          |
-+----------+----------+-------------------+------------+
+             Violations found: 0
++------+----------+-------------+------------+
+| Rule | Severity | Description | Violations |
++------+----------+-------------+------------+
++------+----------+-------------+------------+
 
 2. REPORT DETAILS
 -----------------
-PDRC-153#1 Warning
-Gated clock check  
-Net design_1_i/coffee_moore_0/inst/coffee_moore_v1_0_S00_AXI_inst/coffee_moore_inst/next_state_inferred__6/i__n_0 is a gated clock net sourced by a combinational pin design_1_i/coffee_moore_0/inst/coffee_moore_v1_0_S00_AXI_inst/coffee_moore_inst/next_state_inferred__6/i_/O, cell design_1_i/coffee_moore_0/inst/coffee_moore_v1_0_S00_AXI_inst/coffee_moore_inst/next_state_inferred__6/i_. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
 

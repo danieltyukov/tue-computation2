@@ -10,7 +10,7 @@ module coffee_mealy_tb();
 
     // Outputs from the module
     wire coffee;
-    wire [2:0] state_display;
+    wire [1:0] state_display;
 
     // Instantiate the Unit Under Test (UUT)
     coffee_mealy uut(
@@ -80,4 +80,3 @@ module coffee_mealy_tb();
     endtask
     
 endmodule
-

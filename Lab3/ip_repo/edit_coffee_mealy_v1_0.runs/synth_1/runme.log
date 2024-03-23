@@ -17,36 +17,36 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18042 
+INFO: Helper process launched with PID 14330 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:00.92 ; elapsed = 00:00:01 . Memory (MB): peak = 1355.199 ; gain = 1.402 ; free physical = 100 ; free virtual = 1571
+Starting RTL Elaboration : Time (s): cpu = 00:00:00.96 ; elapsed = 00:00:01 . Memory (MB): peak = 1355.191 ; gain = 1.402 ; free physical = 133 ; free virtual = 1569
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_coffee_mealy_0_0' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-17913-computation-virtual-machine/realtime/design_1_coffee_mealy_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_coffee_mealy_0_0' (1#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-17913-computation-virtual-machine/realtime/design_1_coffee_mealy_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_debounce_0_0' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-17913-computation-virtual-machine/realtime/design_1_debounce_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_debounce_0_0' (2#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-17913-computation-virtual-machine/realtime/design_1_debounce_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_debounce_0_1' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-17913-computation-virtual-machine/realtime/design_1_debounce_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_debounce_0_1' (3#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-17913-computation-virtual-machine/realtime/design_1_debounce_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_debounce_0_2' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-17913-computation-virtual-machine/realtime/design_1_debounce_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_debounce_0_2' (4#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-17913-computation-virtual-machine/realtime/design_1_debounce_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_debounce_0_3' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-17913-computation-virtual-machine/realtime/design_1_debounce_0_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_debounce_0_3' (5#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-17913-computation-virtual-machine/realtime/design_1_debounce_0_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-17913-computation-virtual-machine/realtime/design_1_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (6#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-17913-computation-virtual-machine/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_coffee_mealy_0_0' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-14202-computation-virtual-machine/realtime/design_1_coffee_mealy_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_coffee_mealy_0_0' (1#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-14202-computation-virtual-machine/realtime/design_1_coffee_mealy_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_debounce_0_0' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-14202-computation-virtual-machine/realtime/design_1_debounce_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_debounce_0_0' (2#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-14202-computation-virtual-machine/realtime/design_1_debounce_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_debounce_0_1' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-14202-computation-virtual-machine/realtime/design_1_debounce_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_debounce_0_1' (3#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-14202-computation-virtual-machine/realtime/design_1_debounce_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_debounce_0_2' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-14202-computation-virtual-machine/realtime/design_1_debounce_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_debounce_0_2' (4#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-14202-computation-virtual-machine/realtime/design_1_debounce_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_debounce_0_3' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-14202-computation-virtual-machine/realtime/design_1_debounce_0_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_debounce_0_3' (5#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-14202-computation-virtual-machine/realtime/design_1_debounce_0_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-14202-computation-virtual-machine/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (6#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-14202-computation-virtual-machine/realtime/design_1_processing_system7_0_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' requires 65 connections, but only 63 given [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/synth/design_1.v:216]
 INFO: [Synth 8-6157] synthesizing module 'design_1_ps7_0_axi_periph_0' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/synth/design_1.v:358]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/synth/design_1.v:673]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-17913-computation-virtual-machine/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (7#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-17913-computation-virtual-machine/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-14202-computation-virtual-machine/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (7#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-14202-computation-virtual-machine/realtime/design_1_auto_pc_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (8#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/synth/design_1.v:673]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_0' (9#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/synth/design_1.v:358]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_100M_0' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-17913-computation-virtual-machine/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_100M_0' (10#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-17913-computation-virtual-machine/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_100M_0' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-14202-computation-virtual-machine/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_100M_0' (10#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-14202-computation-virtual-machine/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'design_1_rst_ps7_0_100M_0' requires 10 connections, but only 7 given [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/synth/design_1.v:344]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-17913-computation-virtual-machine/realtime/design_1_xlconcat_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (11#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-17913-computation-virtual-machine/realtime/design_1_xlconcat_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-14202-computation-virtual-machine/realtime/design_1_xlconcat_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (11#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/.Xil/Vivado-14202-computation-virtual-machine/realtime/design_1_xlconcat_0_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'design_1' (12#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/synth/design_1.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (13#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_ACLK
@@ -54,7 +54,7 @@ WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_AR
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port ACLK
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1398.824 ; gain = 45.027 ; free physical = 130 ; free virtual = 1585
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1398.816 ; gain = 45.027 ; free physical = 144 ; free virtual = 1582
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -67,10 +67,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1398.824 ; gain = 45.027 ; free physical = 130 ; free virtual = 1585
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1398.816 ; gain = 45.027 ; free physical = 144 ; free virtual = 1583
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1398.824 ; gain = 45.027 ; free physical = 130 ; free virtual = 1585
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1398.816 ; gain = 45.027 ; free physical = 144 ; free virtual = 1583
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -83,14 +83,14 @@ Parsing XDC File [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/
 Finished Parsing XDC File [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'design_1_i/processing_system7_0'
 Parsing XDC File [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_debounce_0_0/design_1_debounce_0_0/design_1_debounce_0_0_in_context.xdc] for cell 'design_1_i/debounce_0'
 Finished Parsing XDC File [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_debounce_0_0/design_1_debounce_0_0/design_1_debounce_0_0_in_context.xdc] for cell 'design_1_i/debounce_0'
+Parsing XDC File [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0/design_1_xlconcat_0_0_in_context.xdc] for cell 'design_1_i/xlconcat_0'
+Finished Parsing XDC File [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0/design_1_xlconcat_0_0_in_context.xdc] for cell 'design_1_i/xlconcat_0'
 Parsing XDC File [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_debounce_0_1/design_1_debounce_0_1/design_1_debounce_0_1_in_context.xdc] for cell 'design_1_i/debounce_1'
 Finished Parsing XDC File [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_debounce_0_1/design_1_debounce_0_1/design_1_debounce_0_1_in_context.xdc] for cell 'design_1_i/debounce_1'
 Parsing XDC File [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_debounce_0_2/design_1_debounce_0_2/design_1_debounce_0_2_in_context.xdc] for cell 'design_1_i/debounce_2'
 Finished Parsing XDC File [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_debounce_0_2/design_1_debounce_0_2/design_1_debounce_0_2_in_context.xdc] for cell 'design_1_i/debounce_2'
 Parsing XDC File [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_debounce_0_3/design_1_debounce_0_3/design_1_debounce_0_3_in_context.xdc] for cell 'design_1_i/debounce_3'
 Finished Parsing XDC File [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_debounce_0_3/design_1_debounce_0_3/design_1_debounce_0_3_in_context.xdc] for cell 'design_1_i/debounce_3'
-Parsing XDC File [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0/design_1_xlconcat_0_0_in_context.xdc] for cell 'design_1_i/xlconcat_0'
-Finished Parsing XDC File [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0/design_1_xlconcat_0_0_in_context.xdc] for cell 'design_1_i/xlconcat_0'
 Parsing XDC File [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_100M'
 Finished Parsing XDC File [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_100M'
 Parsing XDC File [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
@@ -106,16 +106,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1653.910 ; gain = 0.000 ; free physical = 68 ; free virtual = 1309
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1652.895 ; gain = 0.000 ; free physical = 75 ; free virtual = 1280
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:18 . Memory (MB): peak = 1653.910 ; gain = 300.113 ; free physical = 138 ; free virtual = 1391
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1652.895 ; gain = 299.105 ; free physical = 150 ; free virtual = 1358
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:18 . Memory (MB): peak = 1653.910 ; gain = 300.113 ; free physical = 138 ; free virtual = 1391
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1652.895 ; gain = 299.105 ; free physical = 150 ; free virtual = 1358
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -384,18 +384,18 @@ Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto ge
 Applied set_property DONT_TOUCH = true for design_1_i/coffee_mealy_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/debounce_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/xlconcat_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/debounce_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/debounce_2. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/debounce_3. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/xlconcat_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/rst_ps7_0_100M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:18 . Memory (MB): peak = 1653.910 ; gain = 300.113 ; free physical = 138 ; free virtual = 1393
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1652.895 ; gain = 299.105 ; free physical = 152 ; free virtual = 1360
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:18 . Memory (MB): peak = 1653.910 ; gain = 300.113 ; free physical = 138 ; free virtual = 1393
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1652.895 ; gain = 299.105 ; free physical = 152 ; free virtual = 1360
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -435,7 +435,7 @@ WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port 
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M00_ACLK
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M00_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1653.910 ; gain = 300.113 ; free physical = 124 ; free virtual = 1383
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1652.895 ; gain = 299.105 ; free physical = 142 ; free virtual = 1350
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -449,13 +449,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/processing_system7_0/FCLK_CLK0' to pin 'design_1_i/processing_system7_0/bbstub_FCLK_CLK0/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 1681.910 ; gain = 328.113 ; free physical = 74 ; free virtual = 1257
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 1681.895 ; gain = 328.105 ; free physical = 72 ; free virtual = 1226
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 1681.910 ; gain = 328.113 ; free physical = 74 ; free virtual = 1257
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 1681.895 ; gain = 328.105 ; free physical = 71 ; free virtual = 1226
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -467,7 +467,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 1682.910 ; gain = 329.113 ; free physical = 74 ; free virtual = 1257
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 1682.895 ; gain = 329.105 ; free physical = 71 ; free virtual = 1227
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -491,7 +491,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1682.910 ; gain = 329.113 ; free physical = 74 ; free virtual = 1257
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 1682.895 ; gain = 329.105 ; free physical = 71 ; free virtual = 1227
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -504,7 +504,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1682.910 ; gain = 329.113 ; free physical = 74 ; free virtual = 1257
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 1682.895 ; gain = 329.105 ; free physical = 71 ; free virtual = 1227
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -516,25 +516,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1682.910 ; gain = 329.113 ; free physical = 74 ; free virtual = 1257
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 1682.895 ; gain = 329.105 ; free physical = 71 ; free virtual = 1227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1682.910 ; gain = 329.113 ; free physical = 74 ; free virtual = 1257
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 1682.895 ; gain = 329.105 ; free physical = 71 ; free virtual = 1227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1682.910 ; gain = 329.113 ; free physical = 74 ; free virtual = 1257
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 1682.895 ; gain = 329.105 ; free physical = 71 ; free virtual = 1227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1682.910 ; gain = 329.113 ; free physical = 74 ; free virtual = 1257
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 1682.895 ; gain = 329.105 ; free physical = 71 ; free virtual = 1227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -569,24 +569,24 @@ Report Cell Usage:
 |8     |design_1_rst_ps7_0_100M_0       |     1|
 |9     |design_1_xlconcat_0_0           |     1|
 |10    |IBUF                            |     4|
-|11    |OBUF                            |     4|
+|11    |OBUF                            |     3|
 +------+--------------------------------+------+
 
 Report Instance Areas: 
 +------+---------------------+----------------------------+------+
 |      |Instance             |Module                      |Cells |
 +------+---------------------+----------------------------+------+
-|1     |top                  |                            |   432|
-|2     |  design_1_i         |design_1                    |   424|
+|1     |top                  |                            |   430|
+|2     |  design_1_i         |design_1                    |   423|
 |3     |    ps7_0_axi_periph |design_1_ps7_0_axi_periph_0 |   177|
 |4     |      s00_couplers   |s00_couplers_imp_UYSKKA     |   177|
 +------+---------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1682.910 ; gain = 329.113 ; free physical = 74 ; free virtual = 1257
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 1682.895 ; gain = 329.105 ; free physical = 71 ; free virtual = 1227
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1682.910 ; gain = 74.027 ; free physical = 132 ; free virtual = 1316
-Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1682.918 ; gain = 329.113 ; free physical = 144 ; free virtual = 1327
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1682.895 ; gain = 75.027 ; free physical = 127 ; free virtual = 1285
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 1682.902 ; gain = 329.105 ; free physical = 139 ; free virtual = 1296
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -598,9 +598,9 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 43 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 1696.910 ; gain = 343.113 ; free physical = 116 ; free virtual = 1302
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1696.895 ; gain = 343.105 ; free physical = 123 ; free virtual = 1271
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1696.910 ; gain = 0.000 ; free physical = 114 ; free virtual = 1301
-INFO: [Common 17-206] Exiting Vivado at Sat Mar 23 18:29:34 2024...
+report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1696.895 ; gain = 0.000 ; free physical = 119 ; free virtual = 1271
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 23 23:12:17 2024...

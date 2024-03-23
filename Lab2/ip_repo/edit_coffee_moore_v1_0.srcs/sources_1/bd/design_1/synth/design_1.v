@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-//Date        : Sat Mar 23 10:59:34 2024
+//Date        : Sat Mar 23 22:07:13 2024
 //Host        : computation-virtual-machine running 64-bit Ubuntu 18.04.5 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -169,7 +169,7 @@ module design_1
   design_1_coffee_moore_0_0 coffee_moore_0
        (.coffee(coffee_moore_0_coffee),
         .coins(xlconcat_0_dout),
-        .insert(debounce_2_button_out),
+        .insert(debounce_3_button_out),
         .reset(debounce_0_button_out),
         .s00_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s00_axi_araddr(ps7_0_axi_periph_M00_AXI_ARADDR[3:0]),
@@ -204,12 +204,12 @@ module design_1
         .clk(processing_system7_0_FCLK_CLK0),
         .reset(rst_ps7_0_100M_peripheral_aresetn));
   design_1_debounce_0_2 debounce_2
-       (.button_in(button_in_3_1),
+       (.button_in(button_in_2_1),
         .button_out(debounce_2_button_out),
         .clk(processing_system7_0_FCLK_CLK0),
         .reset(rst_ps7_0_100M_peripheral_aresetn));
   design_1_debounce_0_3 debounce_3
-       (.button_in(button_in_2_1),
+       (.button_in(button_in_3_1),
         .button_out(debounce_3_button_out),
         .clk(processing_system7_0_FCLK_CLK0),
         .reset(rst_ps7_0_100M_peripheral_aresetn));
@@ -351,7 +351,7 @@ module design_1
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
   design_1_xlconcat_0_0 xlconcat_0
        (.In0(debounce_1_button_out),
-        .In1(debounce_3_button_out),
+        .In1(debounce_2_button_out),
         .dout(xlconcat_0_dout));
 endmodule
 

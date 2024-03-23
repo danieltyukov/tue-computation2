@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Sat Mar 23 11:00:25 2024
+| Date         : Sat Mar 23 22:08:04 2024
 | Host         : computation-virtual-machine running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_utilization -file design_1_coffee_moore_0_0_utilization_synth.rpt -pb design_1_coffee_moore_0_0_utilization_synth.pb
 | Design       : design_1_coffee_moore_0_0
@@ -30,12 +30,12 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   17 |     0 |     53200 |  0.03 |
-|   LUT as Logic          |   17 |     0 |     53200 |  0.03 |
+| Slice LUTs*             |   21 |     0 |     53200 |  0.04 |
+|   LUT as Logic          |   21 |     0 |     53200 |  0.04 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |   25 |     0 |    106400 |  0.02 |
+| Slice Registers         |   22 |     0 |    106400 |  0.02 |
 |   Register as Flip Flop |   22 |     0 |    106400 |  0.02 |
-|   Register as Latch     |    3 |     0 |    106400 | <0.01 |
+|   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
@@ -55,7 +55,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 3     |          Yes |           - |        Reset |
+| 0     |          Yes |           - |        Reset |
 | 1     |          Yes |         Set |            - |
 | 21    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -147,11 +147,10 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |   21 |        Flop & Latch |
-| LUT4     |    7 |                 LUT |
-| LUT5     |    6 |                 LUT |
+| LUT5     |    7 |                 LUT |
 | LUT6     |    5 |                 LUT |
-| LDCE     |    3 |        Flop & Latch |
-| LUT3     |    2 |                 LUT |
+| LUT4     |    5 |                 LUT |
+| LUT3     |    5 |                 LUT |
 | LUT2     |    1 |                 LUT |
 | LUT1     |    1 |                 LUT |
 | FDSE     |    1 |        Flop & Latch |

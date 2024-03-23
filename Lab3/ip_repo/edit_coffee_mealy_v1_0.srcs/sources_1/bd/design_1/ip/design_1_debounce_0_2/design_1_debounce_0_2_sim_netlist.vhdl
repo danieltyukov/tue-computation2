@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
--- Date        : Sat Mar 23 18:26:23 2024
+-- Date        : Sat Mar 23 23:10:21 2024
 -- Host        : computation-virtual-machine running 64-bit Ubuntu 18.04.5 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_debounce_0_2/design_1_debounce_0_2_sim_netlist.vhdl

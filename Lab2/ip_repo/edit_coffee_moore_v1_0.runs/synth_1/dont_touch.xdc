@@ -9,11 +9,11 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1 || ORI
 # IP: bd/design_1/ip/design_1_coffee_moore_0_0/design_1_coffee_moore_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_coffee_moore_0_0 || ORIG_REF_NAME==design_1_coffee_moore_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_debounce_0_0/design_1_debounce_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_debounce_0_0 || ORIG_REF_NAME==design_1_debounce_0_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_processing_system7_0_0 || ORIG_REF_NAME==design_1_processing_system7_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_debounce_0_0/design_1_debounce_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_debounce_0_0 || ORIG_REF_NAME==design_1_debounce_0_0} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlconcat_0_0 || ORIG_REF_NAME==design_1_xlconcat_0_0} -quiet] -quiet

@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-// Date        : Sat Mar 23 18:28:21 2024
+// Date        : Sat Mar 23 23:09:43 2024
 // Host        : computation-virtual-machine running 64-bit Ubuntu 18.04.5 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_coffee_mealy_0_0/design_1_coffee_mealy_0_0_sim_netlist.v
@@ -45,7 +45,7 @@ module design_1_coffee_mealy_0_0
   input insert;
   input [1:0]coins;
   output coffee;
-  output [2:0]state_display;
+  output [1:0]state_display;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *) input [3:0]s00_axi_awaddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *) input [2:0]s00_axi_awprot;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID" *) input s00_axi_awvalid;
@@ -69,7 +69,12 @@ module design_1_coffee_mealy_0_0
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW" *) input s00_axi_aresetn;
 
   wire \<const0> ;
+  wire coffee;
+  wire [1:0]coins;
+  wire insert;
+  wire reset;
   wire s00_axi_aclk;
+  wire [3:0]s00_axi_araddr;
   wire s00_axi_aresetn;
   wire s00_axi_arready;
   wire s00_axi_arvalid;
@@ -77,10 +82,12 @@ module design_1_coffee_mealy_0_0
   wire s00_axi_awvalid;
   wire s00_axi_bready;
   wire s00_axi_bvalid;
+  wire [2:0]\^s00_axi_rdata ;
   wire s00_axi_rready;
   wire s00_axi_rvalid;
   wire s00_axi_wready;
   wire s00_axi_wvalid;
+  wire [1:0]state_display;
 
   assign s00_axi_bresp[1] = \<const0> ;
   assign s00_axi_bresp[0] = \<const0> ;
@@ -113,77 +120,280 @@ module design_1_coffee_mealy_0_0
   assign s00_axi_rdata[5] = \<const0> ;
   assign s00_axi_rdata[4] = \<const0> ;
   assign s00_axi_rdata[3] = \<const0> ;
-  assign s00_axi_rdata[2] = \<const0> ;
-  assign s00_axi_rdata[1] = \<const0> ;
-  assign s00_axi_rdata[0] = \<const0> ;
+  assign s00_axi_rdata[2:0] = \^s00_axi_rdata [2:0];
   assign s00_axi_rresp[1] = \<const0> ;
   assign s00_axi_rresp[0] = \<const0> ;
   GND GND
        (.G(\<const0> ));
   design_1_coffee_mealy_0_0_coffee_mealy_v1_0 inst
-       (.S_AXI_AWREADY(s00_axi_awready),
+       (.S_AXI_ARREADY(s00_axi_arready),
+        .S_AXI_AWREADY(s00_axi_awready),
+        .coffee(coffee),
+        .coins(coins),
+        .insert(insert),
+        .reset(reset),
         .s00_axi_aclk(s00_axi_aclk),
+        .s00_axi_araddr(s00_axi_araddr[3:2]),
         .s00_axi_aresetn(s00_axi_aresetn),
-        .s00_axi_arready(s00_axi_arready),
         .s00_axi_arvalid(s00_axi_arvalid),
         .s00_axi_awvalid(s00_axi_awvalid),
         .s00_axi_bready(s00_axi_bready),
         .s00_axi_bvalid(s00_axi_bvalid),
+        .s00_axi_rdata(\^s00_axi_rdata ),
         .s00_axi_rready(s00_axi_rready),
         .s00_axi_rvalid(s00_axi_rvalid),
         .s00_axi_wready(s00_axi_wready),
-        .s00_axi_wvalid(s00_axi_wvalid));
+        .s00_axi_wvalid(s00_axi_wvalid),
+        .\state_display[0] (state_display[0]),
+        .\state_display[1] (state_display[1]));
+endmodule
+
+(* ORIG_REF_NAME = "coffee_mealy" *) 
+module design_1_coffee_mealy_0_0_coffee_mealy
+   (coffee,
+    \state_display[0] ,
+    \state_display[1] ,
+    s00_axi_aclk,
+    p_0_in,
+    reset);
+  output coffee;
+  output \state_display[0] ;
+  output \state_display[1] ;
+  input s00_axi_aclk;
+  input [2:0]p_0_in;
+  input reset;
+
+  wire coffee;
+  wire coffee_i_1_n_0;
+  wire [1:0]next_state__0;
+  wire next_state_n_0;
+  wire \next_state_reg[0]_i_1_n_0 ;
+  wire \next_state_reg[1]_i_1_n_0 ;
+  wire out__0;
+  wire \out_inferred__0/i__n_0 ;
+  wire out_n_0;
+  wire [2:0]p_0_in;
+  wire prev_insert;
+  wire prev_insert_i_1_n_0;
+  wire reset;
+  wire s00_axi_aclk;
+  wire \state_display[0] ;
+  wire \state_display[0]_i_1_n_0 ;
+  wire \state_display[1] ;
+  wire \state_display[1]_i_1_n_0 ;
+
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'h0000BA8A)) 
+    coffee_i_1
+       (.I0(coffee),
+        .I1(prev_insert),
+        .I2(p_0_in[2]),
+        .I3(out__0),
+        .I4(reset),
+        .O(coffee_i_1_n_0));
+  FDRE coffee_reg
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(coffee_i_1_n_0),
+        .Q(coffee),
+        .R(1'b0));
+  LUT4 #(
+    .INIT(16'hF777)) 
+    next_state
+       (.I0(p_0_in[0]),
+        .I1(p_0_in[1]),
+        .I2(\state_display[1] ),
+        .I3(\state_display[0] ),
+        .O(next_state_n_0));
+  (* XILINX_LEGACY_PRIM = "LD" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    \next_state_reg[0] 
+       (.CLR(1'b0),
+        .D(\next_state_reg[0]_i_1_n_0 ),
+        .G(next_state_n_0),
+        .GE(1'b1),
+        .Q(next_state__0[0]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT4 #(
+    .INIT(16'h0D42)) 
+    \next_state_reg[0]_i_1 
+       (.I0(\state_display[0] ),
+        .I1(p_0_in[1]),
+        .I2(\state_display[1] ),
+        .I3(p_0_in[0]),
+        .O(\next_state_reg[0]_i_1_n_0 ));
+  (* XILINX_LEGACY_PRIM = "LD" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    \next_state_reg[1] 
+       (.CLR(1'b0),
+        .D(\next_state_reg[1]_i_1_n_0 ),
+        .G(next_state_n_0),
+        .GE(1'b1),
+        .Q(next_state__0[1]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT4 #(
+    .INIT(16'h4158)) 
+    \next_state_reg[1]_i_1 
+       (.I0(\state_display[0] ),
+        .I1(p_0_in[0]),
+        .I2(p_0_in[1]),
+        .I3(\state_display[1] ),
+        .O(\next_state_reg[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT4 #(
+    .INIT(16'h0460)) 
+    out
+       (.I0(\state_display[0] ),
+        .I1(\state_display[1] ),
+        .I2(p_0_in[1]),
+        .I3(p_0_in[0]),
+        .O(out_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT4 #(
+    .INIT(16'hF77F)) 
+    \out_inferred__0/i_ 
+       (.I0(p_0_in[0]),
+        .I1(p_0_in[1]),
+        .I2(\state_display[1] ),
+        .I3(\state_display[0] ),
+        .O(\out_inferred__0/i__n_0 ));
+  (* XILINX_LEGACY_PRIM = "LD" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    out_reg
+       (.CLR(1'b0),
+        .D(out_n_0),
+        .G(\out_inferred__0/i__n_0 ),
+        .GE(1'b1),
+        .Q(out__0));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    prev_insert_i_1
+       (.I0(prev_insert),
+        .I1(reset),
+        .I2(p_0_in[2]),
+        .O(prev_insert_i_1_n_0));
+  FDRE prev_insert_reg
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(prev_insert_i_1_n_0),
+        .Q(prev_insert),
+        .R(1'b0));
+  LUT5 #(
+    .INIT(32'h0000BA8A)) 
+    \state_display[0]_i_1 
+       (.I0(\state_display[0] ),
+        .I1(prev_insert),
+        .I2(p_0_in[2]),
+        .I3(next_state__0[0]),
+        .I4(reset),
+        .O(\state_display[0]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h0000BA8A)) 
+    \state_display[1]_i_1 
+       (.I0(\state_display[1] ),
+        .I1(prev_insert),
+        .I2(p_0_in[2]),
+        .I3(next_state__0[1]),
+        .I4(reset),
+        .O(\state_display[1]_i_1_n_0 ));
+  FDRE \state_display_reg[0] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(\state_display[0]_i_1_n_0 ),
+        .Q(\state_display[0] ),
+        .R(1'b0));
+  FDRE \state_display_reg[1] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(\state_display[1]_i_1_n_0 ),
+        .Q(\state_display[1] ),
+        .R(1'b0));
 endmodule
 
 (* ORIG_REF_NAME = "coffee_mealy_v1_0" *) 
 module design_1_coffee_mealy_0_0_coffee_mealy_v1_0
-   (s00_axi_wready,
+   (\state_display[0] ,
+    \state_display[1] ,
+    s00_axi_wready,
     S_AXI_AWREADY,
-    s00_axi_arready,
-    s00_axi_bvalid,
+    S_AXI_ARREADY,
+    coffee,
     s00_axi_rvalid,
+    s00_axi_rdata,
+    s00_axi_bvalid,
+    insert,
+    reset,
     s00_axi_aclk,
+    s00_axi_araddr,
+    s00_axi_arvalid,
+    coins,
     s00_axi_aresetn,
     s00_axi_awvalid,
     s00_axi_wvalid,
     s00_axi_bready,
-    s00_axi_arvalid,
     s00_axi_rready);
+  output \state_display[0] ;
+  output \state_display[1] ;
   output s00_axi_wready;
   output S_AXI_AWREADY;
-  output s00_axi_arready;
-  output s00_axi_bvalid;
+  output S_AXI_ARREADY;
+  output coffee;
   output s00_axi_rvalid;
+  output [2:0]s00_axi_rdata;
+  output s00_axi_bvalid;
+  input insert;
+  input reset;
   input s00_axi_aclk;
+  input [1:0]s00_axi_araddr;
+  input s00_axi_arvalid;
+  input [1:0]coins;
   input s00_axi_aresetn;
   input s00_axi_awvalid;
   input s00_axi_wvalid;
   input s00_axi_bready;
-  input s00_axi_arvalid;
   input s00_axi_rready;
 
+  wire S_AXI_ARREADY;
   wire S_AXI_AWREADY;
+  wire coffee;
+  wire [1:0]coins;
+  wire insert;
+  wire reset;
   wire s00_axi_aclk;
+  wire [1:0]s00_axi_araddr;
   wire s00_axi_aresetn;
-  wire s00_axi_arready;
   wire s00_axi_arvalid;
   wire s00_axi_awvalid;
   wire s00_axi_bready;
   wire s00_axi_bvalid;
+  wire [2:0]s00_axi_rdata;
   wire s00_axi_rready;
   wire s00_axi_rvalid;
   wire s00_axi_wready;
   wire s00_axi_wvalid;
+  wire \state_display[0] ;
+  wire \state_display[1] ;
 
   design_1_coffee_mealy_0_0_coffee_mealy_v1_0_S00_AXI coffee_mealy_v1_0_S00_AXI_inst
-       (.s00_axi_aclk(s00_axi_aclk),
+       (.D({\state_display[1] ,\state_display[0] }),
+        .coffee(coffee),
+        .p_0_in({insert,coins}),
+        .reset(reset),
+        .s00_axi_aclk(s00_axi_aclk),
+        .s00_axi_araddr(s00_axi_araddr),
         .s00_axi_aresetn(s00_axi_aresetn),
-        .s00_axi_arready(s00_axi_arready),
+        .s00_axi_arready(S_AXI_ARREADY),
         .s00_axi_arvalid(s00_axi_arvalid),
         .s00_axi_awready(S_AXI_AWREADY),
         .s00_axi_awvalid(s00_axi_awvalid),
         .s00_axi_bready(s00_axi_bready),
         .s00_axi_bvalid(s00_axi_bvalid),
+        .s00_axi_rdata(s00_axi_rdata),
         .s00_axi_rready(s00_axi_rready),
         .s00_axi_rvalid(s00_axi_rvalid),
         .s00_axi_wready(s00_axi_wready),
@@ -192,40 +402,64 @@ endmodule
 
 (* ORIG_REF_NAME = "coffee_mealy_v1_0_S00_AXI" *) 
 module design_1_coffee_mealy_0_0_coffee_mealy_v1_0_S00_AXI
-   (s00_axi_wready,
+   (D,
+    s00_axi_wready,
     s00_axi_awready,
     s00_axi_arready,
-    s00_axi_bvalid,
+    coffee,
     s00_axi_rvalid,
+    s00_axi_rdata,
+    s00_axi_bvalid,
+    p_0_in,
+    reset,
     s00_axi_aclk,
+    s00_axi_araddr,
+    s00_axi_arvalid,
     s00_axi_aresetn,
     s00_axi_awvalid,
     s00_axi_wvalid,
     s00_axi_bready,
-    s00_axi_arvalid,
     s00_axi_rready);
+  output [1:0]D;
   output s00_axi_wready;
   output s00_axi_awready;
   output s00_axi_arready;
-  output s00_axi_bvalid;
+  output coffee;
   output s00_axi_rvalid;
+  output [2:0]s00_axi_rdata;
+  output s00_axi_bvalid;
+  input [2:0]p_0_in;
+  input reset;
   input s00_axi_aclk;
+  input [1:0]s00_axi_araddr;
+  input s00_axi_arvalid;
   input s00_axi_aresetn;
   input s00_axi_awvalid;
   input s00_axi_wvalid;
   input s00_axi_bready;
-  input s00_axi_arvalid;
   input s00_axi_rready;
 
+  wire [1:0]D;
   wire aw_en_i_1_n_0;
   wire aw_en_reg_n_0;
+  wire [3:2]axi_araddr;
+  wire \axi_araddr[2]_i_1_n_0 ;
+  wire \axi_araddr[3]_i_1_n_0 ;
   wire axi_arready0;
   wire axi_awready0__0;
   wire axi_awready_i_1_n_0;
   wire axi_bvalid_i_1_n_0;
+  wire \axi_rdata[0]_i_1_n_0 ;
+  wire \axi_rdata[1]_i_1_n_0 ;
+  wire \axi_rdata[2]_i_1_n_0 ;
   wire axi_rvalid_i_1_n_0;
   wire axi_wready0__0;
+  wire coffee;
+  wire [2:0]p_0_in;
+  wire [0:0]reg_data_out__0;
+  wire reset;
   wire s00_axi_aclk;
+  wire [1:0]s00_axi_araddr;
   wire s00_axi_aresetn;
   wire s00_axi_arready;
   wire s00_axi_arvalid;
@@ -233,10 +467,16 @@ module design_1_coffee_mealy_0_0_coffee_mealy_v1_0_S00_AXI
   wire s00_axi_awvalid;
   wire s00_axi_bready;
   wire s00_axi_bvalid;
+  wire [2:0]s00_axi_rdata;
   wire s00_axi_rready;
   wire s00_axi_rvalid;
   wire s00_axi_wready;
   wire s00_axi_wvalid;
+  wire slv_reg0;
+  wire [2:0]slv_reg1;
+  wire slv_reg2;
+  wire [1:0]slv_reg3;
+  wire slv_reg_rden__0;
 
   LUT6 #(
     .INIT(64'hF7FFF700F700F700)) 
@@ -254,7 +494,36 @@ module design_1_coffee_mealy_0_0_coffee_mealy_v1_0_S00_AXI
         .D(aw_en_i_1_n_0),
         .Q(aw_en_reg_n_0),
         .S(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \axi_araddr[2]_i_1 
+       (.I0(s00_axi_araddr[0]),
+        .I1(s00_axi_arvalid),
+        .I2(s00_axi_arready),
+        .I3(axi_araddr[2]),
+        .O(\axi_araddr[2]_i_1_n_0 ));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \axi_araddr[3]_i_1 
+       (.I0(s00_axi_araddr[1]),
+        .I1(s00_axi_arvalid),
+        .I2(s00_axi_arready),
+        .I3(axi_araddr[3]),
+        .O(\axi_araddr[3]_i_1_n_0 ));
+  FDRE \axi_araddr_reg[2] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(\axi_araddr[2]_i_1_n_0 ),
+        .Q(axi_araddr[2]),
+        .R(axi_awready_i_1_n_0));
+  FDRE \axi_araddr_reg[3] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(\axi_araddr[3]_i_1_n_0 ),
+        .Q(axi_araddr[3]),
+        .R(axi_awready_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h2)) 
     axi_arready_i_1
@@ -267,7 +536,7 @@ module design_1_coffee_mealy_0_0_coffee_mealy_v1_0_S00_AXI
         .D(axi_arready0),
         .Q(s00_axi_arready),
         .R(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'h2000)) 
     axi_awready0
@@ -303,7 +572,53 @@ module design_1_coffee_mealy_0_0_coffee_mealy_v1_0_S00_AXI
         .D(axi_bvalid_i_1_n_0),
         .Q(s00_axi_bvalid),
         .R(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT5 #(
+    .INIT(32'hFBFF0800)) 
+    \axi_rdata[0]_i_1 
+       (.I0(reg_data_out__0),
+        .I1(s00_axi_arvalid),
+        .I2(s00_axi_rvalid),
+        .I3(s00_axi_arready),
+        .I4(s00_axi_rdata[0]),
+        .O(\axi_rdata[0]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hA808FFFFA8080000)) 
+    \axi_rdata[1]_i_1 
+       (.I0(axi_araddr[2]),
+        .I1(slv_reg1[1]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg3[1]),
+        .I4(slv_reg_rden__0),
+        .I5(s00_axi_rdata[1]),
+        .O(\axi_rdata[1]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h40FF4000)) 
+    \axi_rdata[2]_i_1 
+       (.I0(axi_araddr[3]),
+        .I1(axi_araddr[2]),
+        .I2(slv_reg1[2]),
+        .I3(slv_reg_rden__0),
+        .I4(s00_axi_rdata[2]),
+        .O(\axi_rdata[2]_i_1_n_0 ));
+  FDRE \axi_rdata_reg[0] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(\axi_rdata[0]_i_1_n_0 ),
+        .Q(s00_axi_rdata[0]),
+        .R(axi_awready_i_1_n_0));
+  FDRE \axi_rdata_reg[1] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(\axi_rdata[1]_i_1_n_0 ),
+        .Q(s00_axi_rdata[1]),
+        .R(axi_awready_i_1_n_0));
+  FDRE \axi_rdata_reg[2] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(\axi_rdata[2]_i_1_n_0 ),
+        .Q(s00_axi_rdata[2]),
+        .R(axi_awready_i_1_n_0));
   LUT4 #(
     .INIT(16'h08F8)) 
     axi_rvalid_i_1
@@ -318,7 +633,7 @@ module design_1_coffee_mealy_0_0_coffee_mealy_v1_0_S00_AXI
         .D(axi_rvalid_i_1_n_0),
         .Q(s00_axi_rvalid),
         .R(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'h2000)) 
     axi_wready0
@@ -333,6 +648,73 @@ module design_1_coffee_mealy_0_0_coffee_mealy_v1_0_S00_AXI
         .D(axi_wready0__0),
         .Q(s00_axi_wready),
         .R(axi_awready_i_1_n_0));
+  design_1_coffee_mealy_0_0_coffee_mealy coffee_mealy_inst
+       (.coffee(coffee),
+        .p_0_in(p_0_in),
+        .reset(reset),
+        .s00_axi_aclk(s00_axi_aclk),
+        .\state_display[0] (D[0]),
+        .\state_display[1] (D[1]));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    reg_data_out
+       (.I0(slv_reg3[0]),
+        .I1(slv_reg1[0]),
+        .I2(axi_araddr[2]),
+        .I3(slv_reg2),
+        .I4(axi_araddr[3]),
+        .I5(slv_reg0),
+        .O(reg_data_out__0));
+  FDRE \slv_reg0_reg[0] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(reset),
+        .Q(slv_reg0),
+        .R(1'b0));
+  FDRE \slv_reg1_reg[0] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(p_0_in[0]),
+        .Q(slv_reg1[0]),
+        .R(1'b0));
+  FDRE \slv_reg1_reg[1] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(p_0_in[1]),
+        .Q(slv_reg1[1]),
+        .R(1'b0));
+  FDRE \slv_reg1_reg[2] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(p_0_in[2]),
+        .Q(slv_reg1[2]),
+        .R(1'b0));
+  FDRE \slv_reg2_reg[0] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(coffee),
+        .Q(slv_reg2),
+        .R(1'b0));
+  FDRE \slv_reg3_reg[0] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(D[0]),
+        .Q(slv_reg3[0]),
+        .R(1'b0));
+  FDRE \slv_reg3_reg[1] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(D[1]),
+        .Q(slv_reg3[1]),
+        .R(1'b0));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT3 #(
+    .INIT(8'h20)) 
+    slv_reg_rden
+       (.I0(s00_axi_arvalid),
+        .I1(s00_axi_rvalid),
+        .I2(s00_axi_arready),
+        .O(slv_reg_rden__0));
 endmodule
 `ifndef GLBL
 `define GLBL

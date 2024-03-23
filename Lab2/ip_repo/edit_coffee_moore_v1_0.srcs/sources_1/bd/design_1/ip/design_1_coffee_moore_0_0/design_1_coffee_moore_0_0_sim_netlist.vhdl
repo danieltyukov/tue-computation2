@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
--- Date        : Sat Mar 23 11:00:25 2024
+-- Date        : Sat Mar 23 22:08:04 2024
 -- Host        : computation-virtual-machine running 64-bit Ubuntu 18.04.5 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /media/sf_SharedWork/Lab2/ip_repo/edit_coffee_moore_v1_0.srcs/sources_1/bd/design_1/ip/design_1_coffee_moore_0_0/design_1_coffee_moore_0_0_sim_netlist.vhdl
@@ -16,203 +16,172 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_coffee_moore_0_0_coffee_moore is
   port (
-    prev_insert : out STD_LOGIC;
-    \state_display[2]\ : out STD_LOGIC;
-    \state_display[1]\ : out STD_LOGIC;
-    \state_display[0]\ : out STD_LOGIC;
+    state_display : out STD_LOGIC_VECTOR ( 2 downto 0 );
     coffee : out STD_LOGIC;
+    coins : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    slv_reg1 : in STD_LOGIC_VECTOR ( 0 to 0 );
     insert : in STD_LOGIC;
-    s00_axi_aclk : in STD_LOGIC;
     reset : in STD_LOGIC;
-    coins : in STD_LOGIC_VECTOR ( 1 downto 0 )
+    s00_axi_aclk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_1_coffee_moore_0_0_coffee_moore : entity is "coffee_moore";
 end design_1_coffee_moore_0_0_coffee_moore;
 
 architecture STRUCTURE of design_1_coffee_moore_0_0_coffee_moore is
-  signal next_state : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal \next_state_inferred__6/i__n_0\ : STD_LOGIC;
-  signal \next_state_reg[0]_i_1_n_0\ : STD_LOGIC;
-  signal \next_state_reg[1]_i_1_n_0\ : STD_LOGIC;
-  signal \next_state_reg[2]_i_1_n_0\ : STD_LOGIC;
-  signal \^prev_insert\ : STD_LOGIC;
-  signal \^state_display[0]\ : STD_LOGIC;
-  signal \state_display[0]_i_1_n_0\ : STD_LOGIC;
-  signal \^state_display[1]\ : STD_LOGIC;
-  signal \state_display[1]_i_1_n_0\ : STD_LOGIC;
-  signal \^state_display[2]\ : STD_LOGIC;
-  signal \state_display[2]_i_1_n_0\ : STD_LOGIC;
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \next_state_inferred__6/i_\ : label is "soft_lutpair0";
-  attribute XILINX_LEGACY_PRIM : string;
-  attribute XILINX_LEGACY_PRIM of \next_state_reg[0]\ : label is "LD";
-  attribute SOFT_HLUTNM of \next_state_reg[0]_i_1\ : label is "soft_lutpair1";
-  attribute XILINX_LEGACY_PRIM of \next_state_reg[1]\ : label is "LD";
-  attribute SOFT_HLUTNM of \next_state_reg[1]_i_1\ : label is "soft_lutpair0";
-  attribute XILINX_LEGACY_PRIM of \next_state_reg[2]\ : label is "LD";
-  attribute SOFT_HLUTNM of \next_state_reg[2]_i_1\ : label is "soft_lutpair1";
+  signal \FSM_sequential_state_display[0]_i_1_n_0\ : STD_LOGIC;
+  signal \FSM_sequential_state_display[0]_i_2_n_0\ : STD_LOGIC;
+  signal \FSM_sequential_state_display[1]_i_1_n_0\ : STD_LOGIC;
+  signal \FSM_sequential_state_display[1]_i_2_n_0\ : STD_LOGIC;
+  signal \FSM_sequential_state_display[2]_i_1_n_0\ : STD_LOGIC;
+  signal \FSM_sequential_state_display[2]_i_2_n_0\ : STD_LOGIC;
+  signal \state_display__0\ : STD_LOGIC_VECTOR ( 2 downto 0 );
+  attribute RTL_KEEP : string;
+  attribute RTL_KEEP of \state_display__0\ : signal is "yes";
+  attribute FSM_ENCODED_STATES : string;
+  attribute FSM_ENCODED_STATES of \FSM_sequential_state_display_reg[0]\ : label is "credit20:010,credit0:000,credit10:001,credit5:011,credit15:100";
+  attribute KEEP : string;
+  attribute KEEP of \FSM_sequential_state_display_reg[0]\ : label is "yes";
+  attribute FSM_ENCODED_STATES of \FSM_sequential_state_display_reg[1]\ : label is "credit20:010,credit0:000,credit10:001,credit5:011,credit15:100";
+  attribute KEEP of \FSM_sequential_state_display_reg[1]\ : label is "yes";
+  attribute FSM_ENCODED_STATES of \FSM_sequential_state_display_reg[2]\ : label is "credit20:010,credit0:000,credit10:001,credit5:011,credit15:100";
+  attribute KEEP of \FSM_sequential_state_display_reg[2]\ : label is "yes";
 begin
-  prev_insert <= \^prev_insert\;
-  \state_display[0]\ <= \^state_display[0]\;
-  \state_display[1]\ <= \^state_display[1]\;
-  \state_display[2]\ <= \^state_display[2]\;
-\coffee__0\: unisim.vcomponents.LUT3
+\/i_\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"18"
+      INIT => X"24"
     )
         port map (
-      I0 => \^state_display[1]\,
-      I1 => \^state_display[0]\,
-      I2 => \^state_display[2]\,
-      O => coffee
+      I0 => \state_display__0\(0),
+      I1 => \state_display__0\(2),
+      I2 => \state_display__0\(1),
+      O => state_display(0)
     );
-\next_state_inferred__6/i_\: unisim.vcomponents.LUT5
+\FSM_sequential_state_display[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFFFEC"
+      INIT => X"0000BA8A"
     )
         port map (
-      I0 => \^state_display[1]\,
-      I1 => \^state_display[2]\,
-      I2 => \^state_display[0]\,
-      I3 => coins(1),
-      I4 => coins(0),
-      O => \next_state_inferred__6/i__n_0\
+      I0 => \state_display__0\(0),
+      I1 => slv_reg1(0),
+      I2 => insert,
+      I3 => \FSM_sequential_state_display[0]_i_2_n_0\,
+      I4 => reset,
+      O => \FSM_sequential_state_display[0]_i_1_n_0\
     );
-\next_state_reg[0]\: unisim.vcomponents.LDCE
+\FSM_sequential_state_display[0]_i_2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => '0'
+      INIT => X"EFEFAB54"
     )
         port map (
-      CLR => '0',
-      D => \next_state_reg[0]_i_1_n_0\,
-      G => \next_state_inferred__6/i__n_0\,
-      GE => '1',
-      Q => next_state(0)
-    );
-\next_state_reg[0]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"2314"
-    )
-        port map (
-      I0 => \^state_display[1]\,
-      I1 => \^state_display[2]\,
-      I2 => \^state_display[0]\,
-      I3 => coins(1),
-      O => \next_state_reg[0]_i_1_n_0\
-    );
-\next_state_reg[1]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => '0',
-      D => \next_state_reg[1]_i_1_n_0\,
-      G => \next_state_inferred__6/i__n_0\,
-      GE => '1',
-      Q => next_state(1)
-    );
-\next_state_reg[1]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"16163511"
-    )
-        port map (
-      I0 => \^state_display[1]\,
-      I1 => \^state_display[2]\,
-      I2 => \^state_display[0]\,
+      I0 => \state_display__0\(2),
+      I1 => \state_display__0\(1),
+      I2 => \state_display__0\(0),
       I3 => coins(0),
       I4 => coins(1),
-      O => \next_state_reg[1]_i_1_n_0\
+      O => \FSM_sequential_state_display[0]_i_2_n_0\
     );
-\next_state_reg[2]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => '0',
-      D => \next_state_reg[2]_i_1_n_0\,
-      G => \next_state_inferred__6/i__n_0\,
-      GE => '1',
-      Q => next_state(2)
-    );
-\next_state_reg[2]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"0002"
-    )
-        port map (
-      I0 => \^state_display[1]\,
-      I1 => coins(1),
-      I2 => \^state_display[0]\,
-      I3 => \^state_display[2]\,
-      O => \next_state_reg[2]_i_1_n_0\
-    );
-prev_insert_reg: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => '1',
-      D => insert,
-      Q => \^prev_insert\,
-      R => '0'
-    );
-\state_display[0]_i_1\: unisim.vcomponents.LUT5
+\FSM_sequential_state_display[1]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"0000BA8A"
     )
         port map (
-      I0 => \^state_display[0]\,
-      I1 => \^prev_insert\,
+      I0 => \state_display__0\(1),
+      I1 => slv_reg1(0),
       I2 => insert,
-      I3 => next_state(0),
+      I3 => \FSM_sequential_state_display[1]_i_2_n_0\,
       I4 => reset,
-      O => \state_display[0]_i_1_n_0\
+      O => \FSM_sequential_state_display[1]_i_1_n_0\
     );
-\state_display[1]_i_1\: unisim.vcomponents.LUT5
+\FSM_sequential_state_display[1]_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AABB1404"
+    )
+        port map (
+      I0 => \state_display__0\(2),
+      I1 => \state_display__0\(1),
+      I2 => coins(0),
+      I3 => \state_display__0\(0),
+      I4 => coins(1),
+      O => \FSM_sequential_state_display[1]_i_2_n_0\
+    );
+\FSM_sequential_state_display[2]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"0000BA8A"
     )
         port map (
-      I0 => \^state_display[1]\,
-      I1 => \^prev_insert\,
+      I0 => \state_display__0\(2),
+      I1 => slv_reg1(0),
       I2 => insert,
-      I3 => next_state(1),
+      I3 => \FSM_sequential_state_display[2]_i_2_n_0\,
       I4 => reset,
-      O => \state_display[1]_i_1_n_0\
+      O => \FSM_sequential_state_display[2]_i_1_n_0\
     );
-\state_display[2]_i_1\: unisim.vcomponents.LUT5
+\FSM_sequential_state_display[2]_i_2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000BA8A"
+      INIT => X"00005808"
     )
         port map (
-      I0 => \^state_display[2]\,
-      I1 => \^prev_insert\,
-      I2 => insert,
-      I3 => next_state(2),
-      I4 => reset,
-      O => \state_display[2]_i_1_n_0\
+      I0 => coins(1),
+      I1 => \state_display__0\(0),
+      I2 => \state_display__0\(1),
+      I3 => coins(0),
+      I4 => \state_display__0\(2),
+      O => \FSM_sequential_state_display[2]_i_2_n_0\
     );
-\state_display_reg[0]\: unisim.vcomponents.FDRE
+\FSM_sequential_state_display_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => \state_display[0]_i_1_n_0\,
-      Q => \^state_display[0]\,
+      D => \FSM_sequential_state_display[0]_i_1_n_0\,
+      Q => \state_display__0\(0),
       R => '0'
     );
-\state_display_reg[1]\: unisim.vcomponents.FDRE
+\FSM_sequential_state_display_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => \state_display[1]_i_1_n_0\,
-      Q => \^state_display[1]\,
+      D => \FSM_sequential_state_display[1]_i_1_n_0\,
+      Q => \state_display__0\(1),
       R => '0'
     );
-\state_display_reg[2]\: unisim.vcomponents.FDRE
+\FSM_sequential_state_display_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => \state_display[2]_i_1_n_0\,
-      Q => \^state_display[2]\,
+      D => \FSM_sequential_state_display[2]_i_1_n_0\,
+      Q => \state_display__0\(2),
       R => '0'
+    );
+coffee_INST_0: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"14"
+    )
+        port map (
+      I0 => \state_display__0\(0),
+      I1 => \state_display__0\(2),
+      I2 => \state_display__0\(1),
+      O => coffee
+    );
+\state_display[1]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"06"
+    )
+        port map (
+      I0 => \state_display__0\(2),
+      I1 => \state_display__0\(0),
+      I2 => \state_display__0\(1),
+      O => state_display(1)
+    );
+\state_display[2]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"02"
+    )
+        port map (
+      I0 => \state_display__0\(1),
+      I1 => \state_display__0\(2),
+      I2 => \state_display__0\(0),
+      O => state_display(2)
     );
 end STRUCTURE;
 library IEEE;
@@ -221,7 +190,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI is
   port (
-    D : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    state_display : out STD_LOGIC_VECTOR ( 2 downto 0 );
     s00_axi_wready : out STD_LOGIC;
     S_AXI_AWREADY : out STD_LOGIC;
     S_AXI_ARREADY : out STD_LOGIC;
@@ -229,12 +198,12 @@ entity design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI is
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 2 downto 0 );
     s00_axi_rvalid : out STD_LOGIC;
     s00_axi_bvalid : out STD_LOGIC;
+    coins : in STD_LOGIC_VECTOR ( 1 downto 0 );
     insert : in STD_LOGIC;
-    s00_axi_aclk : in STD_LOGIC;
     reset : in STD_LOGIC;
+    s00_axi_aclk : in STD_LOGIC;
     s00_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_arvalid : in STD_LOGIC;
-    coins : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_wvalid : in STD_LOGIC;
     s00_axi_awvalid : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC;
@@ -246,7 +215,6 @@ entity design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI is
 end design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI;
 
 architecture STRUCTURE of design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI is
-  signal \^d\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \^s_axi_arready\ : STD_LOGIC;
   signal \^s_axi_awready\ : STD_LOGIC;
   signal aw_en_i_1_n_0 : STD_LOGIC;
@@ -264,26 +232,25 @@ architecture STRUCTURE of design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI is
   signal axi_rvalid_i_1_n_0 : STD_LOGIC;
   signal \axi_wready0__0\ : STD_LOGIC;
   signal \^coffee\ : STD_LOGIC;
-  signal prev_insert : STD_LOGIC;
   signal \reg_data_out__0\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \^s00_axi_bvalid\ : STD_LOGIC;
   signal \^s00_axi_rdata\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \^s00_axi_rvalid\ : STD_LOGIC;
   signal \^s00_axi_wready\ : STD_LOGIC;
   signal slv_reg0 : STD_LOGIC;
-  signal slv_reg1 : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal slv_reg1 : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal slv_reg2 : STD_LOGIC;
   signal slv_reg3 : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \slv_reg_rden__0\ : STD_LOGIC;
+  signal \^state_display\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \axi_araddr[2]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of axi_awready0 : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \axi_rdata[0]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of axi_wready0 : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of slv_reg_rden : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \axi_araddr[2]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of axi_awready0 : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \axi_rdata[0]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of axi_wready0 : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of slv_reg_rden : label is "soft_lutpair0";
 begin
-  D(2 downto 0) <= \^d\(2 downto 0);
   S_AXI_ARREADY <= \^s_axi_arready\;
   S_AXI_AWREADY <= \^s_axi_awready\;
   coffee <= \^coffee\;
@@ -291,6 +258,7 @@ begin
   s00_axi_rdata(2 downto 0) <= \^s00_axi_rdata\(2 downto 0);
   s00_axi_rvalid <= \^s00_axi_rvalid\;
   s00_axi_wready <= \^s00_axi_wready\;
+  state_display(2 downto 0) <= \^state_display\(2 downto 0);
 aw_en_i_1: unisim.vcomponents.LUT6
     generic map(
       INIT => X"F7FFF700F700F700"
@@ -446,7 +414,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => axi_araddr(2),
-      I1 => prev_insert,
+      I1 => slv_reg1(2),
       I2 => axi_araddr(3),
       I3 => slv_reg3(2),
       I4 => \slv_reg_rden__0\,
@@ -520,12 +488,10 @@ coffee_moore_inst: entity work.design_1_coffee_moore_0_0_coffee_moore
       coffee => \^coffee\,
       coins(1 downto 0) => coins(1 downto 0),
       insert => insert,
-      prev_insert => prev_insert,
       reset => reset,
       s00_axi_aclk => s00_axi_aclk,
-      \state_display[0]\ => \^d\(0),
-      \state_display[1]\ => \^d\(1),
-      \state_display[2]\ => \^d\(2)
+      slv_reg1(0) => slv_reg1(2),
+      state_display(2 downto 0) => \^state_display\(2 downto 0)
     );
 reg_data_out: unisim.vcomponents.LUT6
     generic map(
@@ -564,6 +530,14 @@ reg_data_out: unisim.vcomponents.LUT6
       Q => slv_reg1(1),
       R => '0'
     );
+\slv_reg1_reg[2]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => insert,
+      Q => slv_reg1(2),
+      R => '0'
+    );
 \slv_reg2_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
@@ -576,7 +550,7 @@ reg_data_out: unisim.vcomponents.LUT6
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => \^d\(0),
+      D => \^state_display\(0),
       Q => slv_reg3(0),
       R => '0'
     );
@@ -584,7 +558,7 @@ reg_data_out: unisim.vcomponents.LUT6
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => \^d\(1),
+      D => \^state_display\(1),
       Q => slv_reg3(1),
       R => '0'
     );
@@ -592,7 +566,7 @@ reg_data_out: unisim.vcomponents.LUT6
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => \^d\(2),
+      D => \^state_display\(2),
       Q => slv_reg3(2),
       R => '0'
     );
@@ -613,9 +587,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_coffee_moore_0_0_coffee_moore_v1_0 is
   port (
-    \state_display[2]\ : out STD_LOGIC;
-    \state_display[1]\ : out STD_LOGIC;
-    \state_display[0]\ : out STD_LOGIC;
+    state_display : out STD_LOGIC_VECTOR ( 2 downto 0 );
     s00_axi_wready : out STD_LOGIC;
     S_AXI_AWREADY : out STD_LOGIC;
     S_AXI_ARREADY : out STD_LOGIC;
@@ -623,12 +595,12 @@ entity design_1_coffee_moore_0_0_coffee_moore_v1_0 is
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 2 downto 0 );
     s00_axi_rvalid : out STD_LOGIC;
     s00_axi_bvalid : out STD_LOGIC;
+    coins : in STD_LOGIC_VECTOR ( 1 downto 0 );
     insert : in STD_LOGIC;
-    s00_axi_aclk : in STD_LOGIC;
     reset : in STD_LOGIC;
+    s00_axi_aclk : in STD_LOGIC;
     s00_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_arvalid : in STD_LOGIC;
-    coins : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_wvalid : in STD_LOGIC;
     s00_axi_awvalid : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC;
@@ -643,9 +615,6 @@ architecture STRUCTURE of design_1_coffee_moore_0_0_coffee_moore_v1_0 is
 begin
 coffee_moore_v1_0_S00_AXI_inst: entity work.design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI
      port map (
-      D(2) => \state_display[2]\,
-      D(1) => \state_display[1]\,
-      D(0) => \state_display[0]\,
       S_AXI_ARREADY => S_AXI_ARREADY,
       S_AXI_AWREADY => S_AXI_AWREADY,
       coffee => coffee,
@@ -663,7 +632,8 @@ coffee_moore_v1_0_S00_AXI_inst: entity work.design_1_coffee_moore_0_0_coffee_moo
       s00_axi_rready => s00_axi_rready,
       s00_axi_rvalid => s00_axi_rvalid,
       s00_axi_wready => s00_axi_wready,
-      s00_axi_wvalid => s00_axi_wvalid
+      s00_axi_wvalid => s00_axi_wvalid,
+      state_display(2 downto 0) => state_display(2 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -799,8 +769,6 @@ inst: entity work.design_1_coffee_moore_0_0_coffee_moore_v1_0
       s00_axi_rvalid => s00_axi_rvalid,
       s00_axi_wready => s00_axi_wready,
       s00_axi_wvalid => s00_axi_wvalid,
-      \state_display[0]\ => state_display(0),
-      \state_display[1]\ => state_display(1),
-      \state_display[2]\ => state_display(2)
+      state_display(2 downto 0) => state_display(2 downto 0)
     );
 end STRUCTURE;

@@ -1,4 +1,4 @@
-18:32:51 **** Build of project fsm_code_bsp ****
+23:15:38 **** Build of project fsm_code_bsp ****
 make -k all 
 Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src
 make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -110,7 +110,7 @@ Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
 make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 Compiling scutimer
 Finished building libraries
-18:32:58 **** Build of configuration Debug for project fsm_code ****
+23:15:45 **** Build of configuration Debug for project fsm_code ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
@@ -135,12 +135,12 @@ arm-none-eabi-size fsm_code.elf  |tee "fsm_code.elf.size"
   19348	   1144	  22568	  43060	   a834	fsm_code.elf
 Finished building: fsm_code.elf.size
  
-18:33:00 **** Auto Build of configuration Debug for project fsm_code ****
+23:15:46 **** Auto Build of configuration Debug for project fsm_code ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
-18:34:28 **** Auto Build of configuration Debug for project fsm_code ****
+23:16:27 **** Auto Build of configuration Debug for project fsm_code ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
@@ -160,7 +160,7 @@ arm-none-eabi-size fsm_code.elf  |tee "fsm_code.elf.size"
   22420	   1144	  22568	  46132	   b434	fsm_code.elf
 Finished building: fsm_code.elf.size
  
-18:35:16 **** Incremental Build of configuration Debug for project fsm_code ****
+23:17:03 **** Incremental Build of configuration Debug for project fsm_code ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  

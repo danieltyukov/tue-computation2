@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="design_1" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1711214738"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1711214738"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1711214738"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1711214738"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1711231697"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1711231697"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1711231697"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1711231697"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/design_1_coffee_mealy_0_0/design_1_coffee_mealy_0_0.xci" Type="IP">
         <Instance HierarchyPath="coffee_mealy_0"/>
@@ -31,6 +31,14 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
+      <File Name="ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0.xci" Type="IP">
+        <Instance HierarchyPath="xlconcat_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
       <File Name="ip/design_1_debounce_0_1/design_1_debounce_0_1.xci" Type="IP">
         <Instance HierarchyPath="debounce_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -49,14 +57,6 @@
       </File>
       <File Name="ip/design_1_debounce_0_3/design_1_debounce_0_3.xci" Type="IP">
         <Instance HierarchyPath="debounce_3"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0.xci" Type="IP">
-        <Instance HierarchyPath="xlconcat_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

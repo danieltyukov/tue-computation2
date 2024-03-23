@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Sat Mar 23 11:04:59 2024
+| Date             : Sat Mar 23 22:12:31 2024
 | Host             : computation-virtual-machine running 64-bit Ubuntu 18.04.5 LTS
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -53,12 +53,12 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.003 |        3 |       --- |             --- |
-| Slice Logic             |     0.001 |     1131 |       --- |             --- |
-|   LUT as Logic          |     0.001 |      328 |     53200 |            0.62 |
-|   Register              |    <0.001 |      467 |    106400 |            0.44 |
+| Slice Logic             |     0.001 |     1128 |       --- |             --- |
+|   LUT as Logic          |     0.001 |      332 |     53200 |            0.62 |
+|   Register              |    <0.001 |      464 |    106400 |            0.44 |
 |   CARRY4                |    <0.001 |       23 |     13300 |            0.17 |
 |   LUT as Shift Register |    <0.001 |       31 |     17400 |            0.18 |
-|   Others                |     0.000 |      199 |       --- |             --- |
+|   Others                |     0.000 |      197 |       --- |             --- |
 | Signals                 |     0.001 |      712 |       --- |             --- |
 | I/O                     |    <0.001 |        8 |       125 |            6.40 |
 | PS7                     |     1.256 |        1 |       --- |             --- |

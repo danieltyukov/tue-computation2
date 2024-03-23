@@ -26,7 +26,7 @@ module coffee_moore(input clk,
                 state_display <= next_state;
             end
         end
-        prev_insert = insert;
+        prev_insert <= insert;
     end
     
     always @(*) begin
@@ -34,14 +34,17 @@ module coffee_moore(input clk,
             credit0: begin
                 if (coins[1]) next_state      = credit5;
                 else if (coins[0]) next_state = credit10;
+                else if (~|coins) next_state  = credit0;
             end
             credit5: begin
                 if (coins[1]) next_state      = credit10;
                 else if (coins[0]) next_state = credit15;
+                else if (~|coins) next_state  = credit5;
             end
             credit10: begin
                 if (coins[1]) next_state      = credit15;
                 else if (coins[0]) next_state = credit20;
+                else if (~|coins) next_state  = credit10;
             end
             credit15: begin
                 if (coins[1]) next_state      = credit5;

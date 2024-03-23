@@ -1,4 +1,4 @@
-Running: xsim.dir/coffee_mealy_tb_behav/xsimk -simmode gui -wdb coffee_mealy_tb_behav.wdb -simrunnum 0 -socket 51273
+Running: xsim.dir/coffee_mealy_tb_behav/xsimk -simmode gui -wdb coffee_mealy_tb_behav.wdb -simrunnum 0 -socket 39329
 Design successfully loaded
 Design Loading Memory Usage: 43168 KB (Peak: 43224 KB)
 Design Loading CPU Usage: 10 ms

@@ -214,17 +214,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>debounce_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="debounce" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_debounce_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">debounce</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>processing_system7_0</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="processing_system7" spirit:vendor="xilinx.com" spirit:version="5.5"/>
         <spirit:configurableElementValues>
@@ -757,6 +746,17 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
+        <spirit:instanceName>debounce_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="debounce" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_debounce_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">debounce</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
         <spirit:instanceName>xlconcat_0</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="xlconcat" spirit:vendor="xilinx.com" spirit:version="2.1"/>
         <spirit:configurableElementValues>
@@ -842,8 +842,8 @@
         <spirit:internalPortReference spirit:componentRef="coffee_moore_0" spirit:portRef="reset"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>debounce_2_button_out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="debounce_2" spirit:portRef="button_out"/>
+        <spirit:name>debounce_3_button_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="debounce_3" spirit:portRef="button_out"/>
         <spirit:internalPortReference spirit:componentRef="coffee_moore_0" spirit:portRef="insert"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -852,8 +852,8 @@
         <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="In0"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>debounce_3_button_out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="debounce_3" spirit:portRef="button_out"/>
+        <spirit:name>debounce_2_button_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="debounce_2" spirit:portRef="button_out"/>
         <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="In1"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -874,12 +874,12 @@
       <spirit:adHocConnection>
         <spirit:name>button_in_2_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="button_in_coins_5"/>
-        <spirit:internalPortReference spirit:componentRef="debounce_3" spirit:portRef="button_in"/>
+        <spirit:internalPortReference spirit:componentRef="debounce_2" spirit:portRef="button_in"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>button_in_3_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="button_in_insert"/>
-        <spirit:internalPortReference spirit:componentRef="debounce_2" spirit:portRef="button_in"/>
+        <spirit:internalPortReference spirit:componentRef="debounce_3" spirit:portRef="button_in"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_CLK0</spirit:name>

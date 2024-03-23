@@ -6,7 +6,7 @@
 <Project Version="7" Minor="38" Path="/media/sf_SharedWork/Lab2/coffee_moore/coffee_moore.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="57139bdff82346238bfe2dc01e437937"/>
+    <Option Name="Id" Val="8f863ef03cc148a092506d12faf13918"/>
     <Option Name="Part" Val="xc7z020clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>

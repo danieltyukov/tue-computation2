@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-//Date        : Sat Mar 23 18:25:29 2024
+//Date        : Sat Mar 23 23:08:09 2024
 //Host        : computation-virtual-machine running 64-bit Ubuntu 18.04.5 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -64,14 +64,14 @@ module design_1
   input button_in_insert;
   input button_in_reset;
   output coffee_0;
-  output [2:0]state_display_0;
+  output [1:0]state_display_0;
 
   wire button_in_0_1;
   wire button_in_1_1;
   wire button_in_2_1;
   wire button_in_3_1;
   wire coffee_mealy_0_coffee;
-  wire [2:0]coffee_mealy_0_state_display;
+  wire [1:0]coffee_mealy_0_state_display;
   wire debounce_0_button_out;
   wire debounce_1_button_out;
   wire debounce_2_button_out;
@@ -160,12 +160,12 @@ module design_1
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
   wire [1:0]xlconcat_0_dout;
 
-  assign button_in_0_1 = button_in_coins_5;
+  assign button_in_0_1 = button_in_reset;
   assign button_in_1_1 = button_in_coins_10;
-  assign button_in_2_1 = button_in_insert;
-  assign button_in_3_1 = button_in_reset;
+  assign button_in_2_1 = button_in_coins_5;
+  assign button_in_3_1 = button_in_insert;
   assign coffee_0 = coffee_mealy_0_coffee;
-  assign state_display_0[2:0] = coffee_mealy_0_state_display;
+  assign state_display_0[1:0] = coffee_mealy_0_state_display;
   design_1_coffee_mealy_0_0 coffee_mealy_0
        (.coffee(coffee_mealy_0_coffee),
         .coins(xlconcat_0_dout),
@@ -194,7 +194,7 @@ module design_1
         .s00_axi_wvalid(ps7_0_axi_periph_M00_AXI_WVALID),
         .state_display(coffee_mealy_0_state_display));
   design_1_debounce_0_0 debounce_0
-       (.button_in(button_in_3_1),
+       (.button_in(button_in_0_1),
         .button_out(debounce_0_button_out),
         .clk(processing_system7_0_FCLK_CLK0),
         .reset(rst_ps7_0_100M_peripheral_aresetn));
@@ -204,12 +204,12 @@ module design_1
         .clk(processing_system7_0_FCLK_CLK0),
         .reset(rst_ps7_0_100M_peripheral_aresetn));
   design_1_debounce_0_2 debounce_2
-       (.button_in(button_in_0_1),
+       (.button_in(button_in_2_1),
         .button_out(debounce_2_button_out),
         .clk(processing_system7_0_FCLK_CLK0),
         .reset(rst_ps7_0_100M_peripheral_aresetn));
   design_1_debounce_0_3 debounce_3
-       (.button_in(button_in_2_1),
+       (.button_in(button_in_3_1),
         .button_out(debounce_3_button_out),
         .clk(processing_system7_0_FCLK_CLK0),
         .reset(rst_ps7_0_100M_peripheral_aresetn));

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Mar 23 18:25:38 2024" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Mar 23 23:08:17 2024" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -9,14 +9,14 @@
         <CONNECTION INSTANCE="coffee_mealy_0" PORT="coffee"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="2" NAME="state_display_0" RIGHT="0" SIGIS="undef" SIGNAME="coffee_mealy_0_state_display">
+    <PORT DIR="O" LEFT="1" NAME="state_display_0" RIGHT="0" SIGIS="undef" SIGNAME="coffee_mealy_0_state_display">
       <CONNECTIONS>
         <CONNECTION INSTANCE="coffee_mealy_0" PORT="state_display"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="button_in_coins_5" SIGIS="undef" SIGNAME="External_Ports_button_in_coins_5">
+    <PORT DIR="I" NAME="button_in_reset" SIGIS="undef" SIGNAME="External_Ports_button_in_reset">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="debounce_2" PORT="button_in"/>
+        <CONNECTION INSTANCE="debounce_0" PORT="button_in"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="button_in_coins_10" SIGIS="undef" SIGNAME="External_Ports_button_in_coins_10">
@@ -24,14 +24,14 @@
         <CONNECTION INSTANCE="debounce_1" PORT="button_in"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="I" NAME="button_in_coins_5" SIGIS="undef" SIGNAME="External_Ports_button_in_coins_5">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="debounce_2" PORT="button_in"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="I" NAME="button_in_insert" SIGIS="undef" SIGNAME="External_Ports_button_in_insert">
       <CONNECTIONS>
         <CONNECTION INSTANCE="debounce_3" PORT="button_in"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="button_in_reset" SIGIS="undef" SIGNAME="External_Ports_button_in_reset">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="debounce_0" PORT="button_in"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef"/>
@@ -139,7 +139,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="coffee_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="state_display" RIGHT="0" SIGIS="undef" SIGNAME="coffee_mealy_0_state_display">
+        <PORT DIR="O" LEFT="1" NAME="state_display" RIGHT="0" SIGIS="undef" SIGNAME="coffee_mealy_0_state_display">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="state_display_0"/>
           </CONNECTIONS>

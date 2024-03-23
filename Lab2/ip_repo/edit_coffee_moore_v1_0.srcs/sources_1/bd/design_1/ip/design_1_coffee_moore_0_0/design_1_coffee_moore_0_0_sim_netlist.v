@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-// Date        : Sat Mar 23 11:00:25 2024
+// Date        : Sat Mar 23 22:08:04 2024
 // Host        : computation-virtual-machine running 64-bit Ubuntu 18.04.5 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /media/sf_SharedWork/Lab2/ip_repo/edit_coffee_moore_v1_0.srcs/sources_1/bd/design_1/ip/design_1_coffee_moore_0_0/design_1_coffee_moore_0_0_sim_netlist.v
@@ -144,180 +144,152 @@ module design_1_coffee_moore_0_0
         .s00_axi_rvalid(s00_axi_rvalid),
         .s00_axi_wready(s00_axi_wready),
         .s00_axi_wvalid(s00_axi_wvalid),
-        .\state_display[0] (state_display[0]),
-        .\state_display[1] (state_display[1]),
-        .\state_display[2] (state_display[2]));
+        .state_display(state_display));
 endmodule
 
 (* ORIG_REF_NAME = "coffee_moore" *) 
 module design_1_coffee_moore_0_0_coffee_moore
-   (prev_insert,
-    \state_display[2] ,
-    \state_display[1] ,
-    \state_display[0] ,
+   (state_display,
     coffee,
+    coins,
+    slv_reg1,
     insert,
-    s00_axi_aclk,
     reset,
-    coins);
-  output prev_insert;
-  output \state_display[2] ;
-  output \state_display[1] ;
-  output \state_display[0] ;
+    s00_axi_aclk);
+  output [2:0]state_display;
   output coffee;
-  input insert;
-  input s00_axi_aclk;
-  input reset;
   input [1:0]coins;
+  input [0:0]slv_reg1;
+  input insert;
+  input reset;
+  input s00_axi_aclk;
 
+  wire \FSM_sequential_state_display[0]_i_1_n_0 ;
+  wire \FSM_sequential_state_display[0]_i_2_n_0 ;
+  wire \FSM_sequential_state_display[1]_i_1_n_0 ;
+  wire \FSM_sequential_state_display[1]_i_2_n_0 ;
+  wire \FSM_sequential_state_display[2]_i_1_n_0 ;
+  wire \FSM_sequential_state_display[2]_i_2_n_0 ;
   wire coffee;
   wire [1:0]coins;
   wire insert;
-  wire [2:0]next_state;
-  wire \next_state_inferred__6/i__n_0 ;
-  wire \next_state_reg[0]_i_1_n_0 ;
-  wire \next_state_reg[1]_i_1_n_0 ;
-  wire \next_state_reg[2]_i_1_n_0 ;
-  wire prev_insert;
   wire reset;
   wire s00_axi_aclk;
-  wire \state_display[0] ;
-  wire \state_display[0]_i_1_n_0 ;
-  wire \state_display[1] ;
-  wire \state_display[1]_i_1_n_0 ;
-  wire \state_display[2] ;
-  wire \state_display[2]_i_1_n_0 ;
+  wire [0:0]slv_reg1;
+  wire [2:0]state_display;
+  (* RTL_KEEP = "yes" *) wire [2:0]state_display__0;
 
   LUT3 #(
-    .INIT(8'h18)) 
-    coffee__0
-       (.I0(\state_display[1] ),
-        .I1(\state_display[0] ),
-        .I2(\state_display[2] ),
-        .O(coffee));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+    .INIT(8'h24)) 
+    \/i_ 
+       (.I0(state_display__0[0]),
+        .I1(state_display__0[2]),
+        .I2(state_display__0[1]),
+        .O(state_display[0]));
   LUT5 #(
-    .INIT(32'hFFFFFFEC)) 
-    \next_state_inferred__6/i_ 
-       (.I0(\state_display[1] ),
-        .I1(\state_display[2] ),
-        .I2(\state_display[0] ),
-        .I3(coins[1]),
-        .I4(coins[0]),
-        .O(\next_state_inferred__6/i__n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \next_state_reg[0] 
-       (.CLR(1'b0),
-        .D(\next_state_reg[0]_i_1_n_0 ),
-        .G(\next_state_inferred__6/i__n_0 ),
-        .GE(1'b1),
-        .Q(next_state[0]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT4 #(
-    .INIT(16'h2314)) 
-    \next_state_reg[0]_i_1 
-       (.I0(\state_display[1] ),
-        .I1(\state_display[2] ),
-        .I2(\state_display[0] ),
-        .I3(coins[1]),
-        .O(\next_state_reg[0]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \next_state_reg[1] 
-       (.CLR(1'b0),
-        .D(\next_state_reg[1]_i_1_n_0 ),
-        .G(\next_state_inferred__6/i__n_0 ),
-        .GE(1'b1),
-        .Q(next_state[1]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+    .INIT(32'h0000BA8A)) 
+    \FSM_sequential_state_display[0]_i_1 
+       (.I0(state_display__0[0]),
+        .I1(slv_reg1),
+        .I2(insert),
+        .I3(\FSM_sequential_state_display[0]_i_2_n_0 ),
+        .I4(reset),
+        .O(\FSM_sequential_state_display[0]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h16163511)) 
-    \next_state_reg[1]_i_1 
-       (.I0(\state_display[1] ),
-        .I1(\state_display[2] ),
-        .I2(\state_display[0] ),
+    .INIT(32'hEFEFAB54)) 
+    \FSM_sequential_state_display[0]_i_2 
+       (.I0(state_display__0[2]),
+        .I1(state_display__0[1]),
+        .I2(state_display__0[0]),
         .I3(coins[0]),
         .I4(coins[1]),
-        .O(\next_state_reg[1]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \next_state_reg[2] 
-       (.CLR(1'b0),
-        .D(\next_state_reg[2]_i_1_n_0 ),
-        .G(\next_state_inferred__6/i__n_0 ),
-        .GE(1'b1),
-        .Q(next_state[2]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT4 #(
-    .INIT(16'h0002)) 
-    \next_state_reg[2]_i_1 
-       (.I0(\state_display[1] ),
-        .I1(coins[1]),
-        .I2(\state_display[0] ),
-        .I3(\state_display[2] ),
-        .O(\next_state_reg[2]_i_1_n_0 ));
-  FDRE prev_insert_reg
-       (.C(s00_axi_aclk),
-        .CE(1'b1),
-        .D(insert),
-        .Q(prev_insert),
-        .R(1'b0));
+        .O(\FSM_sequential_state_display[0]_i_2_n_0 ));
   LUT5 #(
     .INIT(32'h0000BA8A)) 
-    \state_display[0]_i_1 
-       (.I0(\state_display[0] ),
-        .I1(prev_insert),
+    \FSM_sequential_state_display[1]_i_1 
+       (.I0(state_display__0[1]),
+        .I1(slv_reg1),
         .I2(insert),
-        .I3(next_state[0]),
+        .I3(\FSM_sequential_state_display[1]_i_2_n_0 ),
         .I4(reset),
-        .O(\state_display[0]_i_1_n_0 ));
+        .O(\FSM_sequential_state_display[1]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'hAABB1404)) 
+    \FSM_sequential_state_display[1]_i_2 
+       (.I0(state_display__0[2]),
+        .I1(state_display__0[1]),
+        .I2(coins[0]),
+        .I3(state_display__0[0]),
+        .I4(coins[1]),
+        .O(\FSM_sequential_state_display[1]_i_2_n_0 ));
   LUT5 #(
     .INIT(32'h0000BA8A)) 
-    \state_display[1]_i_1 
-       (.I0(\state_display[1] ),
-        .I1(prev_insert),
+    \FSM_sequential_state_display[2]_i_1 
+       (.I0(state_display__0[2]),
+        .I1(slv_reg1),
         .I2(insert),
-        .I3(next_state[1]),
+        .I3(\FSM_sequential_state_display[2]_i_2_n_0 ),
         .I4(reset),
-        .O(\state_display[1]_i_1_n_0 ));
+        .O(\FSM_sequential_state_display[2]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h0000BA8A)) 
-    \state_display[2]_i_1 
-       (.I0(\state_display[2] ),
-        .I1(prev_insert),
-        .I2(insert),
-        .I3(next_state[2]),
-        .I4(reset),
-        .O(\state_display[2]_i_1_n_0 ));
-  FDRE \state_display_reg[0] 
+    .INIT(32'h00005808)) 
+    \FSM_sequential_state_display[2]_i_2 
+       (.I0(coins[1]),
+        .I1(state_display__0[0]),
+        .I2(state_display__0[1]),
+        .I3(coins[0]),
+        .I4(state_display__0[2]),
+        .O(\FSM_sequential_state_display[2]_i_2_n_0 ));
+  (* FSM_ENCODED_STATES = "credit20:010,credit0:000,credit10:001,credit5:011,credit15:100" *) 
+  (* KEEP = "yes" *) 
+  FDRE \FSM_sequential_state_display_reg[0] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(\state_display[0]_i_1_n_0 ),
-        .Q(\state_display[0] ),
+        .D(\FSM_sequential_state_display[0]_i_1_n_0 ),
+        .Q(state_display__0[0]),
         .R(1'b0));
-  FDRE \state_display_reg[1] 
+  (* FSM_ENCODED_STATES = "credit20:010,credit0:000,credit10:001,credit5:011,credit15:100" *) 
+  (* KEEP = "yes" *) 
+  FDRE \FSM_sequential_state_display_reg[1] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(\state_display[1]_i_1_n_0 ),
-        .Q(\state_display[1] ),
+        .D(\FSM_sequential_state_display[1]_i_1_n_0 ),
+        .Q(state_display__0[1]),
         .R(1'b0));
-  FDRE \state_display_reg[2] 
+  (* FSM_ENCODED_STATES = "credit20:010,credit0:000,credit10:001,credit5:011,credit15:100" *) 
+  (* KEEP = "yes" *) 
+  FDRE \FSM_sequential_state_display_reg[2] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(\state_display[2]_i_1_n_0 ),
-        .Q(\state_display[2] ),
+        .D(\FSM_sequential_state_display[2]_i_1_n_0 ),
+        .Q(state_display__0[2]),
         .R(1'b0));
+  LUT3 #(
+    .INIT(8'h14)) 
+    coffee_INST_0
+       (.I0(state_display__0[0]),
+        .I1(state_display__0[2]),
+        .I2(state_display__0[1]),
+        .O(coffee));
+  LUT3 #(
+    .INIT(8'h06)) 
+    \state_display[1]_INST_0 
+       (.I0(state_display__0[2]),
+        .I1(state_display__0[0]),
+        .I2(state_display__0[1]),
+        .O(state_display[1]));
+  LUT3 #(
+    .INIT(8'h02)) 
+    \state_display[2]_INST_0 
+       (.I0(state_display__0[1]),
+        .I1(state_display__0[2]),
+        .I2(state_display__0[0]),
+        .O(state_display[2]));
 endmodule
 
 (* ORIG_REF_NAME = "coffee_moore_v1_0" *) 
 module design_1_coffee_moore_0_0_coffee_moore_v1_0
-   (\state_display[2] ,
-    \state_display[1] ,
-    \state_display[0] ,
+   (state_display,
     s00_axi_wready,
     S_AXI_AWREADY,
     S_AXI_ARREADY,
@@ -325,20 +297,18 @@ module design_1_coffee_moore_0_0_coffee_moore_v1_0
     s00_axi_rdata,
     s00_axi_rvalid,
     s00_axi_bvalid,
+    coins,
     insert,
-    s00_axi_aclk,
     reset,
+    s00_axi_aclk,
     s00_axi_araddr,
     s00_axi_arvalid,
-    coins,
     s00_axi_wvalid,
     s00_axi_awvalid,
     s00_axi_aresetn,
     s00_axi_bready,
     s00_axi_rready);
-  output \state_display[2] ;
-  output \state_display[1] ;
-  output \state_display[0] ;
+  output [2:0]state_display;
   output s00_axi_wready;
   output S_AXI_AWREADY;
   output S_AXI_ARREADY;
@@ -346,12 +316,12 @@ module design_1_coffee_moore_0_0_coffee_moore_v1_0
   output [2:0]s00_axi_rdata;
   output s00_axi_rvalid;
   output s00_axi_bvalid;
+  input [1:0]coins;
   input insert;
-  input s00_axi_aclk;
   input reset;
+  input s00_axi_aclk;
   input [1:0]s00_axi_araddr;
   input s00_axi_arvalid;
-  input [1:0]coins;
   input s00_axi_wvalid;
   input s00_axi_awvalid;
   input s00_axi_aresetn;
@@ -376,13 +346,10 @@ module design_1_coffee_moore_0_0_coffee_moore_v1_0
   wire s00_axi_rvalid;
   wire s00_axi_wready;
   wire s00_axi_wvalid;
-  wire \state_display[0] ;
-  wire \state_display[1] ;
-  wire \state_display[2] ;
+  wire [2:0]state_display;
 
   design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI coffee_moore_v1_0_S00_AXI_inst
-       (.D({\state_display[2] ,\state_display[1] ,\state_display[0] }),
-        .S_AXI_ARREADY(S_AXI_ARREADY),
+       (.S_AXI_ARREADY(S_AXI_ARREADY),
         .S_AXI_AWREADY(S_AXI_AWREADY),
         .coffee(coffee),
         .coins(coins),
@@ -399,12 +366,13 @@ module design_1_coffee_moore_0_0_coffee_moore_v1_0
         .s00_axi_rready(s00_axi_rready),
         .s00_axi_rvalid(s00_axi_rvalid),
         .s00_axi_wready(s00_axi_wready),
-        .s00_axi_wvalid(s00_axi_wvalid));
+        .s00_axi_wvalid(s00_axi_wvalid),
+        .state_display(state_display));
 endmodule
 
 (* ORIG_REF_NAME = "coffee_moore_v1_0_S00_AXI" *) 
 module design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI
-   (D,
+   (state_display,
     s00_axi_wready,
     S_AXI_AWREADY,
     S_AXI_ARREADY,
@@ -412,18 +380,18 @@ module design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI
     s00_axi_rdata,
     s00_axi_rvalid,
     s00_axi_bvalid,
+    coins,
     insert,
-    s00_axi_aclk,
     reset,
+    s00_axi_aclk,
     s00_axi_araddr,
     s00_axi_arvalid,
-    coins,
     s00_axi_wvalid,
     s00_axi_awvalid,
     s00_axi_aresetn,
     s00_axi_bready,
     s00_axi_rready);
-  output [2:0]D;
+  output [2:0]state_display;
   output s00_axi_wready;
   output S_AXI_AWREADY;
   output S_AXI_ARREADY;
@@ -431,19 +399,18 @@ module design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI
   output [2:0]s00_axi_rdata;
   output s00_axi_rvalid;
   output s00_axi_bvalid;
+  input [1:0]coins;
   input insert;
-  input s00_axi_aclk;
   input reset;
+  input s00_axi_aclk;
   input [1:0]s00_axi_araddr;
   input s00_axi_arvalid;
-  input [1:0]coins;
   input s00_axi_wvalid;
   input s00_axi_awvalid;
   input s00_axi_aresetn;
   input s00_axi_bready;
   input s00_axi_rready;
 
-  wire [2:0]D;
   wire S_AXI_ARREADY;
   wire S_AXI_AWREADY;
   wire aw_en_i_1_n_0;
@@ -463,7 +430,6 @@ module design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI
   wire coffee;
   wire [1:0]coins;
   wire insert;
-  wire prev_insert;
   wire [0:0]reg_data_out__0;
   wire reset;
   wire s00_axi_aclk;
@@ -479,10 +445,11 @@ module design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI
   wire s00_axi_wready;
   wire s00_axi_wvalid;
   wire slv_reg0;
-  wire [1:0]slv_reg1;
+  wire [2:0]slv_reg1;
   wire slv_reg2;
   wire [2:0]slv_reg3;
   wire slv_reg_rden__0;
+  wire [2:0]state_display;
 
   LUT6 #(
     .INIT(64'hF7FFF700F700F700)) 
@@ -500,7 +467,7 @@ module design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI
         .D(aw_en_i_1_n_0),
         .Q(aw_en_reg_n_0),
         .S(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \axi_araddr[2]_i_1 
@@ -529,7 +496,7 @@ module design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI
         .D(\axi_araddr[3]_i_1_n_0 ),
         .Q(axi_araddr[3]),
         .R(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
     .INIT(4'h2)) 
     axi_arready_i_1
@@ -542,7 +509,7 @@ module design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI
         .D(axi_arready0),
         .Q(S_AXI_ARREADY),
         .R(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
     .INIT(16'h2000)) 
     axi_awready0
@@ -578,7 +545,7 @@ module design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI
         .D(axi_bvalid_i_1_n_0),
         .Q(s00_axi_bvalid),
         .R(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'hFBFF0800)) 
     \axi_rdata[0]_i_1 
@@ -602,7 +569,7 @@ module design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI
     .INIT(64'hA808FFFFA8080000)) 
     \axi_rdata[2]_i_1 
        (.I0(axi_araddr[2]),
-        .I1(prev_insert),
+        .I1(slv_reg1[2]),
         .I2(axi_araddr[3]),
         .I3(slv_reg3[2]),
         .I4(slv_reg_rden__0),
@@ -640,7 +607,7 @@ module design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI
         .D(axi_rvalid_i_1_n_0),
         .Q(s00_axi_rvalid),
         .R(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
     .INIT(16'h2000)) 
     axi_wready0
@@ -659,12 +626,10 @@ module design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI
        (.coffee(coffee),
         .coins(coins),
         .insert(insert),
-        .prev_insert(prev_insert),
         .reset(reset),
         .s00_axi_aclk(s00_axi_aclk),
-        .\state_display[0] (D[0]),
-        .\state_display[1] (D[1]),
-        .\state_display[2] (D[2]));
+        .slv_reg1(slv_reg1[2]),
+        .state_display(state_display));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     reg_data_out
@@ -693,6 +658,12 @@ module design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI
         .D(coins[1]),
         .Q(slv_reg1[1]),
         .R(1'b0));
+  FDRE \slv_reg1_reg[2] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(insert),
+        .Q(slv_reg1[2]),
+        .R(1'b0));
   FDRE \slv_reg2_reg[0] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
@@ -702,22 +673,22 @@ module design_1_coffee_moore_0_0_coffee_moore_v1_0_S00_AXI
   FDRE \slv_reg3_reg[0] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(D[0]),
+        .D(state_display[0]),
         .Q(slv_reg3[0]),
         .R(1'b0));
   FDRE \slv_reg3_reg[1] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(D[1]),
+        .D(state_display[1]),
         .Q(slv_reg3[1]),
         .R(1'b0));
   FDRE \slv_reg3_reg[2] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(D[2]),
+        .D(state_display[2]),
         .Q(slv_reg3[2]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'h20)) 
     slv_reg_rden

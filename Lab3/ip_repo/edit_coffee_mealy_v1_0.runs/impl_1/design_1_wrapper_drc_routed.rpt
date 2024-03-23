@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Sat Mar 23 18:30:33 2024
+| Date         : Sat Mar 23 23:13:17 2024
 | Host         : computation-virtual-machine running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -24,12 +24,23 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 0
-+------+----------+-------------+------------+
-| Rule | Severity | Description | Violations |
-+------+----------+-------------+------------+
-+------+----------+-------------+------------+
+             Violations found: 2
++----------+----------+-------------------+------------+
+| Rule     | Severity | Description       | Violations |
++----------+----------+-------------------+------------+
+| PDRC-153 | Warning  | Gated clock check | 2          |
++----------+----------+-------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net design_1_i/coffee_mealy_0/inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/next_state_n_0 is a gated clock net sourced by a combinational pin design_1_i/coffee_mealy_0/inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/next_state/O, cell design_1_i/coffee_mealy_0/inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/next_state. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net design_1_i/coffee_mealy_0/inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/out_inferred__0/i__n_0 is a gated clock net sourced by a combinational pin design_1_i/coffee_mealy_0/inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/out_inferred__0/i_/O, cell design_1_i/coffee_mealy_0/inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/out_inferred__0/i_. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
 

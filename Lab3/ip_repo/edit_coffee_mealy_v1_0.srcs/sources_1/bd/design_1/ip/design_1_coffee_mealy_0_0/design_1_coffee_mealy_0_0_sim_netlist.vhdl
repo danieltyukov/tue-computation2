@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
--- Date        : Sat Mar 23 18:28:21 2024
+-- Date        : Sat Mar 23 23:09:43 2024
 -- Host        : computation-virtual-machine running 64-bit Ubuntu 18.04.5 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_coffee_mealy_0_0/design_1_coffee_mealy_0_0_sim_netlist.vhdl
@@ -14,19 +14,240 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
+entity design_1_coffee_mealy_0_0_coffee_mealy is
+  port (
+    coffee : out STD_LOGIC;
+    \state_display[0]\ : out STD_LOGIC;
+    \state_display[1]\ : out STD_LOGIC;
+    s00_axi_aclk : in STD_LOGIC;
+    p_0_in : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    reset : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_coffee_mealy_0_0_coffee_mealy : entity is "coffee_mealy";
+end design_1_coffee_mealy_0_0_coffee_mealy;
+
+architecture STRUCTURE of design_1_coffee_mealy_0_0_coffee_mealy is
+  signal \^coffee\ : STD_LOGIC;
+  signal coffee_i_1_n_0 : STD_LOGIC;
+  signal \next_state__0\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal next_state_n_0 : STD_LOGIC;
+  signal \next_state_reg[0]_i_1_n_0\ : STD_LOGIC;
+  signal \next_state_reg[1]_i_1_n_0\ : STD_LOGIC;
+  signal \out__0\ : STD_LOGIC;
+  signal \out_inferred__0/i__n_0\ : STD_LOGIC;
+  signal out_n_0 : STD_LOGIC;
+  signal prev_insert : STD_LOGIC;
+  signal prev_insert_i_1_n_0 : STD_LOGIC;
+  signal \^state_display[0]\ : STD_LOGIC;
+  signal \state_display[0]_i_1_n_0\ : STD_LOGIC;
+  signal \^state_display[1]\ : STD_LOGIC;
+  signal \state_display[1]_i_1_n_0\ : STD_LOGIC;
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of coffee_i_1 : label is "soft_lutpair0";
+  attribute XILINX_LEGACY_PRIM : string;
+  attribute XILINX_LEGACY_PRIM of \next_state_reg[0]\ : label is "LD";
+  attribute SOFT_HLUTNM of \next_state_reg[0]_i_1\ : label is "soft_lutpair2";
+  attribute XILINX_LEGACY_PRIM of \next_state_reg[1]\ : label is "LD";
+  attribute SOFT_HLUTNM of \next_state_reg[1]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \out\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \out_inferred__0/i_\ : label is "soft_lutpair1";
+  attribute XILINX_LEGACY_PRIM of out_reg : label is "LD";
+  attribute SOFT_HLUTNM of prev_insert_i_1 : label is "soft_lutpair0";
+begin
+  coffee <= \^coffee\;
+  \state_display[0]\ <= \^state_display[0]\;
+  \state_display[1]\ <= \^state_display[1]\;
+coffee_i_1: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"0000BA8A"
+    )
+        port map (
+      I0 => \^coffee\,
+      I1 => prev_insert,
+      I2 => p_0_in(2),
+      I3 => \out__0\,
+      I4 => reset,
+      O => coffee_i_1_n_0
+    );
+coffee_reg: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => coffee_i_1_n_0,
+      Q => \^coffee\,
+      R => '0'
+    );
+next_state: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"F777"
+    )
+        port map (
+      I0 => p_0_in(0),
+      I1 => p_0_in(1),
+      I2 => \^state_display[1]\,
+      I3 => \^state_display[0]\,
+      O => next_state_n_0
+    );
+\next_state_reg[0]\: unisim.vcomponents.LDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      CLR => '0',
+      D => \next_state_reg[0]_i_1_n_0\,
+      G => next_state_n_0,
+      GE => '1',
+      Q => \next_state__0\(0)
+    );
+\next_state_reg[0]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0D42"
+    )
+        port map (
+      I0 => \^state_display[0]\,
+      I1 => p_0_in(1),
+      I2 => \^state_display[1]\,
+      I3 => p_0_in(0),
+      O => \next_state_reg[0]_i_1_n_0\
+    );
+\next_state_reg[1]\: unisim.vcomponents.LDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      CLR => '0',
+      D => \next_state_reg[1]_i_1_n_0\,
+      G => next_state_n_0,
+      GE => '1',
+      Q => \next_state__0\(1)
+    );
+\next_state_reg[1]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"4158"
+    )
+        port map (
+      I0 => \^state_display[0]\,
+      I1 => p_0_in(0),
+      I2 => p_0_in(1),
+      I3 => \^state_display[1]\,
+      O => \next_state_reg[1]_i_1_n_0\
+    );
+\out\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0460"
+    )
+        port map (
+      I0 => \^state_display[0]\,
+      I1 => \^state_display[1]\,
+      I2 => p_0_in(1),
+      I3 => p_0_in(0),
+      O => out_n_0
+    );
+\out_inferred__0/i_\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"F77F"
+    )
+        port map (
+      I0 => p_0_in(0),
+      I1 => p_0_in(1),
+      I2 => \^state_display[1]\,
+      I3 => \^state_display[0]\,
+      O => \out_inferred__0/i__n_0\
+    );
+out_reg: unisim.vcomponents.LDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      CLR => '0',
+      D => out_n_0,
+      G => \out_inferred__0/i__n_0\,
+      GE => '1',
+      Q => \out__0\
+    );
+prev_insert_i_1: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => prev_insert,
+      I1 => reset,
+      I2 => p_0_in(2),
+      O => prev_insert_i_1_n_0
+    );
+prev_insert_reg: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => prev_insert_i_1_n_0,
+      Q => prev_insert,
+      R => '0'
+    );
+\state_display[0]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"0000BA8A"
+    )
+        port map (
+      I0 => \^state_display[0]\,
+      I1 => prev_insert,
+      I2 => p_0_in(2),
+      I3 => \next_state__0\(0),
+      I4 => reset,
+      O => \state_display[0]_i_1_n_0\
+    );
+\state_display[1]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"0000BA8A"
+    )
+        port map (
+      I0 => \^state_display[1]\,
+      I1 => prev_insert,
+      I2 => p_0_in(2),
+      I3 => \next_state__0\(1),
+      I4 => reset,
+      O => \state_display[1]_i_1_n_0\
+    );
+\state_display_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \state_display[0]_i_1_n_0\,
+      Q => \^state_display[0]\,
+      R => '0'
+    );
+\state_display_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \state_display[1]_i_1_n_0\,
+      Q => \^state_display[1]\,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
 entity design_1_coffee_mealy_0_0_coffee_mealy_v1_0_S00_AXI is
   port (
+    D : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_wready : out STD_LOGIC;
     s00_axi_awready : out STD_LOGIC;
     s00_axi_arready : out STD_LOGIC;
-    s00_axi_bvalid : out STD_LOGIC;
+    coffee : out STD_LOGIC;
     s00_axi_rvalid : out STD_LOGIC;
+    s00_axi_rdata : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_bvalid : out STD_LOGIC;
+    p_0_in : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    reset : in STD_LOGIC;
     s00_axi_aclk : in STD_LOGIC;
+    s00_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_arvalid : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC;
     s00_axi_awvalid : in STD_LOGIC;
     s00_axi_wvalid : in STD_LOGIC;
     s00_axi_bready : in STD_LOGIC;
-    s00_axi_arvalid : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -34,28 +255,48 @@ entity design_1_coffee_mealy_0_0_coffee_mealy_v1_0_S00_AXI is
 end design_1_coffee_mealy_0_0_coffee_mealy_v1_0_S00_AXI;
 
 architecture STRUCTURE of design_1_coffee_mealy_0_0_coffee_mealy_v1_0_S00_AXI is
+  signal \^d\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal aw_en_i_1_n_0 : STD_LOGIC;
   signal aw_en_reg_n_0 : STD_LOGIC;
+  signal axi_araddr : STD_LOGIC_VECTOR ( 3 downto 2 );
+  signal \axi_araddr[2]_i_1_n_0\ : STD_LOGIC;
+  signal \axi_araddr[3]_i_1_n_0\ : STD_LOGIC;
   signal axi_arready0 : STD_LOGIC;
   signal \axi_awready0__0\ : STD_LOGIC;
   signal axi_awready_i_1_n_0 : STD_LOGIC;
   signal axi_bvalid_i_1_n_0 : STD_LOGIC;
+  signal \axi_rdata[0]_i_1_n_0\ : STD_LOGIC;
+  signal \axi_rdata[1]_i_1_n_0\ : STD_LOGIC;
+  signal \axi_rdata[2]_i_1_n_0\ : STD_LOGIC;
   signal axi_rvalid_i_1_n_0 : STD_LOGIC;
   signal \axi_wready0__0\ : STD_LOGIC;
+  signal \^coffee\ : STD_LOGIC;
+  signal \reg_data_out__0\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \^s00_axi_arready\ : STD_LOGIC;
   signal \^s00_axi_awready\ : STD_LOGIC;
   signal \^s00_axi_bvalid\ : STD_LOGIC;
+  signal \^s00_axi_rdata\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \^s00_axi_rvalid\ : STD_LOGIC;
   signal \^s00_axi_wready\ : STD_LOGIC;
+  signal slv_reg0 : STD_LOGIC;
+  signal slv_reg1 : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal slv_reg2 : STD_LOGIC;
+  signal slv_reg3 : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \slv_reg_rden__0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of axi_awready0 : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of axi_rvalid_i_1 : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of axi_wready0 : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \axi_araddr[2]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of axi_awready0 : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \axi_rdata[0]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of axi_wready0 : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of slv_reg_rden : label is "soft_lutpair3";
 begin
+  D(1 downto 0) <= \^d\(1 downto 0);
+  coffee <= \^coffee\;
   s00_axi_arready <= \^s00_axi_arready\;
   s00_axi_awready <= \^s00_axi_awready\;
   s00_axi_bvalid <= \^s00_axi_bvalid\;
+  s00_axi_rdata(2 downto 0) <= \^s00_axi_rdata\(2 downto 0);
   s00_axi_rvalid <= \^s00_axi_rvalid\;
   s00_axi_wready <= \^s00_axi_wready\;
 aw_en_i_1: unisim.vcomponents.LUT6
@@ -78,6 +319,44 @@ aw_en_reg: unisim.vcomponents.FDSE
       D => aw_en_i_1_n_0,
       Q => aw_en_reg_n_0,
       S => axi_awready_i_1_n_0
+    );
+\axi_araddr[2]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FB08"
+    )
+        port map (
+      I0 => s00_axi_araddr(0),
+      I1 => s00_axi_arvalid,
+      I2 => \^s00_axi_arready\,
+      I3 => axi_araddr(2),
+      O => \axi_araddr[2]_i_1_n_0\
+    );
+\axi_araddr[3]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FB08"
+    )
+        port map (
+      I0 => s00_axi_araddr(1),
+      I1 => s00_axi_arvalid,
+      I2 => \^s00_axi_arready\,
+      I3 => axi_araddr(3),
+      O => \axi_araddr[3]_i_1_n_0\
+    );
+\axi_araddr_reg[2]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \axi_araddr[2]_i_1_n_0\,
+      Q => axi_araddr(2),
+      R => axi_awready_i_1_n_0
+    );
+\axi_araddr_reg[3]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \axi_araddr[3]_i_1_n_0\,
+      Q => axi_araddr(3),
+      R => axi_awready_i_1_n_0
     );
 axi_arready_i_1: unisim.vcomponents.LUT2
     generic map(
@@ -144,6 +423,67 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       Q => \^s00_axi_bvalid\,
       R => axi_awready_i_1_n_0
     );
+\axi_rdata[0]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FBFF0800"
+    )
+        port map (
+      I0 => \reg_data_out__0\(0),
+      I1 => s00_axi_arvalid,
+      I2 => \^s00_axi_rvalid\,
+      I3 => \^s00_axi_arready\,
+      I4 => \^s00_axi_rdata\(0),
+      O => \axi_rdata[0]_i_1_n_0\
+    );
+\axi_rdata[1]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A808FFFFA8080000"
+    )
+        port map (
+      I0 => axi_araddr(2),
+      I1 => slv_reg1(1),
+      I2 => axi_araddr(3),
+      I3 => slv_reg3(1),
+      I4 => \slv_reg_rden__0\,
+      I5 => \^s00_axi_rdata\(1),
+      O => \axi_rdata[1]_i_1_n_0\
+    );
+\axi_rdata[2]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"40FF4000"
+    )
+        port map (
+      I0 => axi_araddr(3),
+      I1 => axi_araddr(2),
+      I2 => slv_reg1(2),
+      I3 => \slv_reg_rden__0\,
+      I4 => \^s00_axi_rdata\(2),
+      O => \axi_rdata[2]_i_1_n_0\
+    );
+\axi_rdata_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \axi_rdata[0]_i_1_n_0\,
+      Q => \^s00_axi_rdata\(0),
+      R => axi_awready_i_1_n_0
+    );
+\axi_rdata_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \axi_rdata[1]_i_1_n_0\,
+      Q => \^s00_axi_rdata\(1),
+      R => axi_awready_i_1_n_0
+    );
+\axi_rdata_reg[2]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \axi_rdata[2]_i_1_n_0\,
+      Q => \^s00_axi_rdata\(2),
+      R => axi_awready_i_1_n_0
+    );
 axi_rvalid_i_1: unisim.vcomponents.LUT4
     generic map(
       INIT => X"08F8"
@@ -182,6 +522,94 @@ axi_wready_reg: unisim.vcomponents.FDRE
       Q => \^s00_axi_wready\,
       R => axi_awready_i_1_n_0
     );
+coffee_mealy_inst: entity work.design_1_coffee_mealy_0_0_coffee_mealy
+     port map (
+      coffee => \^coffee\,
+      p_0_in(2 downto 0) => p_0_in(2 downto 0),
+      reset => reset,
+      s00_axi_aclk => s00_axi_aclk,
+      \state_display[0]\ => \^d\(0),
+      \state_display[1]\ => \^d\(1)
+    );
+reg_data_out: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => slv_reg3(0),
+      I1 => slv_reg1(0),
+      I2 => axi_araddr(2),
+      I3 => slv_reg2,
+      I4 => axi_araddr(3),
+      I5 => slv_reg0,
+      O => \reg_data_out__0\(0)
+    );
+\slv_reg0_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => reset,
+      Q => slv_reg0,
+      R => '0'
+    );
+\slv_reg1_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => p_0_in(0),
+      Q => slv_reg1(0),
+      R => '0'
+    );
+\slv_reg1_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => p_0_in(1),
+      Q => slv_reg1(1),
+      R => '0'
+    );
+\slv_reg1_reg[2]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => p_0_in(2),
+      Q => slv_reg1(2),
+      R => '0'
+    );
+\slv_reg2_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \^coffee\,
+      Q => slv_reg2,
+      R => '0'
+    );
+\slv_reg3_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \^d\(0),
+      Q => slv_reg3(0),
+      R => '0'
+    );
+\slv_reg3_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \^d\(1),
+      Q => slv_reg3(1),
+      R => '0'
+    );
+slv_reg_rden: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"20"
+    )
+        port map (
+      I0 => s00_axi_arvalid,
+      I1 => \^s00_axi_rvalid\,
+      I2 => \^s00_axi_arready\,
+      O => \slv_reg_rden__0\
+    );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -189,17 +617,25 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_coffee_mealy_0_0_coffee_mealy_v1_0 is
   port (
+    \state_display[0]\ : out STD_LOGIC;
+    \state_display[1]\ : out STD_LOGIC;
     s00_axi_wready : out STD_LOGIC;
     S_AXI_AWREADY : out STD_LOGIC;
-    s00_axi_arready : out STD_LOGIC;
-    s00_axi_bvalid : out STD_LOGIC;
+    S_AXI_ARREADY : out STD_LOGIC;
+    coffee : out STD_LOGIC;
     s00_axi_rvalid : out STD_LOGIC;
+    s00_axi_rdata : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_bvalid : out STD_LOGIC;
+    insert : in STD_LOGIC;
+    reset : in STD_LOGIC;
     s00_axi_aclk : in STD_LOGIC;
+    s00_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_arvalid : in STD_LOGIC;
+    coins : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_aresetn : in STD_LOGIC;
     s00_axi_awvalid : in STD_LOGIC;
     s00_axi_wvalid : in STD_LOGIC;
     s00_axi_bready : in STD_LOGIC;
-    s00_axi_arvalid : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -210,14 +646,22 @@ architecture STRUCTURE of design_1_coffee_mealy_0_0_coffee_mealy_v1_0 is
 begin
 coffee_mealy_v1_0_S00_AXI_inst: entity work.design_1_coffee_mealy_0_0_coffee_mealy_v1_0_S00_AXI
      port map (
+      D(1) => \state_display[1]\,
+      D(0) => \state_display[0]\,
+      coffee => coffee,
+      p_0_in(2) => insert,
+      p_0_in(1 downto 0) => coins(1 downto 0),
+      reset => reset,
       s00_axi_aclk => s00_axi_aclk,
+      s00_axi_araddr(1 downto 0) => s00_axi_araddr(1 downto 0),
       s00_axi_aresetn => s00_axi_aresetn,
-      s00_axi_arready => s00_axi_arready,
+      s00_axi_arready => S_AXI_ARREADY,
       s00_axi_arvalid => s00_axi_arvalid,
       s00_axi_awready => S_AXI_AWREADY,
       s00_axi_awvalid => s00_axi_awvalid,
       s00_axi_bready => s00_axi_bready,
       s00_axi_bvalid => s00_axi_bvalid,
+      s00_axi_rdata(2 downto 0) => s00_axi_rdata(2 downto 0),
       s00_axi_rready => s00_axi_rready,
       s00_axi_rvalid => s00_axi_rvalid,
       s00_axi_wready => s00_axi_wready,
@@ -234,7 +678,7 @@ entity design_1_coffee_mealy_0_0 is
     insert : in STD_LOGIC;
     coins : in STD_LOGIC_VECTOR ( 1 downto 0 );
     coffee : out STD_LOGIC;
-    state_display : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    state_display : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s00_axi_awvalid : in STD_LOGIC;
@@ -269,6 +713,7 @@ end design_1_coffee_mealy_0_0;
 
 architecture STRUCTURE of design_1_coffee_mealy_0_0 is
   signal \<const0>\ : STD_LOGIC;
+  signal \^s00_axi_rdata\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of reset : signal is "xilinx.com:signal:reset:1.0 reset RST";
   attribute X_INTERFACE_PARAMETER : string;
@@ -329,32 +774,34 @@ begin
   s00_axi_rdata(5) <= \<const0>\;
   s00_axi_rdata(4) <= \<const0>\;
   s00_axi_rdata(3) <= \<const0>\;
-  s00_axi_rdata(2) <= \<const0>\;
-  s00_axi_rdata(1) <= \<const0>\;
-  s00_axi_rdata(0) <= \<const0>\;
+  s00_axi_rdata(2 downto 0) <= \^s00_axi_rdata\(2 downto 0);
   s00_axi_rresp(1) <= \<const0>\;
   s00_axi_rresp(0) <= \<const0>\;
-  coffee <= 'Z';
-  state_display(0) <= 'Z';
-  state_display(1) <= 'Z';
-  state_display(2) <= 'Z';
 GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
 inst: entity work.design_1_coffee_mealy_0_0_coffee_mealy_v1_0
      port map (
+      S_AXI_ARREADY => s00_axi_arready,
       S_AXI_AWREADY => s00_axi_awready,
+      coffee => coffee,
+      coins(1 downto 0) => coins(1 downto 0),
+      insert => insert,
+      reset => reset,
       s00_axi_aclk => s00_axi_aclk,
+      s00_axi_araddr(1 downto 0) => s00_axi_araddr(3 downto 2),
       s00_axi_aresetn => s00_axi_aresetn,
-      s00_axi_arready => s00_axi_arready,
       s00_axi_arvalid => s00_axi_arvalid,
       s00_axi_awvalid => s00_axi_awvalid,
       s00_axi_bready => s00_axi_bready,
       s00_axi_bvalid => s00_axi_bvalid,
+      s00_axi_rdata(2 downto 0) => \^s00_axi_rdata\(2 downto 0),
       s00_axi_rready => s00_axi_rready,
       s00_axi_rvalid => s00_axi_rvalid,
       s00_axi_wready => s00_axi_wready,
-      s00_axi_wvalid => s00_axi_wvalid
+      s00_axi_wvalid => s00_axi_wvalid,
+      \state_display[0]\ => state_display(0),
+      \state_display[1]\ => state_display(1)
     );
 end STRUCTURE;
