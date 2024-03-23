@@ -167,12 +167,12 @@ proc create_root_design { parentCell } {
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
 
   # Create ports
-  set button_in_0 [ create_bd_port -dir I button_in_0 ]
-  set button_in_1 [ create_bd_port -dir I button_in_1 ]
-  set button_in_2 [ create_bd_port -dir I button_in_2 ]
-  set button_in_3 [ create_bd_port -dir I button_in_3 ]
+  set button_in_coins_5 [ create_bd_port -dir I button_in_coins_5 ]
+  set button_in_coins_10 [ create_bd_port -dir I button_in_coins_10 ]
+  set button_in_insert [ create_bd_port -dir I button_in_insert ]
+  set button_in_reset [ create_bd_port -dir I button_in_reset ]
   set coffee_0 [ create_bd_port -dir O coffee_0 ]
-  set state_display_0 [ create_bd_port -dir O -from 1 -to 0 state_display_0 ]
+  set state_display_0 [ create_bd_port -dir O -from 2 -to 0 state_display_0 ]
 
   # Create instance: coffee_mealy_0, and set properties
   set coffee_mealy_0 [ create_bd_cell -type ip -vlnv user.org:user:coffee_mealy:1.0 coffee_mealy_0 ]
@@ -1013,10 +1013,10 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins coffee_mealy_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
 
   # Create port connections
-  connect_bd_net -net button_in_0_1 [get_bd_ports button_in_0] [get_bd_pins debounce_1/button_in]
-  connect_bd_net -net button_in_1_1 [get_bd_ports button_in_1] [get_bd_pins debounce_2/button_in]
-  connect_bd_net -net button_in_2_1 [get_bd_ports button_in_2] [get_bd_pins debounce_0/button_in]
-  connect_bd_net -net button_in_3_1 [get_bd_ports button_in_3] [get_bd_pins debounce_3/button_in]
+  connect_bd_net -net button_in_0_1 [get_bd_ports button_in_coins_5] [get_bd_pins debounce_2/button_in]
+  connect_bd_net -net button_in_1_1 [get_bd_ports button_in_coins_10] [get_bd_pins debounce_1/button_in]
+  connect_bd_net -net button_in_2_1 [get_bd_ports button_in_insert] [get_bd_pins debounce_3/button_in]
+  connect_bd_net -net button_in_3_1 [get_bd_ports button_in_reset] [get_bd_pins debounce_0/button_in]
   connect_bd_net -net coffee_mealy_0_coffee [get_bd_ports coffee_0] [get_bd_pins coffee_mealy_0/coffee]
   connect_bd_net -net coffee_mealy_0_state_display [get_bd_ports state_display_0] [get_bd_pins coffee_mealy_0/state_display]
   connect_bd_net -net debounce_0_button_out [get_bd_pins coffee_mealy_0/reset] [get_bd_pins debounce_0/button_out]

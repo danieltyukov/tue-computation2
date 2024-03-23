@@ -1,76 +1,83 @@
 `timescale 1ns / 1ps
 
-module coffee_mealy_tb;
+module coffee_mealy_tb();
 
-    // Inputs
+    // Inputs to the module
     reg clk;
     reg insert;
     reg reset;
     reg [1:0] coins;
 
-    // Outputs
+    // Outputs from the module
     wire coffee;
-    wire [1:0] state_display;
+    wire [2:0] state_display;
 
     // Instantiate the Unit Under Test (UUT)
-    coffee_mealy uut (
-        .clk(clk), 
-        .insert(insert), 
-        .reset(reset), 
-        .coins(coins), 
-        .coffee(coffee), 
+    coffee_mealy uut(
+        .clk(clk),
+        .insert(insert),
+        .reset(reset),
+        .coins(coins),
+        .coffee(coffee),
         .state_display(state_display)
     );
 
-    // Clock generation
-    initial begin
-        clk = 0;
-        forever #10 clk = ~clk; // 50MHz clock
-    end
+    // Generate clock signal
+    always #5 clk = ~clk; // 100MHz clock, change period as needed
 
-    // Testbench logic
+    // Test sequence
     initial begin
-        // Initialize Inputs
+        // Initialize inputs
+        clk = 0;
         insert = 0;
         reset = 0;
         coins = 2'b00;
-
-        // Wait 100 ns for global reset to finish
+        
+        // Reset the FSM
         #100;
-        reset = 1; #20; reset = 0; #20; // Apply reset
-
-        // Try all possible transitions from each state
-        // State A transitions
-        coins = 2'b01; insert = 1; #20; insert = 0; #40; // A -> C, no coffee
+        reset = 1; #10; reset = 0; #10;
+        
+        // Test sequence start
+        // Scenario 1: Insert 10c -> Coffee dispensed
+        test_insert(2'b01); // Insert 10c
+        test_insert(2'b00); // No insert
+        
+        // Scenario 2: Reset and insert 5c, then 10c -> Coffee dispensed
         reset_fsm();
-        coins = 2'b10; insert = 1; #20; insert = 0; #40; // A -> B, no coffee
+        test_insert(2'b10); // Insert 5c
+        test_insert(2'b01); // Insert 10c
+        
+        // Scenario 3: Insert 5c, Reset, insert 10c -> No coffee dispensed until after reset
         reset_fsm();
-
-        // State B transitions
-        force uut.state_display = 2'b01; // Force state to B
-        coins = 2'b01; insert = 1; #20; insert = 0; #40; // B -> A, coffee
+        test_insert(2'b10); // Insert 5c
         reset_fsm();
-        force uut.state_display = 2'b01; // Force state to B
-        coins = 2'b10; insert = 1; #20; insert = 0; #40; // B -> C, no coffee
+        test_insert(2'b01); // Insert 10c
+        
+        // Scenario 4: Insert 10c twice -> Coffee dispensed, then insert 10c for second coffee
         reset_fsm();
-
-        // State C transitions
-        force uut.state_display = 2'b10; // Force state to C
-        coins = 2'b01; insert = 1; #20; insert = 0; #40; // C -> B, coffee
-        reset_fsm();
-        force uut.state_display = 2'b10; // Force state to C
-        coins = 2'b10; insert = 1; #20; insert = 0; #40; // C -> A, coffee
-        reset_fsm();
-
+        test_insert(2'b01); // Insert 10c
+        test_insert(2'b01); // Insert 10c again for next coffee
+        test_insert(2'b01); // Insert 10c for the second cup
+        
         // Complete the test
+        #100;
         $finish;
     end
-
-    // Task to apply reset
-    task reset_fsm;
+    
+    // Function to simulate coin insert
+    task test_insert;
+        input [1:0] coin_value;
         begin
-            reset = 1; #20; reset = 0; #40; // Apply reset
+            coins = coin_value; insert = 1; #10; insert = 0; #20;
         end
     endtask
-
+    
+    // Function to reset FSM
+    task reset_fsm;
+        begin
+            reset = 1; #10; reset = 0; #10;
+        end
+    endtask
+    
 endmodule
+

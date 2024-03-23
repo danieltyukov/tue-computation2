@@ -14,39 +14,80 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7295 
+INFO: Helper process launched with PID 17597 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1313.637 ; gain = 82.879 ; free physical = 62 ; free virtual = 1755
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1313.641 ; gain = 82.879 ; free physical = 67 ; free virtual = 1256
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_coffee_mealy_0_0' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_coffee_mealy_0_0/synth/design_1_coffee_mealy_0_0.v:56]
-INFO: [Synth 8-6157] synthesizing module 'coffee_mealy_v1_0' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/0574/hdl/coffee_mealy_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'coffee_mealy_v1_0' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/e995/hdl/coffee_mealy_v1_0.v:4]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'coffee_mealy_v1_0_S00_AXI' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/0574/hdl/coffee_mealy_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'coffee_mealy_v1_0_S00_AXI' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/e995/hdl/coffee_mealy_v1_0_S00_AXI.v:4]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter ADDR_LSB bound to: 2 - type: integer 
 	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
-INFO: [Synth 8-226] default block is never used [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/0574/hdl/coffee_mealy_v1_0_S00_AXI.v:236]
-INFO: [Synth 8-226] default block is never used [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/0574/hdl/coffee_mealy_v1_0_S00_AXI.v:382]
-INFO: [Synth 8-6157] synthesizing module 'coffee_mealy' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/coffee_mealy.v:4]
-	Parameter A bound to: 2'b00 
-	Parameter B bound to: 2'b01 
-	Parameter C bound to: 2'b10 
-INFO: [Synth 8-6155] done synthesizing module 'coffee_mealy' (1#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/coffee_mealy.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'coffee_mealy_v1_0_S00_AXI' (2#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/0574/hdl/coffee_mealy_v1_0_S00_AXI.v:4]
-WARNING: [Synth 8-350] instance 'coffee_mealy_v1_0_S00_AXI_inst' of module 'coffee_mealy_v1_0_S00_AXI' requires 26 connections, but only 21 given [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/0574/hdl/coffee_mealy_v1_0.v:54]
-WARNING: [Synth 8-3848] Net coffee in module/entity coffee_mealy_v1_0 does not have driver. [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/0574/hdl/coffee_mealy_v1_0.v:21]
-WARNING: [Synth 8-3848] Net state_display in module/entity coffee_mealy_v1_0 does not have driver. [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/0574/hdl/coffee_mealy_v1_0.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'coffee_mealy_v1_0' (3#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/0574/hdl/coffee_mealy_v1_0.v:4]
+INFO: [Synth 8-226] default block is never used [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/e995/hdl/coffee_mealy_v1_0_S00_AXI.v:376]
+INFO: [Synth 8-6157] synthesizing module 'coffee_mealy' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/edit_coffee_mealy_v1_0.srcs/sources_1/new/coffee_mealy.v:3]
+	Parameter credit0 bound to: 3'b000 
+	Parameter credit5 bound to: 3'b001 
+	Parameter credit10 bound to: 3'b010 
+INFO: [Synth 8-6155] done synthesizing module 'coffee_mealy' (1#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/edit_coffee_mealy_v1_0.srcs/sources_1/new/coffee_mealy.v:3]
+WARNING: [Synth 8-6014] Unused sequential element axi_awaddr_reg was removed.  [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/e995/hdl/coffee_mealy_v1_0_S00_AXI.v:174]
+INFO: [Synth 8-6155] done synthesizing module 'coffee_mealy_v1_0_S00_AXI' (2#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/e995/hdl/coffee_mealy_v1_0_S00_AXI.v:4]
+WARNING: [Synth 8-350] instance 'coffee_mealy_v1_0_S00_AXI_inst' of module 'coffee_mealy_v1_0_S00_AXI' requires 26 connections, but only 21 given [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/e995/hdl/coffee_mealy_v1_0.v:54]
+WARNING: [Synth 8-3848] Net coffee in module/entity coffee_mealy_v1_0 does not have driver. [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/e995/hdl/coffee_mealy_v1_0.v:21]
+WARNING: [Synth 8-3848] Net state_display in module/entity coffee_mealy_v1_0 does not have driver. [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/e995/hdl/coffee_mealy_v1_0.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'coffee_mealy_v1_0' (3#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/e995/hdl/coffee_mealy_v1_0.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_coffee_mealy_0_0' (4#1) [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_coffee_mealy_0_0/synth/design_1_coffee_mealy_0_0.v:56]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[3]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[2]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[1]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[0]
 WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
 WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
 WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[31]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[30]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[29]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[28]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[27]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[26]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[25]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[24]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[23]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[22]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[21]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[20]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[19]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[18]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[17]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[16]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[15]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[14]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[13]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[12]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[11]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[10]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[9]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[8]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[7]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[6]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[5]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[4]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[3]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[2]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[1]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WDATA[0]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[3]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[2]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[1]
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[0]
 WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
 WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design coffee_mealy_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
 WARNING: [Synth 8-3331] design coffee_mealy_v1_0 has unconnected port coffee
+WARNING: [Synth 8-3331] design coffee_mealy_v1_0 has unconnected port state_display[2]
 WARNING: [Synth 8-3331] design coffee_mealy_v1_0 has unconnected port state_display[1]
 WARNING: [Synth 8-3331] design coffee_mealy_v1_0 has unconnected port state_display[0]
 WARNING: [Synth 8-3331] design coffee_mealy_v1_0 has unconnected port reset
@@ -54,7 +95,7 @@ WARNING: [Synth 8-3331] design coffee_mealy_v1_0 has unconnected port insert
 WARNING: [Synth 8-3331] design coffee_mealy_v1_0 has unconnected port coins[1]
 WARNING: [Synth 8-3331] design coffee_mealy_v1_0 has unconnected port coins[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1357.262 ; gain = 126.504 ; free physical = 119 ; free virtual = 1725
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1357.266 ; gain = 126.504 ; free physical = 129 ; free virtual = 1265
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -63,18 +104,18 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin coffee_mealy_v1_0_S00_AXI_inst:reset to constant 0 [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/0574/hdl/coffee_mealy_v1_0.v:54]
-WARNING: [Synth 8-3295] tying undriven pin coffee_mealy_v1_0_S00_AXI_inst:insert to constant 0 [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/0574/hdl/coffee_mealy_v1_0.v:54]
-WARNING: [Synth 8-3295] tying undriven pin coffee_mealy_v1_0_S00_AXI_inst:coins[1] to constant 0 [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/0574/hdl/coffee_mealy_v1_0.v:54]
-WARNING: [Synth 8-3295] tying undriven pin coffee_mealy_v1_0_S00_AXI_inst:coins[0] to constant 0 [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/0574/hdl/coffee_mealy_v1_0.v:54]
+WARNING: [Synth 8-3295] tying undriven pin coffee_mealy_v1_0_S00_AXI_inst:reset to constant 0 [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/e995/hdl/coffee_mealy_v1_0.v:54]
+WARNING: [Synth 8-3295] tying undriven pin coffee_mealy_v1_0_S00_AXI_inst:insert to constant 0 [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/e995/hdl/coffee_mealy_v1_0.v:54]
+WARNING: [Synth 8-3295] tying undriven pin coffee_mealy_v1_0_S00_AXI_inst:coins[1] to constant 0 [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/e995/hdl/coffee_mealy_v1_0.v:54]
+WARNING: [Synth 8-3295] tying undriven pin coffee_mealy_v1_0_S00_AXI_inst:coins[0] to constant 0 [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/e995/hdl/coffee_mealy_v1_0.v:54]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1357.262 ; gain = 126.504 ; free physical = 114 ; free virtual = 1720
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1357.266 ; gain = 126.504 ; free physical = 129 ; free virtual = 1265
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1357.262 ; gain = 126.504 ; free physical = 115 ; free virtual = 1721
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1357.266 ; gain = 126.504 ; free physical = 129 ; free virtual = 1265
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -87,40 +128,26 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraint will be written out.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.13 . Memory (MB): peak = 1666.426 ; gain = 1.000 ; free physical = 74 ; free virtual = 1253
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.14 . Memory (MB): peak = 1679.422 ; gain = 2.000 ; free physical = 72 ; free virtual = 884
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 1666.426 ; gain = 435.668 ; free physical = 171 ; free virtual = 1388
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 1679.422 ; gain = 448.660 ; free physical = 106 ; free virtual = 948
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 1666.426 ; gain = 435.668 ; free physical = 170 ; free virtual = 1389
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 1679.422 ; gain = 448.660 ; free physical = 105 ; free virtual = 949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 1666.426 ; gain = 435.668 ; free physical = 170 ; free virtual = 1392
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 1679.422 ; gain = 448.660 ; free physical = 103 ; free virtual = 950
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'state_display_reg' in module 'coffee_mealy'
-INFO: [Synth 8-5544] ROM "coffee" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "next_state_display" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_display_reg' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/coffee_mealy.v:36]
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_display_reg' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/coffee_mealy.v:36]
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                       A |                              001 |                               00
-                       B |                              010 |                               01
-                       C |                              100 |                               10
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_display_reg' using encoding 'one-hot' in module 'coffee_mealy'
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_display_reg' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/coffee_mealy.v:36]
-WARNING: [Synth 8-327] inferring latch for variable 'coffee_reg' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/coffee_mealy.v:37]
+WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ipshared/edit_coffee_mealy_v1_0.srcs/sources_1/new/coffee_mealy.v:36]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 1666.426 ; gain = 435.668 ; free physical = 136 ; free virtual = 1375
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 1679.422 ; gain = 448.660 ; free physical = 84 ; free virtual = 941
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -133,17 +160,16 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 5     
-	                4 Bit    Registers := 2     
+	               32 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 7     
+	                1 Bit    Registers := 10    
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 4     
-	   4 Input     32 Bit        Muxes := 5     
-	   3 Input      3 Bit        Muxes := 3     
-	   2 Input      3 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 6     
-	   3 Input      1 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -154,22 +180,22 @@ Hierarchical RTL Component report
 Module coffee_mealy 
 Detailed RTL Component Info : 
 +---Registers : 
-	                1 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
-	   3 Input      3 Bit        Muxes := 3     
-	   2 Input      3 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
-	   3 Input      1 Bit        Muxes := 2     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 1     
 Module coffee_mealy_v1_0_S00_AXI 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 5     
-	                4 Bit    Registers := 2     
+	               32 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 6     
+	                1 Bit    Registers := 8     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 4     
-	   4 Input     32 Bit        Muxes := 5     
+	   4 Input     32 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -187,32 +213,113 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[31] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[30] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[29] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[28] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[27] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[26] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[25] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[24] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[23] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[22] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[21] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[20] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[19] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[18] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[17] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[16] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[15] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[14] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[13] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[12] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[11] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[10] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[9] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[8] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[7] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[6] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[5] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[4] driven by constant 0
+INFO: [Synth 8-3917] design design_1_coffee_mealy_0_0 has port s00_axi_rdata[3] driven by constant 0
 WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port coffee
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port state_display[2]
 WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port state_display[1]
 WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port state_display[0]
 WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port reset
 WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port insert
 WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port coins[1]
 WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port coins[0]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_awaddr[3]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_awaddr[2]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_awaddr[1]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_awaddr[0]
 WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_awprot[2]
 WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_awprot[1]
 WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_awprot[0]
-WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_arprot[2]
-WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_arprot[1]
-WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_arprot[0]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[31]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[30]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[29]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[28]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[27]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[26]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[25]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[24]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[23]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[22]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[21]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[20]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[19]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[18]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[17]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[16]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[15]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[14]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[13]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[12]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[11]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[10]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[9]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[8]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[7]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[6]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[5]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[4]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[3]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[2]
+WARNING: [Synth 8-3331] design design_1_coffee_mealy_0_0 has unconnected port s00_axi_wdata[1]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/next_state_reg[2] )
+INFO: [Synth 8-3886] merging instance 'inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/prev_insert_reg' (FD) to 'inst/coffee_mealy_v1_0_S00_AXI_inst/slv_reg1_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/coffee_reg )
+INFO: [Synth 8-3886] merging instance 'inst/coffee_mealy_v1_0_S00_AXI_inst/slv_reg1_reg[0]' (FD) to 'inst/coffee_mealy_v1_0_S00_AXI_inst/slv_reg1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/coffee_mealy_v1_0_S00_AXI_inst/slv_reg2_reg[0]' (FD) to 'inst/coffee_mealy_v1_0_S00_AXI_inst/slv_reg1_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/coffee_mealy_v1_0_S00_AXI_inst/slv_reg1_reg[1] )
 INFO: [Synth 8-3886] merging instance 'inst/coffee_mealy_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'inst/coffee_mealy_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/coffee_mealy_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
 INFO: [Synth 8-3886] merging instance 'inst/coffee_mealy_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/coffee_mealy_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/coffee_mealy_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
-INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/coffee_reg) is unused and will be removed from module design_1_coffee_mealy_0_0.
+INFO: [Synth 8-3886] merging instance 'inst/coffee_mealy_v1_0_S00_AXI_inst/slv_reg3_reg[0]' (FD) to 'inst/coffee_mealy_v1_0_S00_AXI_inst/slv_reg1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/coffee_mealy_v1_0_S00_AXI_inst/slv_reg1_reg[1]' (FD) to 'inst/coffee_mealy_v1_0_S00_AXI_inst/slv_reg1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/coffee_mealy_v1_0_S00_AXI_inst/slv_reg3_reg[1]' (FD) to 'inst/coffee_mealy_v1_0_S00_AXI_inst/slv_reg1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/coffee_mealy_v1_0_S00_AXI_inst/slv_reg3_reg[2]' (FD) to 'inst/coffee_mealy_v1_0_S00_AXI_inst/slv_reg1_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/coffee_mealy_v1_0_S00_AXI_inst/slv_reg1_reg[2] )
+INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/next_state_reg[2]) is unused and will be removed from module design_1_coffee_mealy_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/next_state_reg[1]) is unused and will be removed from module design_1_coffee_mealy_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/next_state_reg[0]) is unused and will be removed from module design_1_coffee_mealy_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/state_display_reg[2]) is unused and will be removed from module design_1_coffee_mealy_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/state_display_reg[1]) is unused and will be removed from module design_1_coffee_mealy_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/state_display_reg[0]) is unused and will be removed from module design_1_coffee_mealy_0_0.
 INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module design_1_coffee_mealy_0_0.
 INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module design_1_coffee_mealy_0_0.
 INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module design_1_coffee_mealy_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module design_1_coffee_mealy_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module design_1_coffee_mealy_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/coffee_reg) is unused and will be removed from module design_1_coffee_mealy_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/axi_rdata_reg[2]) is unused and will be removed from module design_1_coffee_mealy_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/axi_rdata_reg[1]) is unused and will be removed from module design_1_coffee_mealy_0_0.
 INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module design_1_coffee_mealy_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/slv_reg1_reg[2]) is unused and will be removed from module design_1_coffee_mealy_0_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 1666.426 ; gain = 435.668 ; free physical = 80 ; free virtual = 1356
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 1679.422 ; gain = 448.660 ; free physical = 75 ; free virtual = 929
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -224,13 +331,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:29 . Memory (MB): peak = 1666.426 ; gain = 435.668 ; free physical = 68 ; free virtual = 1110
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1679.422 ; gain = 448.660 ; free physical = 71 ; free virtual = 805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:29 . Memory (MB): peak = 1666.426 ; gain = 435.668 ; free physical = 76 ; free virtual = 1100
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1679.422 ; gain = 448.660 ; free physical = 71 ; free virtual = 805
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -241,12 +348,12 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/prev_insert_reg) is unused and will be removed from module design_1_coffee_mealy_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/FSM_onehot_next_state_display_reg[2]) is unused and will be removed from module design_1_coffee_mealy_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/FSM_onehot_next_state_display_reg[1]) is unused and will be removed from module design_1_coffee_mealy_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/coffee_mealy_inst/FSM_onehot_next_state_display_reg[0]) is unused and will be removed from module design_1_coffee_mealy_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/axi_araddr_reg[3]) is unused and will be removed from module design_1_coffee_mealy_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/axi_araddr_reg[2]) is unused and will be removed from module design_1_coffee_mealy_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/slv_reg0_reg[0]) is unused and will be removed from module design_1_coffee_mealy_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/coffee_mealy_v1_0_S00_AXI_inst/axi_rdata_reg[0]) is unused and will be removed from module design_1_coffee_mealy_0_0.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:29 . Memory (MB): peak = 1674.434 ; gain = 443.676 ; free physical = 79 ; free virtual = 1108
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1679.422 ; gain = 448.660 ; free physical = 69 ; free virtual = 804
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -270,7 +377,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1674.434 ; gain = 443.676 ; free physical = 67 ; free virtual = 1107
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1679.422 ; gain = 448.660 ; free physical = 69 ; free virtual = 805
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -283,7 +390,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1674.434 ; gain = 443.676 ; free physical = 67 ; free virtual = 1107
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1679.422 ; gain = 448.660 ; free physical = 69 ; free virtual = 805
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -295,25 +402,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1674.434 ; gain = 443.676 ; free physical = 65 ; free virtual = 1107
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1679.422 ; gain = 448.660 ; free physical = 69 ; free virtual = 805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1674.434 ; gain = 443.676 ; free physical = 65 ; free virtual = 1107
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1679.422 ; gain = 448.660 ; free physical = 69 ; free virtual = 805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1674.434 ; gain = 443.676 ; free physical = 64 ; free virtual = 1107
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1679.422 ; gain = 448.660 ; free physical = 69 ; free virtual = 805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1674.434 ; gain = 443.676 ; free physical = 64 ; free virtual = 1107
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1679.422 ; gain = 448.660 ; free physical = 69 ; free virtual = 805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -331,28 +438,26 @@ Report Cell Usage:
 +------+-----+------+
 |1     |LUT1 |     1|
 |2     |LUT2 |     1|
-|3     |LUT3 |     1|
-|4     |LUT4 |    22|
-|5     |LUT6 |    36|
-|6     |FDRE |   172|
-|7     |FDSE |     1|
+|3     |LUT4 |     3|
+|4     |LUT6 |     2|
+|5     |FDRE |     5|
+|6     |FDSE |     1|
 +------+-----+------+
 
 Report Instance Areas: 
 +------+-----------------------------------+--------------------------+------+
 |      |Instance                           |Module                    |Cells |
 +------+-----------------------------------+--------------------------+------+
-|1     |top                                |                          |   234|
-|2     |  inst                             |coffee_mealy_v1_0         |   234|
-|3     |    coffee_mealy_v1_0_S00_AXI_inst |coffee_mealy_v1_0_S00_AXI |   234|
-|4     |      coffee_mealy_inst            |coffee_mealy              |     3|
+|1     |top                                |                          |    13|
+|2     |  inst                             |coffee_mealy_v1_0         |    13|
+|3     |    coffee_mealy_v1_0_S00_AXI_inst |coffee_mealy_v1_0_S00_AXI |    13|
 +------+-----------------------------------+--------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1674.434 ; gain = 443.676 ; free physical = 64 ; free virtual = 1107
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1679.422 ; gain = 448.660 ; free physical = 69 ; free virtual = 805
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1674.434 ; gain = 134.512 ; free physical = 191 ; free virtual = 1222
-Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1674.441 ; gain = 443.676 ; free physical = 179 ; free virtual = 1224
+Synthesis finished with 0 errors, 0 critical warnings and 55 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1679.422 ; gain = 126.504 ; free physical = 124 ; free virtual = 863
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1679.430 ; gain = 448.660 ; free physical = 124 ; free virtual = 865
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -360,15 +465,15 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-38 Infos, 38 Warnings, 0 Critical Warnings and 0 Errors encountered.
+81 Infos, 110 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1679.434 ; gain = 460.250 ; free physical = 161 ; free virtual = 1213
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:27 . Memory (MB): peak = 1679.430 ; gain = 460.242 ; free physical = 132 ; free virtual = 865
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/design_1_coffee_mealy_0_0_synth_1/design_1_coffee_mealy_0_0.dcp' has been generated.
 INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_coffee_mealy_0_0/design_1_coffee_mealy_0_0.xci
-INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.runs/design_1_coffee_mealy_0_0_synth_1/design_1_coffee_mealy_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_coffee_mealy_0_0_utilization_synth.rpt -pb design_1_coffee_mealy_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1703.445 ; gain = 0.000 ; free physical = 83 ; free virtual = 1208
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 21 16:11:27 2024...
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1703.434 ; gain = 0.000 ; free physical = 94 ; free virtual = 862
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 23 18:28:21 2024...

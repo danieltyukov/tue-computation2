@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Thu Mar 21 16:15:14 2024
+| Date             : Sat Mar 23 18:30:34 2024
 | Host             : computation-virtual-machine running 64-bit Ubuntu 18.04.5 LTS
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.396        |
+| Total On-Chip Power (W)  | 1.394        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.262        |
+| Dynamic (W)              | 1.260        |
 | Device Static (W)        | 0.134        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 68.9         |
@@ -52,17 +52,16 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.003 |        3 |       --- |             --- |
-| Slice Logic             |     0.001 |     1340 |       --- |             --- |
-|   LUT as Logic          |     0.001 |      353 |     53200 |            0.66 |
-|   Register              |    <0.001 |      639 |    106400 |            0.60 |
-|   CARRY4                |    <0.001 |        6 |     13300 |            0.05 |
-|   LUT as Shift Register |    <0.001 |       60 |     17400 |            0.34 |
+| Clocks                  |     0.002 |        3 |       --- |             --- |
+| Slice Logic             |    <0.001 |      734 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      159 |     53200 |            0.30 |
+|   Register              |    <0.001 |      299 |    106400 |            0.28 |
+|   LUT as Shift Register |    <0.001 |       28 |     17400 |            0.16 |
 |   Others                |     0.000 |      186 |       --- |             --- |
-| Signals                 |     0.002 |      980 |       --- |             --- |
+| Signals                 |    <0.001 |      449 |       --- |             --- |
 | PS7                     |     1.256 |        1 |       --- |             --- |
 | Static Power            |     0.134 |          |           |                 |
-| Total                   |     1.396 |          |           |                 |
+| Total                   |     1.394 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.019 |       0.006 |      0.013 |
+| Vccint    |       1.000 |     0.017 |       0.004 |      0.013 |
 | Vccaux    |       1.800 |     0.014 |       0.000 |      0.014 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -148,27 +147,27 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | Name                                             | Power (W) |
 +--------------------------------------------------+-----------+
-| design_1_wrapper                                 |     1.262 |
-|   design_1_i                                     |     1.262 |
+| design_1_wrapper                                 |     1.260 |
+|   design_1_i                                     |     1.260 |
 |     coffee_mealy_0                               |    <0.001 |
 |       inst                                       |    <0.001 |
 |         coffee_mealy_v1_0_S00_AXI_inst           |    <0.001 |
 |     processing_system7_0                         |     1.256 |
 |       inst                                       |     1.256 |
-|     ps7_0_axi_periph                             |     0.005 |
-|       s00_couplers                               |     0.005 |
-|         auto_pc                                  |     0.005 |
-|           inst                                   |     0.005 |
-|             gen_axilite.gen_b2s_conv.axilite_b2s |     0.005 |
-|               RD.ar_channel_0                    |     0.001 |
+|     ps7_0_axi_periph                             |     0.003 |
+|       s00_couplers                               |     0.003 |
+|         auto_pc                                  |     0.003 |
+|           inst                                   |     0.003 |
+|             gen_axilite.gen_b2s_conv.axilite_b2s |     0.003 |
+|               RD.ar_channel_0                    |    <0.001 |
 |                 ar_cmd_fsm_0                     |    <0.001 |
 |                 cmd_translator_0                 |    <0.001 |
 |                   incr_cmd_0                     |    <0.001 |
 |                   wrap_cmd_0                     |    <0.001 |
-|               RD.r_channel_0                     |     0.001 |
+|               RD.r_channel_0                     |    <0.001 |
 |                 rd_data_fifo_0                   |    <0.001 |
 |                 transaction_fifo_0               |    <0.001 |
-|               SI_REG                             |     0.001 |
+|               SI_REG                             |    <0.001 |
 |                 ar.ar_pipe                       |    <0.001 |
 |                 aw.aw_pipe                       |    <0.001 |
 |                 b.b_pipe                         |    <0.001 |

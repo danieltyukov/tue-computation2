@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xc7z020clg400-1
@@ -31,10 +32,7 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-set_property ip_repo_paths {
-  /media/sf_SharedWork/Lab3/ip_repo/coffee_mealy_1.0
-  /media/sf_SharedWork/Lab3/ip_repo/coffee_mealy_1.0
-} [current_project]
+set_property ip_repo_paths /media/sf_SharedWork/Lab3/ip_repo/coffee_mealy_1.0 [current_project]
 set_property ip_output_repo /media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_ip -quiet /media/sf_SharedWork/Lab3/ip_repo/edit_coffee_mealy_v1_0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci

@@ -1,6 +1,6 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../coffee_mealy.v" \
+"../../../../edit_coffee_mealy_v1_0.srcs/sources_1/new/coffee_mealy.v" \
 "../../../../edit_coffee_mealy_v1_0.srcs/sim_1/new/coffee_mealy_tb.v" \
 
 # compile glbl module
