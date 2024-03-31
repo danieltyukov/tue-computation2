@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER ElevatorFSM
+	OPTION supported_peripherals = (ElevatorFSM);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = ElevatorFSM;
+END DRIVER

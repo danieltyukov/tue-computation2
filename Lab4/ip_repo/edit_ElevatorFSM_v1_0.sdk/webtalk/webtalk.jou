@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# 
+# Start of session at: Mon Apr  1 01:52:13 2024
+# Process ID: 10879
+# Current directory: /media/sf_SharedWork/Lab4/ip_repo/edit_ElevatorFSM_v1_0.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /media/sf_SharedWork/Lab4/ip_repo/edit_ElevatorFSM_v1_0.sdk/webtalk/webtalk.log
+# Journal file: /media/sf_SharedWork/Lab4/ip_repo/edit_ElevatorFSM_v1_0.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

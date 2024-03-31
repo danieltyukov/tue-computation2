@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xil_io.h" // Required for AXI GPIO
+#include "ElevatorFSM.h"
+#include "xparameters.h"
+#include "sleep.h" // Required for usleep()
+
+#define AXI_GPIO_BASEADDR XPAR_ELEVATORFSM_0_S00_AXI_BASEADDR // Adjust this to your AXI GPIO base address
+#define UPDATE_OFFSET ELEVATORFSM_S00_AXI_SLV_REG3_OFFSET // Adjust if necessary
+#define MOVEMENT_OFFSET ELEVATORFSM_S00_AXI_SLV_REG2_OFFSET // Adjust if necessary
+#define FLOOR_OFFSET ELEVATORFSM_S00_AXI_SLV_REG1_OFFSET // Adjust if necessary
+#define MOTOR_CONTROL_OFFSET ELEVATORFSM_S00_AXI_SLV_REG0_OFFSET // Adjust if necessary
+#define RESET_OFFSET ELEVATORFSM_S00_AXI_SLV_REG3_OFFSET // Adjust if necessary
+
+int main() {
+    init_platform();
+
+    u32 movement, floor, update, reset, motor_control;
+
+    while (1) {
+        // Assuming the AXI GPIO is connected to the respective ports.
+        // Adjust the offsets based on your AXI GPIO configuration.
+    	motor_control = Xil_In32(AXI_GPIO_BASEADDR + MOTOR_CONTROL_OFFSET);
+    	floor = Xil_In32(AXI_GPIO_BASEADDR + FLOOR_OFFSET);
+        update = Xil_In32(AXI_GPIO_BASEADDR + UPDATE_OFFSET);
+        reset = Xil_In32(AXI_GPIO_BASEADDR + RESET_OFFSET);
+        movement = Xil_In32(AXI_GPIO_BASEADDR + MOVEMENT_OFFSET);
+
+        update = (update >> 2) & 1;
+        reset &= 0b11;
+
+        xil_printf("Floor: %d, Movement: %d, Reset: %d, Update: %d, Motor_Control: %d\n\r",
+        		floor, movement, reset, update, motor_control);
+
+        usleep(1000000); // Sleep for 1 second
+    }
+
+    cleanup_platform();
+    return 0;
+}
+

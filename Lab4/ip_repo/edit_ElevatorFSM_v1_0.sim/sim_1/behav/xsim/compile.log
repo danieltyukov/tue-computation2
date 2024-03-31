@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/sf_SharedWork/Lab4/ip_repo/edit_ElevatorFSM_v1_0.srcs/sources_1/new/ElevatorFSM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ElevatorFSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/sf_SharedWork/Lab4/ip_repo/edit_ElevatorFSM_v1_0.srcs/sim_1/new/ElevatorFSM_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ElevatorFSM_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/sf_SharedWork/Lab4/ip_repo/edit_ElevatorFSM_v1_0.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
