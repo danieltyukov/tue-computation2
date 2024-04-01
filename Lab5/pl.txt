@@ -1,0 +1,5 @@
+Name: Counter
+Description: This overlay enables the costum counter
+FPGA:
+LoadAtBoot: False
+Dependencies: []

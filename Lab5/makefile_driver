@@ -1,0 +1,45 @@
+
+##################################################################################
+## Company: Eindhoven University of Technology
+## Author: Wouter Schoenmakers
+## 
+## Create Date: 11/02/2019
+## Module Name: makefile_driver
+## Description: 5EIB0 lab 5 makefile for counter_driver
+## 
+## Version: 1.0
+##################################################################################
+
+BUILD_DIR:=/lib/modules/$(shell uname -r)/build
+CURDIR:=$(shell pwd)
+
+C_OBJS:=$(shell find . -name "*.c" ! -name "counter_driver.c" -print)
+OBJS:=$(C_OBJS:.c=.o)
+
+obj-m += counter_driver.o
+
+device-trees= pl.dtbo
+
+DTC:=dtc
+
+.PHONEY: all install clean help
+
+all: $(device-trees) $(OBJS)
+	make -C $(BUILD_DIR) M=$(CURDIR) modules
+
+clean:
+	make -C /lib/modules/$(shell uname -r)/build M=$(CURDIR) clean
+	rm -f $(device-trees)
+	rm -rf $(OBJS)
+
+help:
+	make -C /lib/modules/$(shell uname -r)/build M=$(CURDIR) help
+
+install:
+	make -C /lib/modules/$(shell uname -r)/build M=$(CURDIR) modules_install
+	
+%.o: %.c
+	$(CC) -g -c $< -o $@
+	
+%.dtbo: %.dtsi
+	$(DTC) -I dts -O dtb -o $@ $<
