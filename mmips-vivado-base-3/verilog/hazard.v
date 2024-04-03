@@ -28,14 +28,16 @@ module HAZARD(
         MEMWBWriteRegister,
         Instr,
         BranchOpID,
-        BranchOpEX,
+        //BranchOpEX,
         dmem_wait,
         imem_wait,
         PCWrite,
         IFIDWrite,
         Hazard,
         pipe_en,
-        imem_en
+        imem_en,
+        forwarding1,
+        forwarding2
     );
 
     input   [0:0]   enable;
@@ -49,7 +51,7 @@ module HAZARD(
     input   [4:0]   MEMWBWriteRegister;
     input   [31:0]  Instr;
     input   [1:0]   BranchOpID;
-    input   [1:0]   BranchOpEX;
+    //input   [1:0]   BranchOpEX;
     input   dmem_wait;
     input   imem_wait;
     output  [0:0]   PCWrite;
@@ -65,6 +67,10 @@ module HAZARD(
     reg     [0:0]   hazard;
     reg     [4:0]   ifidreadregister1;
     reg     [4:0]   ifidreadregister2;
+	output	[1:0] forwarding1;
+	output	[1:0]	forwarding2;
+	reg 		[1:0]	forwarding1;
+	reg		[1:0]	forwarding2;
 
     
     always @(MEMWBRegWrite or 
@@ -74,7 +80,7 @@ module HAZARD(
                 IDEXWriteRegisterRt or 
                 IDEXWriteRegisterRd or 
                 BranchOpID or 
-                BranchOpEX or 
+                //BranchOpEX or 
                 EXMEMWriteRegister or 
                 MEMWBWriteRegister or 
                 Instr or 
@@ -90,34 +96,208 @@ module HAZARD(
             // Enable the pipeline and instruction memory
             imem_en = 1'b1;
             pipe_en = 1'b1;
-            
+				forwarding1 = 0;//2'b00; //3'b000;
+				forwarding2 = 0;//2'b00; //3'b000;
+            //hazard = 1'b0; 
             // Check for hazards (for simplicity assume that register zero
             // can also cause a hazard)
-            if (BranchOpID != 2'b00 || BranchOpEX != 2'b00)
+				
+				//nothing you can do about this
+            if (BranchOpID != 2'b00)// || BranchOpEX != 2'b00)
                 // (Control) branch hazard
                 // Don't fetch a new instruction, insert a 'nop'
                 hazard = 1'b1;
-            else if (IDEXRegWrite == 1'b1 && ( 
+				else 
+				
+				begin
+            
+					if (MEMWBRegWrite == 1'b1 &&
+								MEMWBWriteRegister == ifidreadregister1 &&
+								MEMWBWriteRegister != 0)
+						// Forward A from WB
+						begin
+						forwarding1 = 3;//'b11; //Assuming 2'b11 selects WB forwarding signal
+						end
+					if (MEMWBRegWrite == 1'b1 &&
+								MEMWBWriteRegister == ifidreadregister2 &&
+								MEMWBWriteRegister != 0)
+						// Forward B from WB
+						begin
+						forwarding2 = 3;
+						end
+						
+					
+						
+					if (EXMEMRegWrite == 1'b1 && (
+                        EXMEMWriteRegister == ifidreadregister1 ||
+                        EXMEMWriteRegister == ifidreadregister2))
+                // MEM hazard
+                hazard = 1'b1;
+				
+					if (IDEXRegWrite == 1'b1 && ( 
                         IDEXRegDst == 2'b00 && IDEXWriteRegisterRt == ifidreadregister1 ||
                         IDEXRegDst == 2'b01 && IDEXWriteRegisterRd == ifidreadregister1 ||
                         IDEXRegDst == 2'b00 && IDEXWriteRegisterRt == ifidreadregister2 ||
                         IDEXRegDst == 2'b01 && IDEXWriteRegisterRd == ifidreadregister2))
                 // EX hazard
                 hazard = 1'b1;
-            else if (EXMEMRegWrite == 1'b1 && (
-                        EXMEMWriteRegister == ifidreadregister1 ||
-                        EXMEMWriteRegister == ifidreadregister2))
-                // MEM hazard
-                hazard = 1'b1;
-            else if (MEMWBRegWrite == 1'b1 && (
-                        MEMWBWriteRegister == ifidreadregister1 ||
-                        MEMWBWriteRegister == ifidreadregister2))
-                // WB hazard
-                hazard = 1'b1;
-            else
-                // No hazard
-                hazard = 1'b0;
             
+				else
+                // No hazard
+                hazard = 1'b0; 
+					 
+					 
+				end
+				
+//			else	if (EXMEMRegWrite == 1'b1 && (
+//                        EXMEMWriteRegister == ifidreadregister1 ||
+//                        EXMEMWriteRegister == ifidreadregister2))
+//                // MEM hazard
+//                hazard = 1'b1;
+            
+				
+				
+				
+//					if (MEMWBRegWrite == 1'b1 &&
+//						MEMWBWriteRegister == ifidreadregister1 &&
+//						MEMWBWriteRegister != 0)
+//						// Forward A from WB
+//						forwarding1 = 3;//'b11; //Assuming 2'b11 selects WB forwarding signal
+//					if (MEMWBRegWrite == 1'b1 &&
+//						MEMWBWriteRegister == ifidreadregister2 &&
+//						MEMWBWriteRegister != 0)
+//						// Forward B from WB
+//						forwarding2 = 3;//'b11; //Assuming 2'b11 selects WB forwarding signal
+						
+				
+				
+//            else
+//                // No hazard
+//                hazard = 1'b0; 
+				 
+				 
+			
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+//					 //old code
+//            /*else if (IDEXRegWrite == 1'b1 && ( 
+//                        IDEXRegDst == 2'b00 && IDEXWriteRegisterRt == ifidreadregister1 ||
+//                        IDEXRegDst == 2'b01 && IDEXWriteRegisterRd == ifidreadregister1 ||
+//                        IDEXRegDst == 2'b00 && IDEXWriteRegisterRt == ifidreadregister2 ||
+//                        IDEXRegDst == 2'b01 && IDEXWriteRegisterRd == ifidreadregister2))
+//                // EX hazard
+//                hazard = 1'b1;
+//            else if (EXMEMRegWrite == 1'b1 && (
+//                        EXMEMWriteRegister == ifidreadregister1 ||
+//                        EXMEMWriteRegister == ifidreadregister2))
+//                // MEM hazard
+//                hazard = 1'b1;
+//            else if (MEMWBRegWrite == 1'b1 && (
+//                        MEMWBWriteRegister == ifidreadregister1 ||
+//                        MEMWBWriteRegister == ifidreadregister2))
+//                // WB hazard
+//                hazard = 1'b1;
+//            else
+//                // No hazard
+//                hazard = 1'b0;*/
+//            
+//					else 
+//						begin
+//				
+//					forwarding1 =0;
+//					forwarding2 =0;
+//					hazard = 0'b0;
+//						
+//				
+//						if (MEMWBRegWrite == 1'b1 &&
+//									MEMWBWriteRegister == ifidreadregister1 &&
+//									MEMWBWriteRegister != 0)
+//							// Forward A from WB
+//							begin
+//								forwarding1 = 3; //3'b011;
+//							end
+//							
+//						if (MEMWBRegWrite == 1'b1 &&
+//									MEMWBWriteRegister == ifidreadregister2 &&
+//									MEMWBWriteRegister != 0)
+//							begin
+//								forwarding2 = 3; //'b011;
+//							end		
+//				
+//					end
+//					
+//				
+//					if (EXMEMRegWrite == 1'b1 && (
+//                        EXMEMWriteRegister == ifidreadregister1 ||
+//                        EXMEMWriteRegister == ifidreadregister2))
+//                // MEM hazard
+//                hazard = 1'b1;
+//				
+//				//begin the forwarding
+//				
+//					else if (IDEXRegWrite == 1'b1 && ( 
+//                        IDEXRegDst == 2'b00 && IDEXWriteRegisterRt == ifidreadregister1 ||
+//                        IDEXRegDst == 2'b01 && IDEXWriteRegisterRd == ifidreadregister1 ||
+//                        IDEXRegDst == 2'b00 && IDEXWriteRegisterRt == ifidreadregister2 ||
+//                        IDEXRegDst == 2'b01 && IDEXWriteRegisterRd == ifidreadregister2))
+//                // EX hazard
+//                hazard = 1'b1;
+//	
+
+//				else 
+//					begin
+//				
+//					forwarding1 =0;
+//					forwarding2 =0;
+//					hazard = 0'b0;
+//						
+//				
+//						if (MEMWBRegWrite == 1'b1 &&
+//									MEMWBWriteRegister == ifidreadregister1 &&
+//									MEMWBWriteRegister != 0)
+//							// Forward A from WB
+//							begin
+//								forwarding1 = 3; //3'b011;
+//							end
+//							
+//						if (MEMWBRegWrite == 1'b1 &&
+//									MEMWBWriteRegister == ifidreadregister2 &&
+//									MEMWBWriteRegister != 0)
+//							begin
+//								forwarding2 = 3; //'b011;
+//							end		
+//				
+//				end
+				
+				
+				
+				
+				
+				
+				
             // Write output
             if (enable[1'b0] == 0)
             begin
@@ -140,7 +320,8 @@ module HAZARD(
             else if (hazard)
             begin
                 // pre-fetch next instruction if it's branch hazard
-                if (BranchOpEX)
+                //if (BranchOpEX)
+					 if (BranchOpID)
                 begin
                     PCWrite = 1'b1;
                     imem_en = 1'b1;
