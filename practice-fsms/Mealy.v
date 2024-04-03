@@ -32,12 +32,6 @@ module Mealy (
         end
 	end
 
-	/*
-	THIS IMPLEMENTATION DOES NOT WORK ON ONCOURSE RIGHT NOW
-	It should work as it is functionally identical to the Moore implementation, and the output of the reference model does match in the debugger.
-	Except the evaluation fails for some unknown reason.
-	*/
-
 	// State Implementation
 	always @(*) begin
 		next_state = state;
