@@ -28,7 +28,7 @@ module HAZARD(
         MEMWBWriteRegister,
         Instr,
         BranchOpID,
-        BranchOpEX,
+        //BranchOpEX,
         dmem_wait,
         imem_wait,
         PCWrite,
@@ -49,7 +49,7 @@ module HAZARD(
     input   [4:0]   MEMWBWriteRegister;
     input   [31:0]  Instr;
     input   [1:0]   BranchOpID;
-    input   [1:0]   BranchOpEX;
+    //input   [1:0]   BranchOpEX;
     input   dmem_wait;
     input   imem_wait;
     output  [0:0]   PCWrite;
@@ -74,7 +74,7 @@ module HAZARD(
                 IDEXWriteRegisterRt or 
                 IDEXWriteRegisterRd or 
                 BranchOpID or 
-                BranchOpEX or 
+                //BranchOpEX or 
                 EXMEMWriteRegister or 
                 MEMWBWriteRegister or 
                 Instr or 
@@ -93,7 +93,7 @@ module HAZARD(
             
             // Check for hazards (for simplicity assume that register zero
             // can also cause a hazard)
-            if (BranchOpID != 2'b00 || BranchOpEX != 2'b00)
+            if (BranchOpID != 2'b00)// || BranchOpEX != 2'b00)
                 // (Control) branch hazard
                 // Don't fetch a new instruction, insert a 'nop'
                 hazard = 1'b1;
@@ -140,7 +140,8 @@ module HAZARD(
             else if (hazard)
             begin
                 // pre-fetch next instruction if it's branch hazard
-                if (BranchOpEX)
+                //if (BranchOpEX)
+                if (BranchOpID)
                 begin
                     PCWrite = 1'b1;
                     imem_en = 1'b1;

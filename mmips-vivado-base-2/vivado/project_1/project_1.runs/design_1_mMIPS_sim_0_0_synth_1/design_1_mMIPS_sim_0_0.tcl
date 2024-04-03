@@ -25,39 +25,39 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.cache/wt [current_project]
-set_property parent.project_path /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.xpr [current_project]
+set_property webtalk.parent_dir /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.cache/wt [current_project]
+set_property parent.project_path /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-set_property ip_output_repo /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.cache/ip [current_project]
+set_property ip_output_repo /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  /media/sf_SharedWork/mmips-vivado-base/verilog/RAMB16BWER.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/add.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/alu.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/aluctrl.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/branch_ctrl.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/bytewrite_tdp_ram_nc.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/ctrl.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/decoder.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/hazard.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/hazard_ctrl.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/imm2word.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/memdev.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/mmips_defines.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/mmips.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/mux.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/ram.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/regfile16.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/register.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/rom.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/shift.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/signextend.v
-  /media/sf_SharedWork/mmips-vivado-base/verilog/mMIPS_sim.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/RAMB16BWER.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/add.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/alu.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/aluctrl.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/branch_ctrl.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/bytewrite_tdp_ram_nc.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/ctrl.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/decoder.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/hazard.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/hazard_ctrl.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/imm2word.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/memdev.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/mmips_defines.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/mmips.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/mux.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/ram.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/regfile16.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/register.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/rom.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/shift.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/signextend.v
+  /media/sf_SharedWork/mmips-vivado-base-2/verilog/mMIPS_sim.v
 }
-read_ip -quiet /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0.xci
+read_ip -quiet /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0.xci
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -69,7 +69,7 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 }
 set_param ips.enableIPCacheLiteLoad 0
 
-set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.runs/design_1_mMIPS_sim_0_0_synth_1 -new_name design_1_mMIPS_sim_0_0 -ip [get_ips design_1_mMIPS_sim_0_0]]
+set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.runs/design_1_mMIPS_sim_0_0_synth_1 -new_name design_1_mMIPS_sim_0_0 -ip [get_ips design_1_mMIPS_sim_0_0]]
 
 if { $cached_ip eq {} } {
 close [open __synthesis_is_running__ w]
@@ -110,32 +110,32 @@ write_checkpoint -force -noxdef design_1_mMIPS_sim_0_0.dcp
 create_report "design_1_mMIPS_sim_0_0_synth_1_synth_report_utilization_0" "report_utilization -file design_1_mMIPS_sim_0_0_utilization_synth.rpt -pb design_1_mMIPS_sim_0_0_utilization_synth.pb"
 
 if { [catch {
-  file copy -force /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.runs/design_1_mMIPS_sim_0_0_synth_1/design_1_mMIPS_sim_0_0.dcp /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0.dcp
+  file copy -force /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.runs/design_1_mMIPS_sim_0_0_synth_1/design_1_mMIPS_sim_0_0.dcp /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0_stub.v
+  write_verilog -force -mode synth_stub /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0_stub.vhdl
+  write_vhdl -force -mode synth_stub /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0_sim_netlist.v
+  write_verilog -force -mode funcsim /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -145,47 +145,47 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.runs/design_1_mMIPS_sim_0_0_synth_1/design_1_mMIPS_sim_0_0.dcp /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0.dcp
+  file copy -force /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.runs/design_1_mMIPS_sim_0_0_synth_1/design_1_mMIPS_sim_0_0.dcp /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.runs/design_1_mMIPS_sim_0_0_synth_1/design_1_mMIPS_sim_0_0_stub.v /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0_stub.v
+  file rename -force /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.runs/design_1_mMIPS_sim_0_0_synth_1/design_1_mMIPS_sim_0_0_stub.v /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.runs/design_1_mMIPS_sim_0_0_synth_1/design_1_mMIPS_sim_0_0_stub.vhdl /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0_stub.vhdl
+  file rename -force /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.runs/design_1_mMIPS_sim_0_0_synth_1/design_1_mMIPS_sim_0_0_stub.vhdl /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.runs/design_1_mMIPS_sim_0_0_synth_1/design_1_mMIPS_sim_0_0_sim_netlist.v /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0_sim_netlist.v
+  file rename -force /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.runs/design_1_mMIPS_sim_0_0_synth_1/design_1_mMIPS_sim_0_0_sim_netlist.v /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.runs/design_1_mMIPS_sim_0_0_synth_1/design_1_mMIPS_sim_0_0_sim_netlist.vhdl /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0_sim_netlist.vhdl
+  file rename -force /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.runs/design_1_mMIPS_sim_0_0_synth_1/design_1_mMIPS_sim_0_0_sim_netlist.vhdl /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cached_ip 
 
-if {[file isdir /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.ip_user_files/ip/design_1_mMIPS_sim_0_0]} {
+if {[file isdir /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.ip_user_files/ip/design_1_mMIPS_sim_0_0]} {
   catch { 
-    file copy -force /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0_stub.v /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.ip_user_files/ip/design_1_mMIPS_sim_0_0
+    file copy -force /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0_stub.v /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.ip_user_files/ip/design_1_mMIPS_sim_0_0
   }
 }
 
-if {[file isdir /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.ip_user_files/ip/design_1_mMIPS_sim_0_0]} {
+if {[file isdir /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.ip_user_files/ip/design_1_mMIPS_sim_0_0]} {
   catch { 
-    file copy -force /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0_stub.vhdl /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.ip_user_files/ip/design_1_mMIPS_sim_0_0
+    file copy -force /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0_stub.vhdl /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.ip_user_files/ip/design_1_mMIPS_sim_0_0
   }
 }
 file delete __synthesis_is_running__

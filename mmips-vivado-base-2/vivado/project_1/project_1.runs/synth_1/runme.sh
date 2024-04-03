@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.runs/synth_1'
+HD_PWD='/media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

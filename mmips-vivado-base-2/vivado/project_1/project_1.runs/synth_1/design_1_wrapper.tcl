@@ -24,21 +24,21 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.cache/wt [current_project]
-set_property parent.project_path /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.xpr [current_project]
+set_property webtalk.parent_dir /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.cache/wt [current_project]
+set_property parent.project_path /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-set_property ip_output_repo /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.cache/ip [current_project]
+set_property ip_output_repo /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.srcs/sources_1/imports/vivado/design_1_wrapper.v
-add_files /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd
-set_property used_in_implementation false [get_files -all /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc]
-set_property used_in_implementation false [get_files -all /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc]
-set_property used_in_implementation false [get_files -all /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
+read_verilog -library xil_defaultlib /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.srcs/sources_1/imports/vivado/design_1_wrapper.v
+add_files /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd
+set_property used_in_implementation false [get_files -all /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc]
+set_property used_in_implementation false [get_files -all /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc]
+set_property used_in_implementation false [get_files -all /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/sf_SharedWork/mmips-vivado-base-2/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
