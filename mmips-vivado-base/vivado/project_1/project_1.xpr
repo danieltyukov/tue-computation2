@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2018.2 (64-bit)              -->
+<!--                                                         -->
+<!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
+
+<Project Version="7" Minor="38" Path="/media/sf_SharedWork/mmips-vivado-base/vivado/project_1/project_1.xpr">
+  <DefaultLaunch Dir="$PRUNDIR"/>
+  <Configuration>
+    <Option Name="Id" Val="30f8a4ebf2684d7b8f6bf2502643c95f"/>
+    <Option Name="Part" Val="xc7z020clg400-1"/>
+    <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
+    <Option Name="CompiledLibDirXSim" Val=""/>
+    <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
+    <Option Name="CompiledLibDirQuesta" Val="$PCACHEDIR/compile_simlib/questa"/>
+    <Option Name="CompiledLibDirIES" Val="$PCACHEDIR/compile_simlib/ies"/>
+    <Option Name="CompiledLibDirXcelium" Val="$PCACHEDIR/compile_simlib/xcelium"/>
+    <Option Name="CompiledLibDirVCS" Val="$PCACHEDIR/compile_simlib/vcs"/>
+    <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
+    <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
+    <Option Name="BoardPart" Val="tul.com.tw:pynq-z2:part0:1.0"/>
+    <Option Name="ActiveSimSet" Val="sim_1"/>
+    <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
+    <Option Name="IPCachePermission" Val="read"/>
+    <Option Name="IPCachePermission" Val="write"/>
+    <Option Name="EnableCoreContainer" Val="FALSE"/>
+    <Option Name="XPMLibraries" Val="XPM_FIFO"/>
+    <Option Name="XPMLibraries" Val="XPM_MEMORY"/>
+    <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
+    <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
+    <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
+    <Option Name="EnableBDX" Val="FALSE"/>
+    <Option Name="DSAVendor" Val="xilinx"/>
+    <Option Name="DSABoardId" Val="pynq-z2"/>
+    <Option Name="DSANumComputeUnits" Val="60"/>
+    <Option Name="WTXSimLaunchSim" Val="15"/>
+    <Option Name="WTModelSimLaunchSim" Val="0"/>
+    <Option Name="WTQuestaLaunchSim" Val="0"/>
+    <Option Name="WTIesLaunchSim" Val="0"/>
+    <Option Name="WTVcsLaunchSim" Val="0"/>
+    <Option Name="WTRivieraLaunchSim" Val="0"/>
+    <Option Name="WTActivehdlLaunchSim" Val="0"/>
+    <Option Name="WTXSimExportSim" Val="4"/>
+    <Option Name="WTModelSimExportSim" Val="4"/>
+    <Option Name="WTQuestaExportSim" Val="4"/>
+    <Option Name="WTIesExportSim" Val="4"/>
+    <Option Name="WTVcsExportSim" Val="4"/>
+    <Option Name="WTRivieraExportSim" Val="4"/>
+    <Option Name="WTActivehdlExportSim" Val="4"/>
+    <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
+    <Option Name="XSimRadix" Val="hex"/>
+    <Option Name="XSimTimeUnit" Val="ns"/>
+    <Option Name="XSimArrayDisplayLimit" Val="1024"/>
+    <Option Name="XSimTraceLimit" Val="65536"/>
+    <Option Name="SimTypes" Val="rtl"/>
+    <Option Name="SimTypes" Val="bfm"/>
+    <Option Name="SimTypes" Val="tlm"/>
+    <Option Name="SimTypes" Val="tlm_dpi"/>
+    <Option Name="MEMEnableMemoryMapGeneration" Val="TRUE"/>
+  </Configuration>
+  <FileSets Version="1" Minor="31">
+    <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+      <Filter Type="Srcs"/>
+      <File Path="$PPRDIR/../../verilog/RAMB16BWER.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/add.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/alu.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/aluctrl.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/branch_ctrl.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/bytewrite_tdp_ram_nc.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/ctrl.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/decoder.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/hazard.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/hazard_ctrl.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/imm2word.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/memdev.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/mmips_defines.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/mmips.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/mux.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/ram.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/regfile16.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/register.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/rom.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/shift.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/signextend.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/mMIPS_sim.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xci">
+          <Proxy FileSetName="design_1_rst_ps7_0_50M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci">
+          <Proxy FileSetName="design_1_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_mMIPS_sim_0_0/design_1_mMIPS_sim_0_0.xci">
+          <Proxy FileSetName="design_1_mMIPS_sim_0_0"/>
+        </CompFileExtendedInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/vivado/design_1_wrapper.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../design_1_wrapper.v"/>
+          <Attr Name="ImportTime" Val="1552380640"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="design_1_wrapper"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+      <Filter Type="Constrs"/>
+      <Config>
+        <Option Name="ConstrsType" Val="XDC"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <File Path="$PPRDIR/../../verilog/testbench.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom32.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram03.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram46.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom40.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom16.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom14.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom22.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram05.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram54.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram11.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom08.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram62.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom30.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram36.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram23.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram28.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom12.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom18.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom42.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram48.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram52.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom24.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom37.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram21.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom06.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram34.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom10.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom45.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom36.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram09.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram18.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram41.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram24.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram15.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom43.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram32.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom00.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram58.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom26.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom39.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom04.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom09.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom34.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom21.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom47.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram07.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram43.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram60.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram00.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram30.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram26.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram13.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram56.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom15.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom28.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom02.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram55.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram12.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram39.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom07.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom23.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram63.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom31.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram20.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram37.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram02.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom13.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram45.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram06.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom17.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram49.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram10.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram53.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram22.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom05.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom25.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram40.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram16.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram35.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram29.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram51.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom19.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram47.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom41.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram04.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom11.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram17.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram42.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram25.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram50.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom44.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram33.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom01.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom29.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram59.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram27.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom35.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom38.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram19.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram61.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram.dump.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram01.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram14.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram57.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram31.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram44.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom03.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom27.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom46.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom20.hex"/>
+      <File Path="$PPRDIR/../../memory/rom/mips_rom33.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram38.hex"/>
+      <File Path="$PPRDIR/../../memory/ram/mips_ram08.hex"/>
+      <File Path="$PSRCDIR/sim_1/imports/vivado/design_1_wrapper_behav.wcfg">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../design_1_wrapper_behav.wcfg"/>
+          <Attr Name="ImportTime" Val="1552380640"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="testbench"/>
+        <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="TransportPathDelay" Val="0"/>
+        <Option Name="TransportIntDelay" Val="0"/>
+        <Option Name="SrcSet" Val="sources_1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_rst_ps7_0_50M_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_rst_ps7_0_50M_0">
+      <Config>
+        <Option Name="TopModule" Val="design_1_rst_ps7_0_50M_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_processing_system7_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_processing_system7_0_0">
+      <Config>
+        <Option Name="TopModule" Val="design_1_processing_system7_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_mMIPS_sim_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_mMIPS_sim_0_0">
+      <Config>
+        <Option Name="TopModule" Val="design_1_mMIPS_sim_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+  </FileSets>
+  <Simulators>
+    <Simulator Name="XSim">
+      <Option Name="Description" Val="Vivado Simulator"/>
+      <Option Name="CompiledLib" Val="0"/>
+    </Simulator>
+    <Simulator Name="ModelSim">
+      <Option Name="Description" Val="ModelSim Simulator"/>
+    </Simulator>
+    <Simulator Name="Questa">
+      <Option Name="Description" Val="Questa Advanced Simulator"/>
+    </Simulator>
+    <Simulator Name="IES">
+      <Option Name="Description" Val="Incisive Enterprise Simulator (IES)"/>
+    </Simulator>
+    <Simulator Name="Xcelium">
+      <Option Name="Description" Val="Xcelium Parallel Simulator"/>
+    </Simulator>
+    <Simulator Name="VCS">
+      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
+    </Simulator>
+    <Simulator Name="Riviera">
+      <Option Name="Description" Val="Riviera-PRO Simulator"/>
+    </Simulator>
+  </Simulators>
+  <Runs Version="1" Minor="10">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="design_1_rst_ps7_0_50M_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_rst_ps7_0_50M_0" Part="xc7z020clg400-1" ConstrsSet="design_1_rst_ps7_0_50M_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_rst_ps7_0_50M_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="design_1_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_processing_system7_0_0" Part="xc7z020clg400-1" ConstrsSet="design_1_processing_system7_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_processing_system7_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="design_1_mMIPS_sim_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_mMIPS_sim_0_0" Part="xc7z020clg400-1" ConstrsSet="design_1_mMIPS_sim_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_mMIPS_sim_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="design_1_rst_ps7_0_50M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_1_rst_ps7_0_50M_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="design_1_rst_ps7_0_50M_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="design_1_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_1_processing_system7_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="design_1_processing_system7_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="design_1_mMIPS_sim_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_1_mMIPS_sim_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="design_1_mMIPS_sim_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+  </Runs>
+  <Board>
+    <Jumpers/>
+  </Board>
+</Project>

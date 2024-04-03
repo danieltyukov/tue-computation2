@@ -1,0 +1,454 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:02:38 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 1477
+License: Customer
+
+Current time: 	Wed Apr 03 16:59:22 CEST 2024
+Time zone: 	Central European Time (Europe/Amsterdam)
+
+OS: Ubuntu
+OS Version: 5.4.0-150-generic
+OS Architecture: amd64
+Available processors (cores): 12
+
+Display: :0.0
+Screen size: 1200x1333
+Screen resolution (DPI): 95
+Available screens: 1
+Available disk space: 8 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	/opt/tools/Xilinx/Vivado/2018.2/tps/lnx64/jre
+Java executable location: 	/opt/tools/Xilinx/Vivado/2018.2/tps/lnx64/jre/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	computation
+User home directory: /home/computation
+User working directory: /media/sf_SharedWork/mmips-vivado-base/vivado
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/tools/Xilinx/Vivado
+HDI_APPROOT: /opt/tools/Xilinx/Vivado/2018.2
+RDI_DATADIR: /opt/tools/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: /opt/tools/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: /home/computation/.Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: /home/computation/.Xilinx/Vivado/2018.2/
+Vivado layouts directory: /home/computation/.Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	/opt/tools/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	
+Vivado journal file location: 	
+Engine tmp dir: 	./.Xil/Vivado-1477-computation-virtual-machine
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /opt/tools/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: /opt/tools/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: /opt/tools/Xilinx/Vivado/2018.2
+XILINX_SDK: /opt/tools/Xilinx/SDK/2018.2
+XILINX_VIVADO: /opt/tools/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: /opt/tools/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	240 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 1,139 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: project_1/project_1.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project project_1/project_1.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// [GUI Memory]: 77 MB (+78541kb) [00:00:04]
+// [Engine Memory]: 969 MB (+864524kb) [00:00:04]
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 1,052 MB (+35955kb) [00:00:05]
+// [GUI Memory]: 105 MB (+24748kb) [00:00:06]
+// [GUI Memory]: 116 MB (+6235kb) [00:00:06]
+// [GUI Memory]: 124 MB (+2782kb) [00:00:06]
+// [GUI Memory]: 132 MB (+1668kb) [00:00:06]
+// [Engine Memory]: 1,137 MB (+34504kb) [00:00:07]
+// Tcl Message: open_project project_1/project_1.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/tools/Xilinx/Vivado/2018.2/data/ip'. 
+// Project name: project_1; location: /media/sf_SharedWork/mmips-vivado-base/vivado/project_1; part: xc7z020clg400-1
+dismissDialog("Open Project"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,151 MB. GUI used memory: 56 MB. Current time: 4/3/24 4:59:22 PM CEST
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// [Engine Memory]: 1,195 MB (+1402kb) [00:00:12]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 2,180 MB (+969416kb) [00:00:12]
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15, true); // u (O, ck) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN
+// bx (ck):  Open Synthesized Design : addNotify
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7z020clg400-1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,318 MB. GUI used memory: 55 MB. Current time: 4/3/24 4:59:43 PM CEST
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,491 MB. GUI used memory: 53 MB. Current time: 4/3/24 4:59:51 PM CEST
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). INFO: [Project 1-111] Unisim Transformation Summary:   A total of 12 instances were transformed.   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 12 instances  
+// Device view-level: 0.0
+// Tcl Message: open_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 7340.613 ; gain = 0.000 ; free physical = 19984 ; free virtual = 23216 
+// 'dP' command handler elapsed time: 16 seconds
+// Elapsed time: 16 seconds
+dismissDialog("Open Synthesized Design"); // bx (ck)
+selectButton((HResource) null, "Device_settings"); // u (f, ck): TRUE
+selectButton((HResource) null, "Device_settings"); // u (f, ck): FALSE
+// RouteApi::initDelayMediator elapsed time: 12.2s
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// HMemoryUtils.trashcanNow. Engine heap size: 1,969 MB. GUI used memory: 84 MB. Current time: 4/3/24 5:00:08 PM CEST
+// Elapsed time: 125 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Timing Summary]", 19, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_REPORT_TIMING_SUMMARY
+// aJ (ck): Report Timing Summary: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aJ)
+dismissDialog("Report Timing Summary"); // aJ (ck)
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs 
+// bx (ck):  Report Timing Summary : addNotify
+dismissDialog("Report Timing Summary"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,113 MB. GUI used memory: 90 MB. Current time: 4/3/24 5:02:13 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,115 MB. GUI used memory: 90 MB. Current time: 4/3/24 5:02:17 PM CEST
+// [GUI Memory]: 141 MB (+2030kb) [00:03:07]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,141 MB. GUI used memory: 90 MB. Current time: 4/3/24 5:02:23 PM CEST
+// Elapsed time: 17 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 66087, 254499); // D (I, ck)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 66087, 254499); // D (I, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,142 MB. GUI used memory: 92 MB. Current time: 4/3/24 5:02:36 PM CEST
+// Elapsed time: 29 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 956832, 235218); // D (I, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,148 MB. GUI used memory: 119 MB. Current time: 4/3/24 5:03:01 PM CEST
+// [GUI Memory]: 148 MB (+25kb) [00:04:09]
+// [GUI Memory]: 172 MB (+17546kb) [00:04:12]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,212 MB. GUI used memory: 92 MB. Current time: 4/3/24 5:03:27 PM CEST
+// [GUI Memory]: 200 MB (+20340kb) [00:04:38]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,213 MB. GUI used memory: 91 MB. Current time: 4/3/24 5:03:53 PM CEST
+// Elapsed time: 58 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 357219, 100257); // D (I, ck)
+// Device select: 'I/O Bank - I/O Bank 0'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 597, 78, 1062, 453); // U (k, ck)
+selectButton((HResource) null, "Device_settings"); // u (f, ck): TRUE
+selectButton((HResource) null, "Device_settings"); // u (f, ck): FALSE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Utilization]", 25, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RESOURCE_UTILIZATION
+// a (ck): Report Utilization: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (a)
+dismissDialog("Report Utilization"); // a (ck)
+// TclEventType: UTILIZATION_RESULT_GENERATED
+// Tcl Message: report_utilization -name utilization_1 
+// bx (ck):  Report Utilization : addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 2,219 MB. GUI used memory: 109 MB. Current time: 4/3/24 5:04:14 PM CEST
+// Tcl Message: report_utilization: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 7340.613 ; gain = 0.000 ; free physical = 19349 ; free virtual = 22652 
+dismissDialog("Report Utilization"); // bx (ck)
+selectButton(PAResourceTtoZ.UtilizationHierViewTreeTablePanel_SHOW_PERCENTAGE, (String) null); // u (f, ck): TRUE
+// Elapsed time: 97 seconds
+selectTab((HResource) null, (HResource) null, "Timing", 6); // aE (Q, ck)
+// Elapsed time: 61 seconds
+selectButton(PAResourceAtoD.DesignTimingSumSectionPanel_WORST_NEGATIVE_SLACK, "3.108 ns"); // h (Q, ck)
+// PAPropertyPanels.initPanels (Path 1) elapsed time: 0.3s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,222 MB. GUI used memory: 131 MB. Current time: 4/3/24 5:06:58 PM CEST
+// Elapsed time: 34 seconds
+floatView(PAResourceOtoP.PAViews_TIMING, "Timing - Timing Summary - timing_1"); // aw (aE, ck)
+// PAResourceOtoP.PAViews_TIMING: Timing: float view
+// Elapsed time: 218 seconds
+dockFrame(PAResourceOtoP.PAViews_TIMING, "Timing - Timing Summary - timing_1"); // aw (aE, aG)
+// PAResourceOtoP.PAViews_TIMING: Timing: dock view
+// [GUI Memory]: 212 MB (+1980kb) [00:11:57]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, ck)
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aE (Q, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v)]", 2, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 3, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// [GUI Memory]: 224 MB (+1858kb) [00:12:04]
+// [GUI Memory]: 237 MB (+1439kb) [00:18:49]
+// [GUI Memory]: 249 MB (+525kb) [00:25:51]
+// [GUI Memory]: 262 MB (+156kb) [00:28:11]
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 3,288 MB (+1047727kb) [00:35:59]
+// HMemoryUtils.trashcanNow. Engine heap size: 3,336 MB. GUI used memory: 109 MB. Current time: 4/3/24 5:35:14 PM CEST
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
