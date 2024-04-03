@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+size=$(du -b "$1" | awk '{print $1}')
+outfile="${1%.*}.png"
+
+if [ $size == "414720" ]
+then
+    dim="720x576"
+else
+    dim="32x32"
+fi
+
+convert -depth 8 -size $dim+0 gray:"$1" $outfile
+
+xdg-open $outfile

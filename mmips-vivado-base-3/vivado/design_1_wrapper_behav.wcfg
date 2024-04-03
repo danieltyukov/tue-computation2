@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="design_1_wrapper_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_vip_pkg" />
+            <top_module name="design_1_wrapper" />
+            <top_module name="glbl" />
+            <top_module name="std" />
+            <top_module name="xil_common_vip_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="31400000001fs"></ZoomEndTime>
+      <Cursor1Time time="9290000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="142"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="83" />
+   <wvobject type="array" fp_name="/design_1_wrapper/DDR_addr">
+      <obj_property name="ElementShortName">DDR_addr[14:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_addr[14:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/DDR_ba">
+      <obj_property name="ElementShortName">DDR_ba[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_ba[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/DDR_cas_n">
+      <obj_property name="ElementShortName">DDR_cas_n</obj_property>
+      <obj_property name="ObjectShortName">DDR_cas_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/DDR_ck_n">
+      <obj_property name="ElementShortName">DDR_ck_n</obj_property>
+      <obj_property name="ObjectShortName">DDR_ck_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/DDR_ck_p">
+      <obj_property name="ElementShortName">DDR_ck_p</obj_property>
+      <obj_property name="ObjectShortName">DDR_ck_p</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/DDR_cke">
+      <obj_property name="ElementShortName">DDR_cke</obj_property>
+      <obj_property name="ObjectShortName">DDR_cke</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/DDR_cs_n">
+      <obj_property name="ElementShortName">DDR_cs_n</obj_property>
+      <obj_property name="ObjectShortName">DDR_cs_n</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/DDR_dm">
+      <obj_property name="ElementShortName">DDR_dm[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_dm[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/DDR_dq">
+      <obj_property name="ElementShortName">DDR_dq[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_dq[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/DDR_dqs_n">
+      <obj_property name="ElementShortName">DDR_dqs_n[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_dqs_n[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/DDR_dqs_p">
+      <obj_property name="ElementShortName">DDR_dqs_p[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_dqs_p[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/DDR_odt">
+      <obj_property name="ElementShortName">DDR_odt</obj_property>
+      <obj_property name="ObjectShortName">DDR_odt</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/DDR_ras_n">
+      <obj_property name="ElementShortName">DDR_ras_n</obj_property>
+      <obj_property name="ObjectShortName">DDR_ras_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/DDR_reset_n">
+      <obj_property name="ElementShortName">DDR_reset_n</obj_property>
+      <obj_property name="ObjectShortName">DDR_reset_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/DDR_we_n">
+      <obj_property name="ElementShortName">DDR_we_n</obj_property>
+      <obj_property name="ObjectShortName">DDR_we_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/FIXED_IO_ddr_vrn">
+      <obj_property name="ElementShortName">FIXED_IO_ddr_vrn</obj_property>
+      <obj_property name="ObjectShortName">FIXED_IO_ddr_vrn</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/FIXED_IO_ddr_vrp">
+      <obj_property name="ElementShortName">FIXED_IO_ddr_vrp</obj_property>
+      <obj_property name="ObjectShortName">FIXED_IO_ddr_vrp</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/FIXED_IO_mio">
+      <obj_property name="ElementShortName">FIXED_IO_mio[53:0]</obj_property>
+      <obj_property name="ObjectShortName">FIXED_IO_mio[53:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/FIXED_IO_ps_clk">
+      <obj_property name="ElementShortName">FIXED_IO_ps_clk</obj_property>
+      <obj_property name="ObjectShortName">FIXED_IO_ps_clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/FIXED_IO_ps_porb">
+      <obj_property name="ElementShortName">FIXED_IO_ps_porb</obj_property>
+      <obj_property name="ObjectShortName">FIXED_IO_ps_porb</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/FIXED_IO_ps_srstb">
+      <obj_property name="ElementShortName">FIXED_IO_ps_srstb</obj_property>
+      <obj_property name="ObjectShortName">FIXED_IO_ps_srstb</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/en">
+      <obj_property name="ElementShortName">en</obj_property>
+      <obj_property name="ObjectShortName">en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/dev_dout">
+      <obj_property name="ElementShortName">dev_dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dev_dout[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/dev_din">
+      <obj_property name="ElementShortName">dev_din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dev_din[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/dev_r">
+      <obj_property name="ElementShortName">dev_r</obj_property>
+      <obj_property name="ObjectShortName">dev_r</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/dev_w">
+      <obj_property name="ElementShortName">dev_w</obj_property>
+      <obj_property name="ObjectShortName">dev_w</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/dev_rdyr">
+      <obj_property name="ElementShortName">dev_rdyr</obj_property>
+      <obj_property name="ObjectShortName">dev_rdyr</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/dev_rdyw">
+      <obj_property name="ElementShortName">dev_rdyw</obj_property>
+      <obj_property name="ObjectShortName">dev_rdyw</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/dev_wdata">
+      <obj_property name="ElementShortName">dev_wdata</obj_property>
+      <obj_property name="ObjectShortName">dev_wdata</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/dev_waddr">
+      <obj_property name="ElementShortName">dev_waddr</obj_property>
+      <obj_property name="ObjectShortName">dev_waddr</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/dev_send_eop">
+      <obj_property name="ElementShortName">dev_send_eop</obj_property>
+      <obj_property name="ObjectShortName">dev_send_eop</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/dev_rcv_eop">
+      <obj_property name="ElementShortName">dev_rcv_eop</obj_property>
+      <obj_property name="ObjectShortName">dev_rcv_eop</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/rom_dout">
+      <obj_property name="ElementShortName">rom_dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_dout[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/rom_wait">
+      <obj_property name="ElementShortName">rom_wait</obj_property>
+      <obj_property name="ObjectShortName">rom_wait</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/rom_addr">
+      <obj_property name="ElementShortName">rom_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/rom_r">
+      <obj_property name="ElementShortName">rom_r[0:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_r[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/ram_dout">
+      <obj_property name="ElementShortName">ram_dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_dout[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/ram_wait">
+      <obj_property name="ElementShortName">ram_wait</obj_property>
+      <obj_property name="ObjectShortName">ram_wait</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/ram_din">
+      <obj_property name="ElementShortName">ram_din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_din[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/ram_addr">
+      <obj_property name="ElementShortName">ram_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/ram_r">
+      <obj_property name="ElementShortName">ram_r[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_r[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/ram_w">
+      <obj_property name="ElementShortName">ram_w[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_w[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/rst_ps7_0_50M/slowest_sync_clk">
+      <obj_property name="ElementShortName">slowest_sync_clk</obj_property>
+      <obj_property name="ObjectShortName">slowest_sync_clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/rst_ps7_0_50M/ext_reset_in">
+      <obj_property name="ElementShortName">ext_reset_in</obj_property>
+      <obj_property name="ObjectShortName">ext_reset_in</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/rst_ps7_0_50M/aux_reset_in">
+      <obj_property name="ElementShortName">aux_reset_in</obj_property>
+      <obj_property name="ObjectShortName">aux_reset_in</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/rst_ps7_0_50M/mb_debug_sys_rst">
+      <obj_property name="ElementShortName">mb_debug_sys_rst</obj_property>
+      <obj_property name="ObjectShortName">mb_debug_sys_rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/rst_ps7_0_50M/dcm_locked">
+      <obj_property name="ElementShortName">dcm_locked</obj_property>
+      <obj_property name="ObjectShortName">dcm_locked</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/rst_ps7_0_50M/mb_reset">
+      <obj_property name="ElementShortName">mb_reset</obj_property>
+      <obj_property name="ObjectShortName">mb_reset</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/rst_ps7_0_50M/bus_struct_reset">
+      <obj_property name="ElementShortName">bus_struct_reset[0:0]</obj_property>
+      <obj_property name="ObjectShortName">bus_struct_reset[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/rst_ps7_0_50M/peripheral_reset">
+      <obj_property name="ElementShortName">peripheral_reset[0:0]</obj_property>
+      <obj_property name="ObjectShortName">peripheral_reset[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/rst_ps7_0_50M/interconnect_aresetn">
+      <obj_property name="ElementShortName">interconnect_aresetn[0:0]</obj_property>
+      <obj_property name="ObjectShortName">interconnect_aresetn[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/rst_ps7_0_50M/peripheral_aresetn">
+      <obj_property name="ElementShortName">peripheral_aresetn[0:0]</obj_property>
+      <obj_property name="ObjectShortName">peripheral_aresetn[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/enable">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/rom_dout">
+      <obj_property name="ElementShortName">rom_dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_dout[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/rom_wait">
+      <obj_property name="ElementShortName">rom_wait</obj_property>
+      <obj_property name="ObjectShortName">rom_wait</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/rom_addr">
+      <obj_property name="ElementShortName">rom_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/rom_r">
+      <obj_property name="ElementShortName">rom_r[0:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_r[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/ram_dout">
+      <obj_property name="ElementShortName">ram_dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_dout[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/ram_wait">
+      <obj_property name="ElementShortName">ram_wait</obj_property>
+      <obj_property name="ObjectShortName">ram_wait</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/ram_din">
+      <obj_property name="ElementShortName">ram_din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_din[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/ram_addr">
+      <obj_property name="ElementShortName">ram_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/ram_r">
+      <obj_property name="ElementShortName">ram_r[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_r[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/ram_w">
+      <obj_property name="ElementShortName">ram_w[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_w[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/dev_dout">
+      <obj_property name="ElementShortName">dev_dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dev_dout[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/dev_din">
+      <obj_property name="ElementShortName">dev_din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dev_din[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/dev_r">
+      <obj_property name="ElementShortName">dev_r</obj_property>
+      <obj_property name="ObjectShortName">dev_r</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/dev_w">
+      <obj_property name="ElementShortName">dev_w</obj_property>
+      <obj_property name="ObjectShortName">dev_w</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/dev_rdyr">
+      <obj_property name="ElementShortName">dev_rdyr</obj_property>
+      <obj_property name="ObjectShortName">dev_rdyr</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/dev_rdyw">
+      <obj_property name="ElementShortName">dev_rdyw</obj_property>
+      <obj_property name="ObjectShortName">dev_rdyw</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/dev_wdata">
+      <obj_property name="ElementShortName">dev_wdata</obj_property>
+      <obj_property name="ObjectShortName">dev_wdata</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/dev_waddr">
+      <obj_property name="ElementShortName">dev_waddr</obj_property>
+      <obj_property name="ObjectShortName">dev_waddr</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/dev_send_eop">
+      <obj_property name="ElementShortName">dev_send_eop</obj_property>
+      <obj_property name="ObjectShortName">dev_send_eop</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/dev_rcv_eop">
+      <obj_property name="ElementShortName">dev_rcv_eop</obj_property>
+      <obj_property name="ObjectShortName">dev_rcv_eop</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/pc/in">
+      <obj_property name="ElementShortName">in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">in[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/pc/w">
+      <obj_property name="ElementShortName">w[0:0]</obj_property>
+      <obj_property name="ObjectShortName">w[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/pc/out">
+      <obj_property name="ElementShortName">out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">out[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/pc/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/pc/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_1_wrapper/design_1_i/mMIPS_sim_0/inst/mMIPS/pc/WIDTH">
+      <obj_property name="ElementShortName">WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WIDTH[31:0]</obj_property>
+   </wvobject>
+</wave_config>
