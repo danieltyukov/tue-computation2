@@ -72,15 +72,14 @@ module edge_detector (
 
     // State Parameters
     localparam
-	zero        = 0,
-	one         = 1,
+	one         = 0,
+	zero        = 1,
 	rising_edge = 2;
 	
 	// Bit Definitions
 	localparam
 	LOW   = 1'b0,
 	HIGH  = 1'b1;
-
 
     // Memory Registers
     reg [1:0] state;
@@ -98,7 +97,6 @@ module edge_detector (
     // State logic
     always @(*) begin
         next_state = state;
-        // tick = LOW;
         if(update ==  HIGH) begin
             case (state)
 		        one: begin
