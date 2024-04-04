@@ -22,7 +22,7 @@ module Mealy (
 
 	// Clock Timer
 	always @(posedge clk) begin
-		if(reset == 1'b1) begin
+		if(reset == HIGH) begin
             state <= st_cent0;
         end else begin
             state <= next_state;
