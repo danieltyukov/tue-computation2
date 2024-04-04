@@ -120,7 +120,6 @@ module edge_detector (
             endcase
         end
 
-        // State determines output values (Moore FSM)
         case (state)
 		    rising_edge: begin
 			    tick = HIGH;
@@ -132,3 +131,42 @@ module edge_detector (
     end
 
 endmodule
+
+
+// why does this not work:
+    // always @(*) begin
+    //     next_state = state;
+    //     tick = LOW;
+    //     if(update ==  HIGH) begin
+    //         case (state)
+	// 	        one: begin
+	// 		        if (level == LOW) begin
+	// 			        next_state = zero;
+	// 		        end
+	// 	        end
+	// 	        zero: begin
+	// 		        if (level == HIGH) begin
+	// 			        next_state = rising_edge;
+	// 		        end
+	// 	        end
+	// 	        rising_edge: begin
+	// 		        if (level == HIGH) begin
+	// 			        next_state = one;
+	// 		        end
+	// 		        if (level == LOW) begin
+	// 			        next_state = zero;
+	// 		        end
+    // 		        tick = HIGH;
+	// 	        end
+    //         endcase
+    //     end
+
+    //     case (state)
+	// 	    rising_edge: begin
+	// 		    tick = HIGH;
+	// 	    end
+	// 	    default: begin
+	// 		    tick = LOW;
+	// 	    end
+    //     endcase
+    // end
