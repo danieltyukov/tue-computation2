@@ -82,7 +82,7 @@ module Moore (
 	end
 
 	// Write Output Depending On State
-	always @* begin
+	always @(*) begin
 	    case(state)
 	        st_cent5c: begin
 	            coffee = HIGH;
