@@ -160,13 +160,4 @@ endmodule
 	// 	        end
     //         endcase
     //     end
-
-    //     case (state)
-	// 	    rising_edge: begin
-	// 		    tick = HIGH;
-	// 	    end
-	// 	    default: begin
-	// 		    tick = LOW;
-	// 	    end
-    //     endcase
     // end
