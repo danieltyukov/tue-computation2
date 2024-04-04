@@ -24,6 +24,20 @@ module Moore (
 		This FSM does not depend on the 'update' line, so the state is updated every clock cycle instead.
 	*/
 
+    // Write Output Depending On State
+	always @(*) begin
+	    case(state)
+	        st_cent5c: begin
+	            coffee = HIGH;
+	        end
+	        st_cent0c: begin
+	            coffee = HIGH;
+	        end
+	        default: begin
+				coffee = LOW;
+	        end
+	    endcase
+	end
 
 	// State Logic
 	always @(posedge clk) begin
@@ -75,25 +89,8 @@ module Moore (
 				end
 			end
 		endcase
-
 	    if (reset == HIGH) begin
 	        state <= st_cent0;
 	    end
 	end
-
-	// Write Output Depending On State
-	always @(*) begin
-	    case(state)
-	        st_cent5c: begin
-	            coffee = HIGH;
-	        end
-	        st_cent0c: begin
-	            coffee = HIGH;
-	        end
-	        default: begin
-				coffee = LOW;
-	        end
-	    endcase
-	end
-
 endmodule
