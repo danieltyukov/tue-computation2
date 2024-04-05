@@ -1,6 +1,5 @@
 `timescale 1ns / 100ps
 // [down,up]
-// moore
 module fan_controller (
     input  wire [0:0] clk,
     input  wire [0:0] reset,
@@ -48,36 +47,41 @@ module fan_controller (
         if (update == HIGH) begin
             case (state)
                 stop: begin
-                    if (up == HIGH) begin
+                    if (down == LOW && up == HIGH) begin
                         state <= slow;
                     end
                 end
                 slow: begin
-                    if (down == HIGH) begin
+                    if (down == HIGH && up == LOW) begin
                         state <= stop;
                     end
-                    if (up == HIGH) begin
+                    if (down == HIGH && up == HIGH) begin
+                        state <= stop;
+                    end
+                    if (down == LOW && up == HIGH) begin
                         state <= med;
                     end
                 end
                 med: begin
-                    if (down == HIGH) begin
+                    if (down == HIGH && up == LOW) begin
                         state <= slow;
                     end
-                    if (up == HIGH) begin
+                    if (down == HIGH && up == HIGH) begin
+                        state <= stop;
+                    end
+                    if (down == LOW && up == HIGH) begin
                         state <= fast;
                     end
                 end
                 fast: begin
-                    if (down == HIGH) begin
+                    if (down == HIGH && up == LOW) begin
                         state <= med;
+                    end
+                    if (down == HIGH && up == HIGH) begin
+                        state <= stop;
                     end
                 end
             endcase
-
-            if (down == HIGH && up == HIGH) begin
-                state <= stop;
-            end
         end
         if (reset == HIGH) begin
             state <= stop;
