@@ -8,8 +8,8 @@ module Moore (
     // State Definitions
     localparam
 	st_cent0   = 0,
-	st_cent5   = 1,
-	st_cent10  = 2,
+	st_cent10  = 1,
+	st_cent5   = 2,
 	st_cent5c  = 3,
 	st_cent0c  = 4;
 
@@ -37,48 +37,48 @@ module Moore (
 		state_next = state;
 		case(state)
 			st_cent0: begin
-				if(coins == 2'b01) begin
+				if(coins == st_cent10) begin
 					state_next = st_cent10;
 				end
-				if(coins == 2'b10) begin
+				if(coins == st_cent5) begin
 					state_next = st_cent5;
 				end
 			end
 			st_cent5: begin
-				if(coins == 2'b01) begin
+				if(coins == st_cent10) begin
 					state_next = st_cent0c;
 				end
-				if(coins == 2'b10) begin
+				if(coins == st_cent5) begin
 					state_next = st_cent10;
 				end
 			end
 			st_cent10: begin
-				if(coins == 2'b01) begin
+				if(coins == st_cent10) begin
 					state_next = st_cent5c;
 				end
-				if(coins == 2'b10) begin
+				if(coins == st_cent5) begin
 					state_next = st_cent0c;
 				end
 			end
 			st_cent5c: begin
-				if(coins == 2'b00) begin
+				if(coins == st_cent0) begin
 					state_next = st_cent5;
 				end
-				if(coins == 2'b01) begin
+				if(coins == st_cent10) begin
 					state_next = st_cent0c;
 				end
-				if(coins == 2'b10) begin
+				if(coins == st_cent5) begin
 					state_next = st_cent10;
 				end
 			end
 			st_cent0c: begin
-				if(coins == 2'b00) begin
+				if(coins == st_cent0) begin
 					state_next = st_cent0;
 				end
-				if(coins == 2'b01) begin
+				if(coins == st_cent10) begin
 					state_next = st_cent10;
 				end
-				if(coins == 2'b10) begin
+				if(coins == st_cent5) begin
 				    state_next = st_cent5;
 				end
 			end

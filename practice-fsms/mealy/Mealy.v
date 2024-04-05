@@ -8,8 +8,8 @@ module Mealy (
     // State Definitions
     localparam
 	st_cent0   = 0,
-	st_cent5   = 1,
-	st_cent10  = 2;
+	st_cent10  = 1,
+	st_cent5   = 2;
 
 	// Bit Definitions
 	localparam
@@ -18,56 +18,65 @@ module Mealy (
 
 	// Memory Definitions
 	reg [1:0] state;
-	reg [1:0] next_state;
+	reg [1:0] state_next;
+	reg [0:0] coffee_next;
 
 	// Clock Timer
 	always @(posedge clk) begin
 		if(reset == HIGH) begin
             state <= st_cent0;
-        end else begin
-            state <= next_state;
+			coffee <= LOW;
+        end 
+		else begin
+            state <= state_next;
+			coffee <= coffee_next;
         end
 	end
 
-	//  the output changes immediately when coins changes. no waiting for clock
 	always @(*) begin
-		next_state = state;
-		coffee = LOW;
+		state_next = state;
+		coffee_next = coffee;
 		case(state)
 			st_cent0: begin
 				if(coins == st_cent0) begin
-					next_state = st_cent0;
-				end
-				if(coins == st_cent10) begin
-					next_state = st_cent5;
+					state_next = st_cent0;
+					coffee_next = LOW;
 				end
 				if(coins == st_cent5) begin
-					next_state = st_cent10;
+					state_next = st_cent5;
+					coffee_next = LOW;
+				end
+				if(coins == st_cent10) begin
+					state_next = st_cent10;
+					coffee_next = LOW;
 				end
 			end
 			st_cent5: begin
 				if(coins == st_cent0) begin
-					next_state = st_cent5;
+					state_next = st_cent5;
+					coffee_next = LOW;
 				end
 				if(coins == st_cent5) begin
-					next_state = st_cent0;
-					coffee = HIGH;
+					state_next = st_cent10;
+					coffee_next = LOW;
 				end
 				if(coins == st_cent10) begin
-					next_state = st_cent10;
+					state_next = st_cent0;
+					coffee_next = HIGH;
 				end
 			end
 			st_cent10: begin
 				if(coins == st_cent0) begin
-					next_state = st_cent10;
+					state_next = st_cent10;
+					coffee_next = LOW;
 				end
 				if(coins == st_cent5) begin
-					next_state = st_cent5;
-					coffee = HIGH;
+					state_next = st_cent0;
+					coffee_next = HIGH;
 				end
 				if(coins == st_cent10) begin
-					next_state = st_cent0;
-					coffee = HIGH;
+					state_next = st_cent5;
+					coffee_next = HIGH;
 				end
 			end
 		endcase
