@@ -97,7 +97,7 @@ module edge_detector (
     // State logic
     always @(*) begin
         next_state = state;
-        if(update ==  HIGH) begin
+        if(update == HIGH) begin
             case (state)
 		        one: begin
 			        if (level == LOW) begin

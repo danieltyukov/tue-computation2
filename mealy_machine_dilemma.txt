@@ -1,0 +1,21 @@
+Mealy.v
+- Doesn't have update
+- Has conditional state output
+
+- Has output LOW defined outside main case
+- Has output HIGH defined inside main case
+
+edge_detector.v
+- Has update
+- Doesn't have conditional state output
+
+- Has extra case outside update to handle state LOW and HIGH
+
+sequence_detector.v
+- Has update
+- Has conditional state output
+
+- Has extra state register for output
+- Handles output in clock logic
+- Has extra output defined outside update
+- Has extra output HIGH defined inside main case
