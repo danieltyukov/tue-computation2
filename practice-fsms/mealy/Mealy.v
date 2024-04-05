@@ -1,3 +1,6 @@
+// Mealy machine compared to a moore machine handles output NOT at the clock cycle.
+// Unless 'update' is used then it updates during clock cycle
+
 module Mealy (
     input  wire [0:0] clk,
     input  wire [0:0] reset,
@@ -18,65 +21,61 @@ module Mealy (
 
 	// Memory Definitions
 	reg [1:0] state;
-	reg [1:0] state_next;
-	reg [0:0] coffee_next;
+	reg [1:0] next_state;
 
 	// Clock Timer
 	always @(posedge clk) begin
 		if(reset == HIGH) begin
             state <= st_cent0;
-			coffee <= LOW;
-        end 
-		else begin
-            state <= state_next;
-			coffee <= coffee_next;
+        end else begin
+            state <= next_state;
         end
 	end
 
+	//  the output changes immediately when coins changes. no waiting for clock
 	always @(*) begin
-		state_next = state;
-		coffee_next = coffee;
+		next_state = state;
 		case(state)
 			st_cent0: begin
 				if(coins == st_cent0) begin
-					state_next = st_cent0;
-					coffee_next = LOW;
+					next_state = st_cent0;
+                    coffee = LOW;
 				end
 				if(coins == st_cent5) begin
-					state_next = st_cent5;
-					coffee_next = LOW;
+					next_state = st_cent5;
+                    coffee = LOW;
 				end
 				if(coins == st_cent10) begin
-					state_next = st_cent10;
-					coffee_next = LOW;
+					next_state = st_cent10;
+                    coffee = LOW;
 				end
 			end
 			st_cent5: begin
 				if(coins == st_cent0) begin
-					state_next = st_cent5;
-					coffee_next = LOW;
+					next_state = st_cent5;
+                    coffee = LOW;
 				end
 				if(coins == st_cent5) begin
-					state_next = st_cent10;
-					coffee_next = LOW;
+					next_state = st_cent10;
+                    coffee = LOW;
 				end
 				if(coins == st_cent10) begin
-					state_next = st_cent0;
-					coffee_next = HIGH;
+					next_state = st_cent0;
+                    coffee = HIGH;
 				end
 			end
 			st_cent10: begin
 				if(coins == st_cent0) begin
-					state_next = st_cent10;
-					coffee_next = LOW;
+					next_state = st_cent10;
+                    coffee = LOW;
 				end
 				if(coins == st_cent5) begin
-					state_next = st_cent0;
-					coffee_next = HIGH;
+					next_state = st_cent0;
+					coffee = HIGH;
 				end
 				if(coins == st_cent10) begin
-					state_next = st_cent5;
-					coffee_next = HIGH;
+					next_state = st_cent5;
+					coffee = HIGH;
 				end
 			end
 		endcase
