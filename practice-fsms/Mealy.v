@@ -35,37 +35,37 @@ module Mealy (
 		coffee = LOW;
 		case(state)
 			st_cent0: begin
-				if(coins == 2'b00) begin
+				if(coins == st_cent0) begin
 					next_state = st_cent0;
 				end
-				if(coins == 2'b10) begin
+				if(coins == st_cent10) begin
 					next_state = st_cent5;
 				end
-				if(coins == 2'b01) begin
+				if(coins == st_cent5) begin
 					next_state = st_cent10;
 				end
 			end
 			st_cent5: begin
-				if(coins == 2'b00) begin
+				if(coins == st_cent0) begin
 					next_state = st_cent5;
 				end
-				if(coins == 2'b01) begin
+				if(coins == st_cent5) begin
 					next_state = st_cent0;
 					coffee = HIGH;
 				end
-				if(coins == 2'b10) begin
+				if(coins == st_cent10) begin
 					next_state = st_cent10;
 				end
 			end
 			st_cent10: begin
-				if(coins == 2'b00) begin
+				if(coins == st_cent0) begin
 					next_state = st_cent10;
 				end
-				if(coins == 2'b01) begin
+				if(coins == st_cent5) begin
 					next_state = st_cent5;
 					coffee = HIGH;
 				end
-				if(coins == 2'b10) begin
+				if(coins == st_cent10) begin
 					next_state = st_cent0;
 					coffee = HIGH;
 				end
