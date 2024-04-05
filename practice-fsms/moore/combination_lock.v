@@ -26,8 +26,68 @@ module combination_lock (
     
     /* Internal state registers */
     reg [2:0] state;
+	reg [2:0] state_next;
+	reg [0:0] update_prev;
+    
+    always @(posedge clk) begin
+		if (reset == HIGH) begin
+			state <= st_reset;
+			update_prev <= LOW;
+		end
+		else begin
+			update_prev <= update;
+			if (update == HIGH && update_prev == LOW) begin
+				state <= state_next;
+			end
+		end
+    end
     
     always @(*) begin
+		state_next = state;
+		case (state)
+			st_reset: begin
+				if (key == LOW) begin
+					state_next = st_0;
+				end
+			end
+			st_0: begin
+				if (key == HIGH) begin
+					state_next = st_01;
+				end
+			end
+			st_01: begin
+				if (key == HIGH) begin
+					state_next = st_reset;
+				end
+				if (key == LOW) begin
+					state_next = st_010;
+				end
+			end
+			st_010: begin
+				if (key == HIGH) begin
+					state_next = st_0101;
+				end 
+				if (key == LOW) begin
+					state_next = st_0;
+				end
+			end
+			st_0101: begin
+				if (key == LOW) begin
+					state_next = st_010;
+				end 
+				if (key == HIGH) begin
+					state_next = st_01011;
+				end
+			end
+			st_01011: begin
+				if (key == LOW) begin
+					state_next = st_0;
+				end 
+				if (key == HIGH) begin
+					state_next = st_reset;
+				end
+			end            
+		endcase
 		case(state)
 			st_01011: begin
 				unlock = HIGH;
@@ -36,57 +96,5 @@ module combination_lock (
 				unlock = LOW;
 			end
 		endcase
-    end
-    
-    always @(posedge clk) begin        
-        if(update == HIGH) begin
-			case (state)
-				st_reset: begin
-					if (key == LOW) begin
-						state <= st_0;
-					end
-				end
-				st_0: begin
-					if (key == HIGH) begin
-						state <= st_01;
-					end
-				end
-				st_01: begin
-					if (key == HIGH) begin
-						state <= st_reset;
-					end
-					if (key == LOW) begin
-						state <= st_010;
-					end
-				end
-				st_010: begin
-					if (key == HIGH) begin
-						state <= st_0101;
-					end 
-					if (key == LOW) begin
-						state <= st_0;
-					end
-				end
-				st_0101: begin
-					if (key == LOW) begin
-						state <= st_010;
-					end 
-					if (key == HIGH) begin
-						state <= st_01011;
-					end
-				end
-				st_01011: begin
-					if (key == LOW) begin
-						state <= st_0;
-					end 
-					if (key == HIGH) begin
-						state <= st_reset;
-					end
-				end            
-            endcase
-        end
-		if (reset == HIGH) begin
-			state <= st_reset;
-		end
-    end
+	end
 endmodule

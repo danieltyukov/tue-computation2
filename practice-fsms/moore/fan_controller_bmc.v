@@ -1,9 +1,8 @@
 `timescale 1ns / 100ps
-// [down,up]
+
 module fan_controller (
     input  wire [0:0] clk,
     input  wire [0:0] reset,
-    input  wire [0:0] update,
 	input  wire [0:0] down,
 	input  wire [0:0] up,
 	output reg  [1:0] speed
@@ -22,22 +21,17 @@ module fan_controller (
 
     reg [1:0] state;
     reg [1:0] state_next;
-    reg [0:0] update_prev;
 
     always @(posedge clk) begin
         if (reset == HIGH) begin
             state <= stop;
-            update_prev <= LOW;
         end
         else begin
-            update_prev <= update;
-            if (update == HIGH && update_prev == LOW) begin
-                state <= state_next;
-            end
+			state <= state_next;
         end
     end
 
-    // State Logic
+	// State Logic
     always @(*) begin
         state_next = state;
         case (state)
@@ -92,4 +86,5 @@ module fan_controller (
             end
         endcase 
     end
+
 endmodule
