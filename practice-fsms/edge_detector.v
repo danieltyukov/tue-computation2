@@ -119,7 +119,6 @@ module edge_detector (
 		        end
             endcase
         end
-
         case (state)
 		    rising_edge: begin
 			    tick = HIGH;
@@ -129,9 +128,7 @@ module edge_detector (
 		    end
         endcase
     end
-
 endmodule
-
 
 // why does this not work:
     // always @(*) begin
