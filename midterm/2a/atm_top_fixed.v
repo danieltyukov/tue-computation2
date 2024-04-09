@@ -22,12 +22,11 @@ module atm_top(
 	S_VERIFY_BALANCE = 3,
 	S_DISPENSE_CASH = 4;
 
-    // Bit Definitions
+    // Definitions
     localparam
     LOW  = 1'b0,
     HIGH = 1'b1;
 
-	// Statics
 	reg [15:0] ACCOUNT_PIN = 16'h9284; // hexadecimal
 	reg [13:0] ACCOUNT_BALANCE = 14'd5000; // decimal - preset account balance
 	reg [13:0] ATM_OUT_LIMIT = 14'd10000; // limt to cash out
@@ -36,6 +35,7 @@ module atm_top(
     reg [2:0] state;
     reg [2:0] state_next;
     reg [0:0] next_prev;
+    reg [13:0] cash_in_verify;
 
     always @(posedge clk) begin
         if (cancel == HIGH) begin
@@ -43,10 +43,10 @@ module atm_top(
             next_prev <= LOW;
         end
         else begin
-            next_prev <= next;
             if (next == HIGH && next_prev == LOW) begin
                 state <= state_next;
             end
+            next_prev <= next;
         end
     end
 
@@ -70,17 +70,18 @@ module atm_top(
             S_WITHDRAW_AMT: begin
                 if (next == HIGH && cash_in <= ATM_OUT_LIMIT) begin
                     state_next = S_VERIFY_BALANCE;
+                    cash_in_verify = cash_in; // TRACK THE CASH IN HERE
                 end
                 if (next == HIGH && cash_in > ATM_OUT_LIMIT) begin
                     state_next = S_WITHDRAW_AMT;
                 end
             end
             S_VERIFY_BALANCE: begin
-                if (next == HIGH && cash_in > ACCOUNT_BALANCE) begin
-                    state_next = S_SCAN_CARD;
-                end
-                if (next == HIGH && cash_in <= ACCOUNT_BALANCE) begin
+                if (next == HIGH && cash_in_verify <= ACCOUNT_BALANCE) begin
                     state_next = S_DISPENSE_CASH;
+                end
+                if (next == HIGH && cash_in_verify > ACCOUNT_BALANCE) begin
+                    state_next = S_SCAN_CARD;
                 end
             end
             S_DISPENSE_CASH: begin
@@ -115,7 +116,7 @@ module atm_top(
             end
             S_DISPENSE_CASH: begin
                 success = HIGH;
-                cash_out = cash_in;
+                cash_out = cash_in_verify;
                 state_display = S_DISPENSE_CASH;
             end
         endcase
