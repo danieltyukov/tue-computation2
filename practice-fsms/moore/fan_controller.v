@@ -4,8 +4,10 @@ module fan_controller (
     input  wire [0:0] clk,
     input  wire [0:0] reset,
     input  wire [0:0] update,
+
 	input  wire [0:0] down,
 	input  wire [0:0] up,
+    
 	output reg  [1:0] speed
     );
 
