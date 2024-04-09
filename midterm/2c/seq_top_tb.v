@@ -3,7 +3,13 @@
 module seq_top_tb();
 
 
-	<<DECLARE SIGNALS TO DRIVE MODULE seq_top>>
+	// <<DECLARE SIGNALS TO DRIVE MODULE seq_top>>
+	reg clk;
+	reg reset;
+	reg next;
+	reg in;
+	wire out;
+	wire [2:0] state_display;
    
 	seq_top seq_top_inst(
 		.clk(clk),
@@ -13,7 +19,7 @@ module seq_top_tb();
 		.out(out),
 		.state_display(state_display));
 
-        <<DECLARE CLOCK>>
+        always #10 clk=~clk;
 
    
            
@@ -21,20 +27,81 @@ module seq_top_tb();
 	  $dumpfile("dut.vcd");
    	  $dumpvars(0, seq_top_inst);
 	  
-	  <<RESET>>
+	  //   <<RESET>>
+	  clk=0;
+	  next=0;
+	  in=0;
+	  reset=1;
 	  #500
 	  $display("state %x, out %x", state_display, out);
-   
+	  reset=0;
 	  
-	  <<STIMULI 1>>
+	  //   <<STIMULI 1>>
+	  in=0;
+	  #50 next=1;
 	  #500
 	  $display("state %x, out %x", state_display, out);
 	  
-	  <<STIMULI 2>>
+	  //   <<STIMULI 2>>
+	  in=1;
+	  next=0;
+	  #50 next=1;
 	  #500
 	  $display("state %x, out %x", state_display, out);
 	  
-	  ................................................
+      in=0;
+      next=0;
+	  #50 next=1;
+	  #500 
+	  $display("state %x, out %x", state_display, out);
+	  
+	  in=1;
+	  next=0;
+	  #50 next=1;
+	  #500
+	  $display("state %x, out %x", state_display, out);
+	  
+	  in=1;
+	  next=0;
+	  #50 next=1;
+	  #500 
+	  $display("state %x, out %x", state_display, out);
+	  
+	  in=0;
+	  next=0;
+	  #50 next=1;
+	  #500 
+	  $display("state %x, out %x", state_display, out);
+	  
+	  in=1;
+	  next=0;
+	  #50 next=1;
+	  #500
+	  $display("state %x, out %x", state_display, out);
+	  
+	  in=0;
+	  next=0;
+	  #50 next=1;
+	  #500 
+	  $display("state %x, out %x", state_display, out);
+	  
+	  in=0;
+	  next=0;
+	  #50 next=1;
+	  #500
+	  $display("state %x, out %x", state_display, out);
+	  
+	  in=1;
+	  next=0;
+	  #50 next=1;
+	  #500
+	  $display("state %x, out %x", state_display, out);
+	  
+	  in=0;
+	  next=0;
+	  #50 next=1;
+	  #500
+	  $display("state %x, out %x", state_display, out);
 	  
 	  #100
       $finish;
