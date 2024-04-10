@@ -1,0 +1,21 @@
+q1: makes sense
+q2: check notes
+q3: check formula sheet, %BranchInstructions * %OfBranchOutcome * BranchPenalty
+q4: Fetch (I-Fetch) unit, we look at the latency of the components involved in the instruction fetch stage. 
+Typically, the I-Fetch stage involves accessing the instruction memory (I-Mem) to read an 
+instruction and preparing the next instruction address, which usually involves an adder for incrementing the 
+program counter (PC).
+
+consecutive instructions, the cycle time would be limited by the longest latency operation in the I-Fetch unit.
+
+q5: LWI: load word from memory to register, uses register Rd in Rs to form memory address, from
+which to load. 
+Reg[Rt] indicates that this instruction writes to a register, which means the Register Write Port is needed.
+
+Mem[...] indicates that the instruction reads from memory, so the Data Memory block is used.
+
+Reg[Rd] + Reg[Rs] suggests that an addition operation is needed to calculate the memory address, implying the use of the ALU.
+
+Additionally, since the instruction would need to read from two registers to get the values of Rd and Rs, the Register Read Ports are also used.
+
+And finally, like all instructions, it must be fetched from the Instruction Memory.
