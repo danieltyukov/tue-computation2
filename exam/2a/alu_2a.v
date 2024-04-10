@@ -127,7 +127,15 @@ module ALU(ctrl, a, b, r, r2, z);
                         result = c[31:0];
                         result_hi = c[63:32];
                     end
-                    
+                
+                // ADDING AN EXTRA OPERATION
+                
+                'h14:
+                    begin
+                        if(s>t) result=255;
+                        else result=0;
+                    end
+                
                 default: //No default case: invallid opcode! 
                     begin 
                     end
