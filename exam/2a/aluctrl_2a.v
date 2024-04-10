@@ -103,6 +103,10 @@ module ALUCTRL(functionCode, ALUop, Shamt, ALUctrl);
                                 
                             'h2B:   //Set-on-less-than (unsigned)
                                 ALUctrl = 'h8;
+                            
+                            // REFERENCE CONTROL SIGNAL 
+                            'h31:
+                                ALUctrl = 'h14;
                                 
                             default:
                                 ALUctrl = 'h0;
