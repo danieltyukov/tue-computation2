@@ -1,0 +1,2 @@
+reset: 1'b0 -> means opposite -> active high -> reset on 1
+reset: 1'b1 -> means opposite -> active low -> reset on 0
