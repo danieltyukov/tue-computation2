@@ -19,7 +19,7 @@ module seq_top_tb();
 		.out(out),
 		.state_display(state_display));
 
-        always #10 clk=~clk;
+        always #10 clk=~clk; // Every 10 ns the clock will be inversed
 
    
            
