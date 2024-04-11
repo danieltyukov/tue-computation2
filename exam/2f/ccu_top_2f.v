@@ -23,7 +23,7 @@ assign proceed = (cf && !tr);
 
 /* TODO: Instantiate parametrized_counter module (provided for you).
 Make sure the instance is called parametrized_counter_inst. */
-parametrized_counter #(.tvalue(tvalue)) parametrized_counter_inst
+parametrized_counter #(tvalue) parametrized_counter_inst
 (
     .clk(clk),
     .reset(reset),

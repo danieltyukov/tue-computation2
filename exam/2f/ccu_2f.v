@@ -1,127 +1,110 @@
 module ccu (
-    input  clk,
+    input clk,
     input  reset,
     input  proceed,
-    output green_walk,
-    output orange_walk,
-    output red_hand,
-    output [1:0] multiplier,
-    output tr
+    output reg green_walk,
+    output reg orange_walk,
+    output reg red_hand,
+    output reg [1:0] multiplier,
+    output reg tr
 );
-
-reg [1:0] multiplier_next,multiplier_current,next_state,current_state;
-reg green_walk_next, green_walk_current, orange_walk_next, orange_walk_current, red_hand_next, red_hand_current,tr_next,tr_current;
-
-always @(posedge clk)
-begin
-    if(reset)
-    begin
-        tr_current<=1;
-        multiplier_current<=1;
-        green_walk_current<=1;
-        orange_walk_current<=0;
-        red_hand_current<=0;
-        current_state<=0;
+    
+    reg [1:0] state;
+    reg [1:0] next_state;
+    
+    reg next_green_walk;
+    reg next_orange_walk;
+    reg next_red_hand;
+    reg [1:0] next_multiplier;
+    reg next_tr;
+    
+    localparam
+    walk = 0, //green
+    caution = 1,
+    hand = 2;
+    
+    always @(posedge clk) begin
+        if (reset == 1'b1) begin
+            green_walk <= 1;
+            orange_walk <= 0;
+            red_hand <= 0;
+            multiplier <= 2'b01;
+            tr <= 1;
+            state <= walk;
+        end
+        else begin
+            state <= next_state;
+            tr <= next_tr;
+            green_walk <= next_green_walk;
+            orange_walk <= next_orange_walk;
+            red_hand <= next_red_hand;
+            multiplier <= next_multiplier;
+        end
     end
-    else
-    begin
-        tr_current<=tr_next;
-        multiplier_current<=multiplier_next;
-        green_walk_current<=green_walk_next;
-        orange_walk_current<=orange_walk_next;
-        red_hand_current<=red_hand_next;
-        current_state<=next_state;
-    end
-end
-
-always @(*)
-begin
-        tr_next=tr_current;
-        multiplier_next=multiplier_current;
-        green_walk_next=green_walk_current;
-        orange_walk_next=orange_walk_current;
-        red_hand_next=red_hand_current;
-        next_state=current_state;
-        case(current_state)
-        0:
-        begin
-            if(proceed)
-            begin
-                tr_next=1;
-                multiplier_next=0;
-                green_walk_next=0;
-                orange_walk_next=1;
-                red_hand_next=0;
-                next_state=1;
+    
+    always @(*) begin
+        next_green_walk = green_walk;
+        next_orange_walk = orange_walk;
+        next_red_hand = red_hand;
+        next_multiplier = multiplier;
+        next_state = state;
+        
+        case(state)
+            walk: begin
+                if (proceed == 1'b1) begin
+                    next_green_walk = 0;
+                    next_orange_walk = 1;
+                    next_red_hand = 0;
+                    next_multiplier = 2'b00;
+                    next_tr = 1'b1;
+                    next_state = caution;
+                end
+                else if (proceed == 1'b0) begin
+                    next_green_walk = 1;
+                    next_orange_walk = 0;
+                    next_red_hand = 0;
+                    next_multiplier = 2'b00;
+                    next_tr = 1'b0;
+                    next_state = walk;
+                end
             end
-            else
-            begin
-                tr_next=0;
-                multiplier_next=0;
-                green_walk_next=1;
-                orange_walk_next=0;
-                red_hand_next=0;
-                next_state=0;
+            caution: begin
+                if (proceed == 1'b1) begin
+                    next_green_walk = 0;
+                    next_orange_walk = 0;
+                    next_red_hand = 1;
+                    next_multiplier = 2'b11;
+                    next_tr = 1'b1;
+                    next_state = hand;
+                end
+                else if (proceed == 1'b0) begin
+                    next_green_walk = 0;
+                    next_orange_walk = 1;
+                    next_red_hand = 0;
+                    next_multiplier = 2'b11;
+                    next_tr = 1'b0;
+                    next_state = caution;
+                end
             end
-        end
-        1:
-        begin
-            if(proceed)
-            begin
-                tr_next=1;
-                multiplier_next=3;
-                green_walk_next=0;
-                orange_walk_next=0;
-                red_hand_next=1;
-                next_state=2;
+            hand: begin
+                if (proceed == 1'b1) begin
+                    next_green_walk = 1;
+                    next_orange_walk = 0;
+                    next_red_hand = 0;
+                    next_multiplier = 2'b01;
+                    next_tr = 1'b1;
+                    next_state = walk;
+                end
+                else if (proceed == 1'b0) begin
+                    next_green_walk = 0;
+                    next_orange_walk = 0;
+                    next_red_hand = 1;
+                    next_multiplier = 2'b01;
+                    next_tr = 1'b0;
+                    next_state = hand;
+                end
             end
-            else
-            begin
-                tr_next=0;
-                multiplier_next=3;
-                green_walk_next=0;
-                orange_walk_next=1;
-                red_hand_next=0;
-                next_state=1;
-            end
-        end
-        2:
-        begin
-            if(proceed)
-            begin
-                tr_next=1;
-                multiplier_next=1;
-                green_walk_next=1;
-                orange_walk_next=0;
-                red_hand_next=0;
-                next_state=0;
-            end
-            else
-            begin
-                tr_next=0;
-                multiplier_next=1;
-                green_walk_next=0;
-                orange_walk_next=0;
-                red_hand_next=1;
-                next_state=2;
-            end
-        end
-        default:
-        begin
-            tr_next=1;
-            multiplier_next=1;
-            green_walk_next=1;
-            orange_walk_next=0;
-            red_hand_next=0;
-            next_state=0;
-        end
         endcase
-end
-
-assign green_walk=green_walk_current;
-assign orange_walk=orange_walk_current;
-assign red_hand=red_hand_current;
-assign multiplier=multiplier_current;
-assign tr=tr_current;
+    end
 
 endmodule
