@@ -1,7 +1,7 @@
 module ccu (
-    input clk,
-    input  reset,
-    input  proceed,
+    input wire clk,
+    input wire reset,
+    input wire proceed,
     output reg green_walk,
     output reg orange_walk,
     output reg red_hand,
